@@ -1,3 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+   <?php
+include_once 'menu.php';
+?>
+<!-- start: content -->
+            <div id="content">
+                <div class="panel">
+                  <div class="panel-body">
+                      <div class="col-md-6 col-sm-12">
+                        <h3 class="animated fadeInLeft">Customer Service</h3>
+                        <p class="animated fadeInDown"><span class="fa  fa-map-marker"></span> Batavia,Indonesia</p>
+
+                      
+                    </div>
+                  
+                    </div>
+                  </div>                    
+                </div>
+
 <?php
 include_once '../plantilla/cabecera.php';
 include_once '../plantilla/barraSuperior.php';
@@ -69,10 +91,14 @@ if (isset($_REQUEST['nameEnviar'])) {
     }
     
 } else {
-    ?>
 
-<form action="registro_juridico.php" method="GET" autocomplete="off">
+    ?>
+ 
+<form action="persojuridica.php" method="GET" autocomplete="off">
         <!--    INICIO DE DATOS-->
+
+
+
         <section class="content">
             <div class="container-fluid">
 
@@ -141,7 +167,7 @@ if (isset($_REQUEST['nameEnviar'])) {
                         <div class="card">
                             <div class="header">
                                 <a data-toggle="collapse" data-parent="#accordion" href="#collapse-balance">
-                                    <h2 class="text-center">BALANCE GENERAL (AL 31 DE DICIEMBRE DE 2017)</h2>
+                                    <h2 class="text-center">BALANCE GENERAL (AL 31 DE DICIEMBRE DE 2018)</h2>
                                 </a>
                             </div>
                             <div id="collapse-balance" class="panel-collapse collapse">
@@ -278,7 +304,7 @@ if (isset($_REQUEST['nameEnviar'])) {
                         <div class="card">
                             <div class="header">
                                 <a  data-toggle="collapse" data-parent="#accordion" href="#collapse-estado">
-                                    <h2 class="text-center">ESTADO DE RESULTADOS (AL 31 DE DICIEMBRE DE 2017)</h2>
+                                    <h2 class="text-center">ESTADO DE RESULTADOS (AL 31 DE DICIEMBRE DE 2018)</h2>
                                 </a>
                             </div>
                             <div id="collapse-estado" class="panel-collapse collapse">
@@ -357,6 +383,8 @@ if (isset($_REQUEST['nameEnviar'])) {
                         </div>
                     </div>
                 </div>
+
+
                 <div class="row clearfix">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">

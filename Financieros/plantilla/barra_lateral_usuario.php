@@ -70,7 +70,7 @@
                     <li class="ripple"><a class="tree-toggle nav-header" href="../activo_fijo/listaactivos.php"><span class="fa fa-envelope-o"></span>Lista de Activo  </a>
                       </li>
 
-                    <li class="ripple"><a href="../activo_fijo/tipoactivo.php"><span class="fa fa-file-code-o"></span>Registro tipo de Activo  </a>
+                    <li class="ripple"><a href="../activo_fijo/tipoactivo.php"><span class="fa fa-file-code-o"></span>Registro Tipo de Activo  </a>
                       
                     </li>
 
