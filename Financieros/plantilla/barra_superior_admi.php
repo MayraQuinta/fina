@@ -1,129 +1,46 @@
 <!-- Top Bar -->
-        <nav class="navbar">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a href="#" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
-                    <a href="#" class="bars"></a>
-                    <a class="navbar-brand" href="index.html">SISTEMA</a>
-                </div>
-                <div class="collapse navbar-collapse" id="navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <!-- Call Search -->
+        <!-- start: Header -->
+        <nav class="navbar navbar-default header navbar-fixed-top">
+          <div class="col-md-12 nav-wrapper">
+            <div class="navbar-header" style="width:100%;">
+              <div class="opener-left-menu is-open">
+                <span class="top"></span>
+                <span class="middle"></span>
+                <span class="bottom"></span>
+              </div>
+                <a href="" class="navbar-brand"> 
+                 <b>ANÁLISIS FINANCIERO</b>
+                </a>
 
-                        <!-- #END# Call Search -->
-                        <!-- Notifications -->
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Notificaciones
-                                <i class="material-icons">notifications</i>
-                                <span class="label-count">7</span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li class="header">NOTIFICATIONS</li>
-                                <li class="body">
-                                    <ul class="menu">
-                                        <li>
-                                            <a href="#">
-                                                <div class="icon-circle bg-light-green">
-                                                    <i class="material-icons">person_add</i>
-                                                </div>
-                                                <div class="menu-info">
-                                                    <h4>12 new members joined</h4>
-                                                    <p>
-                                                        <i class="material-icons">access_time</i> 14 mins ago
-                                                    </p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <div class="icon-circle bg-cyan">
-                                                    <i class="material-icons">add_shopping_cart</i>
-                                                </div>
-                                                <div class="menu-info">
-                                                    <h4>4 sales made</h4>
-                                                    <p>
-                                                        <i class="material-icons">access_time</i> 22 mins ago
-                                                    </p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <div class="icon-circle bg-red">
-                                                    <i class="material-icons">delete_forever</i>
-                                                </div>
-                                                <div class="menu-info">
-                                                    <h4><b>Nancy Doe</b> deleted account</h4>
-                                                    <p>
-                                                        <i class="material-icons">access_time</i> 3 hours ago
-                                                    </p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <div class="icon-circle bg-orange">
-                                                    <i class="material-icons">mode_edit</i>
-                                                </div>
-                                                <div class="menu-info">
-                                                    <h4><b>Nancy</b> changed name</h4>
-                                                    <p>
-                                                        <i class="material-icons">access_time</i> 2 hours ago
-                                                    </p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <div class="icon-circle bg-blue-grey">
-                                                    <i class="material-icons">comment</i>
-                                                </div>
-                                                <div class="menu-info">
-                                                    <h4><b>John</b> commented your post</h4>
-                                                    <p>
-                                                        <i class="material-icons">access_time</i> 4 hours ago
-                                                    </p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <div class="icon-circle bg-light-green">
-                                                    <i class="material-icons">cached</i>
-                                                </div>
-                                                <div class="menu-info">
-                                                    <h4><b>John</b> updated status</h4>
-                                                    <p>
-                                                        <i class="material-icons">access_time</i> 3 hours ago
-                                                    </p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <div class="icon-circle bg-purple">
-                                                    <i class="material-icons">settings</i>
-                                                </div>
-                                                <div class="menu-info">
-                                                    <h4>Settings updated</h4>
-                                                    <p>
-                                                        <i class="material-icons">access_time</i> Yesterday
-                                                    </p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="footer">
-                                    <a href="#">View All Notifications</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <!-- #END# Notifications -->
+              <ul class="nav navbar-nav search-nav">
+                <li>
+                   <div class="search">
+                    <span class="fa fa-search icon-search" style="font-size:23px;"></span>
+                    <div class="form-group form-animate-text">
+                      <input type="text" class="form-text" required>
+                      <span class="bar"></span>
+                      <label class="label-search"><b>Search</b> </label>
+                    </div>
+                  </div>
+                </li>
+              </ul>
 
 
-                    </ul>
-                </div>
+              <ul class="nav navbar-nav navbar-right user-nav">
+                <li class="user-name"><span></span></li>
+                  <li class="dropdown avatar-dropdown">
+                   <img src="../asset/img/minerva.gif" class="img-circle avatar" alt="user name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"/>
+                   
+                </li>
+                <li >
+                    <a class="tree-toggle nav-header" style="color: #dc7777"><span class="fa fa-user-times" style="color: #dc7777"></span> Cerrar Session<span class="fa-angle-right fa right-arrow text-right" ></span></a>
+                    <ul class="nav nav-list tree">
+                        <li ><a href="../index.php" >Salir</a></li>
+                      </ul>
+                 </li>
+              </ul>
             </div>
+          </div>
         </nav>
+      <!-- end: Header -->
         <!-- #Top Bar -->

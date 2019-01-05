@@ -3,6 +3,7 @@
 
 
    <?php
+   //hola
 include_once 'menu.php';
 ?>
    

@@ -1,51 +1,46 @@
 <!-- Left Sidebar -->
-        <aside id="leftsidebar" class="sidebar">
+       
             <!-- User Info -->
-            <div class="user-info">
-                <div class="image">
-                    <img src="../images/user.png" width="48" height="48" alt="User" />
-                </div>
-                <div class="info-container">
-                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Administrador</div>
-                    <div class="email">opciones</div>
-                    <div class="btn-group user-helper-dropdown">
-                        <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down </i>
-                        <ul class="dropdown-menu pull-right">
-                             
-                            <li><a href="../index.php"><i class="material-icons">input</i>Salir</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            
             <!-- #User Info -->
             <!-- Menu -->
-             <div class="menu">
-                <ul class="list">
-                    <li class="header text-center">MENU</li>
-                    <li>
-                        <a href="#">
-                            <i class="material-icons col-green">home</i>
-                            <span>Inicio</span>
-                        </a>
+             <div class="container-fluid mimin-wrapper">
+  
+          <!-- start:Left Menu -->
+            <div id="left-menu">
+              <div class="sub-left-menu scroll">
+                <ul class="nav nav-list">
+                    <li><div class="left-bg"></div></li>
+                    <li class="time">
+                      <h1 class="animated fadeInLeft">21:00</h1>
+                      <p class="animated fadeInRight">Sat,October 1st 2029</p>
                     </li>
-                    <li>
+
+                    
+                    <li class="active ripple">
+                      <a class="tree-toggle nav-header" style="color: #dc7777"><span class="fa-home fa" style="color: #dc7777"></span>Confirmación de Solicitudes de Creditos
+                        <span ></span>
+                      </a></li>
+                      
+                          <li>
                         <a href="../admi/solicitud_pendiente.php">
-                            <i class="material-icons col-deep-orange">description</i>
+                            <i class="material-icons col-deep-orange"></i>
                             <span>Solicitudes Juridicas</span>
                         </a>
                     </li>
                     <li>
                         <a href="../admi/solicitud_natural.php">
-                            <i class="material-icons col-amber">description</i>
+                            <i class="material-icons col-amber"></i>
                             <span>Solicitudes Naturales</span>
                         </a>
                     </li>
-                                        
+                      
+            
                     
-                    
-                  
-                </ul>
-            </div>
+                  </ul>
+                </div>
+          </div>
+          </div>
             <!-- #Menu -->
             <!-- Footer -->
             <div class="legal">
@@ -55,5 +50,25 @@
                
             </div>
             <!-- #Footer -->
-        </aside>\
+    
         <!-- #END# Left Sidebar -->
+
+        <!-- start: Javascript -->
+<script src="../asset/js/jquery.min.js"></script>
+<script src="../asset/js/jquery.ui.min.js"></script>
+<script src="../asset/js/bootstrap.min.js"></script>
+
+<!-- plugins -->
+<script src="../asset/js/plugins/jquery.nicescroll.js"></script>
+<script src="../asset/js/plugins/moment.min.js"></script>
+
+
+<!-- custom -->
+<script src="../asset/js/main.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+
+
+});
+</script>
+<!-- end: Javascript -->

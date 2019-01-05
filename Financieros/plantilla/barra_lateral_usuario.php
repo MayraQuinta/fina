@@ -14,12 +14,12 @@
 
                     
                     <li class="active ripple">
-                      <a class="tree-toggle nav-header" style="color: #dc7777"><span class="fa-home fa" style="color: #dc7777"></span>Registro de Clientes 
+                      <a class="tree-toggle nav-header" style="color: #dc7777"><span class="fa-home fa"></span>Registro de Clientes 
                         <span class="fa-angle-right fa right-arrow text-right"></span>
                       </a>
                       <ul class="nav nav-list tree" >
                           <li><a href="../cuentas_cobrar/registro_natura.php">Persona Natural</a></li>
-                          <li><a href="../cuentas_cobrar/persojuridica.php">Persona Jurídica</a></li>
+                          <li><a href="../cuentas_cobrar/registro_juridico.php">Persona Jurídica</a></li>
                       </ul>
                     </li>
                     <li class="ripple">
@@ -46,18 +46,18 @@
                         <li><a href="../creditomoras.php">Incobrables</a></li>
                       </ul>
                     </li>
-                    <li class="ripple"><a >
+                    <li class="ripple"><a href="../cuentas_cobrar/refinanciamiento.php">
                     <span class="fa fa-pencil-square"></span>Refinanciamiento </a>
                       
                     </li>
-                    <li class="ripple"><a class="tree-toggle nav-header"><span class="fa fa-check-square-o"></span>Estados Financieros   </a>
+                    <li class="ripple"><a class="tree-toggle nav-header" href="../cuentas_cobrar/estados_financieros.php"><span class="fa fa-check-square-o"></span>Estados Financieros   </a>
                       
                     </li>
-                    <li class="ripple"><a class="tree-toggle nav-header"><span class="fa fa-table"></span> Registro de Abono  </a>
+                    <li class="ripple"><a class="tree-toggle nav-header" href="../cuentas_cobrar/abono.php"><span class="fa fa-table"></span> Registro de Abono  </a>
                       
                     </li>
 
-                    <li class="ripple"><a class="tree-toggle nav-header"><span class="fa fa-envelope-o"></span>Lista de Activo  </a>
+                    <li class="ripple"><a class="tree-toggle nav-header" href="../listaactivos.php"><span class="fa fa-envelope-o"></span>Lista de Activo  </a>
                       </li>
 
                     <li class="ripple"><a href="../tipoactivo.php"><span class="fa fa-file-code-o"></span>Registro tipo de Activo  </a>
