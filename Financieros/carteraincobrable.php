@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
    <?php
 include_once 'menu.php';
+//cu
 ?>
    
 <body id="mimin" class="dashboard">

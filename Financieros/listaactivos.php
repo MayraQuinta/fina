@@ -108,7 +108,6 @@ and institucion.id_institucion=activo.id_institucion and encargado.id_encargado=
                         <th>Correlativos</th>
                         <th>Departamento</th>
                         <th>Institucion</th>
-                        
                         <th>Encargado</th>
                         <th>Precio($)</th>
                         <th>Acciones</th>
@@ -121,16 +120,16 @@ and institucion.id_institucion=activo.id_institucion and encargado.id_encargado=
                      <tr>
                      <td><?php echo $fila['correlativo']; ?></td>
                      <td><?php echo $fila['ncla']; ?></td>
-                     <td><?php echo $fila['precio'].' $' ; ?></td>
                      <td><?php echo $fila['nombreInst']; ?></td>
                      <td><?php echo $fila['encargado']; ?></td>
+                     <td><?php echo $fila['precio'].' $' ; ?></td>
                      <td ><button class="btn btn-info" onclick="llamarPagina('<?php echo $fila['id']; ?>')"> 
-                      <i class="fa fa-eye"></i>Depreciación</button></td>
+                      <i class="fa fa-eye  "></i>Depreciación</button></td>
                      </tr>
                             <?php
-						}
-							?>
-							
+            }
+              ?>
+              
                       
                     </tbody>
                   </table>
@@ -164,9 +163,9 @@ and institucion.id_institucion=activo.id_institucion and encargado.id_encargado=
         
         <script type="text/javascript" >
 function llamarPagina(id){
-    $("#contenido").load('ver_depreciacion.php?clienteinfo='+id);
-//	window.open("../activo_fijo/ver_depreciacion.php?datos="+id, '_parent');
-	}
+    $("#contenido").load('verDepreciacion.php?clienteinfo='+id);
+//  window.open("../activo_fijo/ver_depreciacion.php?datos="+id, '_parent');
+  }
     
 </script>
           <!-- end: content -->
