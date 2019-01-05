@@ -45,9 +45,9 @@
                         <span class="fa-angle-right fa right-arrow text-right"></span>
                       </a>
                       <ul class="nav nav-list tree">
-                        <li><a href="../cuentas_cobrar/carteranormal.php">Normal</a></li>
-                        <li><a href="../cuentas_cobrar/carteraincobrable.php">Mora</a></li>
-                        <li><a href="../cuentas_cobrar/creditomoras.php">Incobrables</a></li>
+                        <li><a href="../cuentas_cobrar/cartera_normal.php">Normal</a></li>
+                        <li><a href="../cuentas_cobrar/cartera_incobrable.php">Mora</a></li>
+                        <li><a href="../cuentas_cobrar/cartera_mora.php">Incobrables</a></li>
                       </ul>
                     </li>
                     <li class="ripple"><a href="../cuentas_cobrar/refinanciamiento.php">

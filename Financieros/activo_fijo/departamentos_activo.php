@@ -11,19 +11,19 @@ include_once '../app/Conexion.php';
 ?>
 
    <!-- start: content -->
-            <div id="content">
+            <div id="content" align="center">
                 <div class="panel">
                   <div class="panel-body">
                       <div class="col-md-6 col-sm-12">
                         <h3 class="animated fadeInLeft">Customer Service</h3>
-                        <p class="animated fadeInDown"><span class="fa  fa-map-marker"></span> Batavia,Indonesia</p>
+                        
 
                       
                     </div>
                   
                     </div>
                   </div>                    
-                </div>   
+                   
      
  <body id="mimin" class="dashboard">
 
@@ -97,7 +97,7 @@ if (isset($_REQUEST['nameEnviar'])) {
                 </div>
               </div>
    
-
+</div>
    
   <!-- end: Javascript -->
   </body>

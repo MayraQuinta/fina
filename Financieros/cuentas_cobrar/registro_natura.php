@@ -1,96 +1,126 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
 <?php
 include_once '../plantilla/cabecera.php';
 include_once '../plantilla/barraSuperior.php';
 include_once '../plantilla/barra_lateral_usuario.php';
 ?>
+
+<div id="content" align="center">
+                <div class="panel">
+                  <div class="panel-body">
+                      <div class="col-md-6 col-sm-12">
+                        <h3 class="animated fadeInLeft">Registro</h3>
+                        
+
+                      
+                    </div>
+                  
+                    </div>
+                  </div>                    
+                   
+     
+ <body id="mimin" class="dashboard">
+
+<div class="col-md-6" align="center">
+                  <div class="col-md-12 panel">
+                    <div class="col-md-12 panel-heading">
+                      <h4>Persona Natural</h4>
+                    </div>
+                    <div class="col-md-15 panel-body" style="padding-bottom:30px;">
+                      <div class="col-md-15">            
+ 
+
 <form action="" name="form_persona_natural" method="post" onsubmit="return confirmar_envio_perNatural()">
     <input type="hidden" name="pas" id="pass"  >
     <section class="content">
-        <div class="container-fluid">
-            <!-- Vertical Layout -->
-            <div class="row clearfix">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="card">
+        
 
-                        <div class="header">
-                            <h2 class="text-center">REGISTRO DE CLIENTE</h2>
-                        </div>
-                        <div class="body">
-                            <div class="row clearfix">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <div class="form-line">
-                                            <span class="input-group-addon" id="basic-addon1">Nombre</span>
-                                            <input type="text"  class="form-control text-center" name="nombre_natural" placeholder="NOMBRE..." required="">
+                                        
+                                            <div class="col-md-6">
+
+                                            <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                                            <span class="bar" id="validate_firstname">Nombre</span>
+                                            <input type="text"  class="form-text" name="nombre_natural" placeholder="NOMBRE..." required="" aria-required="true">
                                         </div>
                                     </div>
-                                </div> 
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <div class="form-line">
-                                            <span class="input-group-addon" id="basic-addon1">Apellido</span>
-                                            <input type="text" class="form-control text-center" name="apellido_natural" placeholder="APELLIDO..." required="">
+                                 
+                                
+                                        <div class="col-md-6">
+                                            <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                                            <span class="bar" id="basic-addon1">Apellido</span>
+                                            <input type="text" class="form-text" name="apellido_natural" placeholder="APELLIDO..." required="">
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="row clearfix">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <div class="form-line">
-                                            <span class="input-group-addon" id="basic-addon1">Dui</span>
-                                            <input type="text" class="form-control text-center" name="dui_natural"  id="Dui_fia_per" placeholder="DUI..." required="">
+                             
+                            
+                                    
+                                        <div class="col-md-6">
+                                            <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                                            <span class="bar" id="basic-addon1">Dui</span>
+                                            <input type="text" class="form-text" name="dui_natural"  id="Dui_fia_per" placeholder="DUI..." required="">
                                         </div>
                                     </div>
-                                </div> 
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <div class="form-line">
-                                            <span class="input-group-addon" id="basic-addon1">Nit</span>
-                                            <input type="text" class="form-control text-center" name="nit_natural" id="Nit_fia_per" placeholder="NIT..." required="">
+                                 
+                                
+                                        <div class="col-md-6">
+                                            <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                                            <span class="bar" id="basic-addon1">Nit</span>
+                                            <input type="text" class="form-text" name="nit_natural" id="Nit_fia_per" placeholder="NIT..." required="">
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="row clearfix">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <div class="form-line">
-                                            <span class="input-group-addon" id="basic-addon1">Telefono</span>
-                                            <input type="text" class="form-control text-center" name="telefono_natural" id="ref_Telefono" placeholder="TELEFONO..." required="">
+                
+                           
+                            
+                                    
+                                        <div class="col-md-6">
+                                            <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                                            <span class="bar" id="basic-addon1">Telefono</span>
+                                            <input type="text" class="form-text" name="telefono_natural" id="ref_Telefono" placeholder="TELEFONO..." required="">
                                         </div>
                                     </div>
-                                </div> 
-                                <div class="col-md-6 prefix">
-                                    <div class="form-group prefix">
-                                        <div class="form-line prefix">
-                                            <span class="input-group-addon prefix" id="basic-addon1">Dirección</span>
-                                            <input type="text" class="form-control text-center" name="direccion_natural" placeholder="DIRECCION..." required="">
+                                
+                                
+                                        <div class="col-md-6">
+                                            <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                                            <span class="bar" id="basic-addon1">Dirección</span>
+                                            <input type="text" class="form-text" name="direccion_natural" placeholder="DIRECCION..." required="">
                                         </div>
                                     </div>
-                                </div>
-                            </div>
+                                
+                        
 
 
-
+<div class="col-md-12 panel-footer">
                             <div class="text-center">
-                                <button type="submit"  class="btn btn-primary m-t-15 waves-effect">GUARDAR</button>
-                                <button type="reset" class="btn btn-primary m-t-15 waves-effect">CANCELAR</button>
+                                <button type="submit" class="btn ripple-infinite btn-round btn-primary"><div>
+                                      <span>Guardar</span>
+                                    </div></button>
+                                <button type="reset" class="btn ripple-infinite btn-round btn-primary">
+                                    <div>
+                                      <span>Cancelar</span>
+                                    </div>
+                                </button>
                             </div>
                         </div>
 
-                    </div>
-                </div>
-            </div>
             <!-- #END# Vertical Layout -->
 
 
         </div>
+        </div>
+        </div>
+        </div>
         <!-- #END# Inline Layout -->
 
-        </div>
+         
     </section>
 </form>
+ </body>
+ </html>
 <script>
     function confirmar_envio_perNatural() {
         var ok = false;

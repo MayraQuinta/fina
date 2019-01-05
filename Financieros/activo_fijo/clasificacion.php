@@ -74,9 +74,7 @@ if (isset($_REQUEST['nameEnviar'])) {
 } else {
 
     ?>
-   <?php
-include_once 'menu.php';
-?>
+
    <!-- start: content -->
             <div id="content">
                 <div class="panel">
