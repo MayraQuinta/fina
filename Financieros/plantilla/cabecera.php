@@ -7,7 +7,8 @@
   <meta name="author" content="Isna Nur Azis">
   <meta name="keyword" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ANÁLISIS FINANCIEROS</title>
+ 
+  <title aria-label="Hide Sidebar" >ANÁLISIS FINANCIEROS</title>
 
   <!-- start: Css -->
   <link rel="stylesheet" type="text/css" href="../asset/css/bootstrap.min.css">

@@ -8,34 +8,23 @@
                 <span class="middle"></span>
                 <span class="bottom"></span>
               </div>
-                <a href="" class="navbar-brand"> 
-                 <b>ANÁLISIS FINANCIERO</b>
+                <a  class="navbar-brand" style=" font-weight: bold;"  aria-label="Hide Sidebar">
+                
+                 <b>Sistema Financiero</b>
                 </a>
 
-              <ul class="nav navbar-nav search-nav">
-                <li>
-                   <div class="search">
-                    <span class="fa fa-search icon-search" style="font-size:23px;"></span>
-                    <div class="form-group form-animate-text">
-                      <input type="text" class="form-text" required>
-                      <span class="bar"></span>
-                      <label class="label-search"><b>Search</b> </label>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-
+              
 
               <ul class="nav navbar-nav navbar-right user-nav">
                 <li class="user-name"><span></span></li>
                   <li class="dropdown avatar-dropdown">
-                   <img src="../asset/img/minerva.gif" class="img-circle avatar" alt="user name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"/>
+                   <img   data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"/>
                    
                 </li>
                 <li >
-                    <a class="tree-toggle nav-header" style="color: #dc7777"><span class="fa fa-user-times" style="color: #dc7777"></span> Cerrar Session<span class="fa-angle-right fa right-arrow text-right" ></span></a>
+                    <a class="tree-toggle nav-header" style="color: #f8f9fb"><span class="fa fa-user-times" style="color: #f8f9fb"></span> Cerrar Sessión<span class="fa-angle-right fa right-arrow text-right" ></span></a>
                     <ul class="nav nav-list tree">
-                        <li ><a href="../index.php" >Salir</a></li>
+                        <li ><a href="../index.php" style="color: #f8f9fb">Salir</a></li>
                       </ul>
                  </li>
               </ul>

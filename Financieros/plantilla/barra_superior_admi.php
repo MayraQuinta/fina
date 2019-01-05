@@ -8,23 +8,12 @@
                 <span class="middle"></span>
                 <span class="bottom"></span>
               </div>
-                <a href="" class="navbar-brand"> 
+                <a  class="navbar-brand"> 
+                <img src="../asset/img/minerva.gif" class="img-circle avatar" />
                  <b>ANÁLISIS FINANCIERO</b>
                 </a>
 
-              <ul class="nav navbar-nav search-nav">
-                <li>
-                   <div class="search">
-                    <span class="fa fa-search icon-search" style="font-size:23px;"></span>
-                    <div class="form-group form-animate-text">
-                      <input type="text" class="form-text" required>
-                      <span class="bar"></span>
-                      <label class="label-search"><b>Search</b> </label>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-
+             
 
               <ul class="nav navbar-nav navbar-right user-nav">
                 <li class="user-name"><span></span></li>
