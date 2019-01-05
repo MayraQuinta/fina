@@ -3,7 +3,10 @@
 <html lang="en">
 
    <?php
-include_once 'menu.php';
+include_once '../plantilla/cabecera.php';
+include_once '../plantilla/barraSuperior.php';
+include_once '../plantilla/barra_lateral_usuario.php';
+include_once '../app/Conexion.php';
 ?>
 
  <!-- start: content -->
@@ -31,8 +34,8 @@ include_once 'menu.php';
                       <div class="col-md-12">
 <?php
 
-include_once 'app/Conexion.php';
-include_once 'repositorios/correlativos.php';
+include_once '../app/Conexion.php';
+include_once '../repositorios/correlativos.php';
 Conexion::abrir_conexion();
 
 if (isset($_REQUEST['nameEnviar'])) {

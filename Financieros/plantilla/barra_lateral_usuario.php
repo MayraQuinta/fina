@@ -12,9 +12,13 @@
                       <p class="animated fadeInRight">Sat,October 1st 2029</p>
                     </li>
 
+                 <li class="ripple"><a style="color: #dc7777">
+                    <span class="fa-home fa"></span>CUENTAS POR COBRAR </a>
+                      
+                    </li>
                     
                     <li class="active ripple">
-                      <a class="tree-toggle nav-header" style="color: #dc7777"><span class="fa-home fa"></span>Registro de Clientes 
+                      <a class="tree-toggle nav-header" ><span class="fa fa-pencil-square" ></span>Registro de Clientes 
                         <span class="fa-angle-right fa right-arrow text-right"></span>
                       </a>
                       <ul class="nav nav-list tree" >
@@ -28,7 +32,7 @@
                         <span class="fa-angle-right fa right-arrow text-right"></span>
                       </a>
                       <ul class="nav nav-list tree">
-                        <li><a href="../personatural.php">Personal</a></li>
+                        <li><a href="../cuentas_cobrar/credito_personal.php">Personal</a></li>
                         <li><a href="../cuentas_cobrar/credito_juridico.php">Empresaria</a></li>
                         <li><a href="../cuentas_cobrar/credito_hipotecario.php">Hipotecario</a></li>
                         <li><a href="../cuentas_cobrar/credito_solidario.php">Solidario</a></li>
@@ -41,9 +45,9 @@
                         <span class="fa-angle-right fa right-arrow text-right"></span>
                       </a>
                       <ul class="nav nav-list tree">
-                        <li><a href="../carteranormal.php">Normal</a></li>
-                        <li><a href="../carteraincobrable.php">Mora</a></li>
-                        <li><a href="../creditomoras.php">Incobrables</a></li>
+                        <li><a href="../cuentas_cobrar/carteranormal.php">Normal</a></li>
+                        <li><a href="../cuentas_cobrar/carteraincobrable.php">Mora</a></li>
+                        <li><a href="../cuentas_cobrar/creditomoras.php">Incobrables</a></li>
                       </ul>
                     </li>
                     <li class="ripple"><a href="../cuentas_cobrar/refinanciamiento.php">
@@ -57,20 +61,26 @@
                       
                     </li>
 
-                    <li class="ripple"><a class="tree-toggle nav-header" href="../listaactivos.php"><span class="fa fa-envelope-o"></span>Lista de Activo  </a>
-                      </li>
 
-                    <li class="ripple"><a href="../tipoactivo.php"><span class="fa fa-file-code-o"></span>Registro tipo de Activo  </a>
+                    <li class="ripple"><a style="color: #dc7777">
+                    <span class="fa-home fa"></span>ACTIVO FIJO </a>
                       
                     </li>
 
-                     <li class="ripple"><a  href="../encargado.php"><span class="fa "></span>Registro de Encargado  </a>   
+                    <li class="ripple"><a class="tree-toggle nav-header" href="../activo_fijo/listaactivos.php"><span class="fa fa-envelope-o"></span>Lista de Activo  </a>
+                      </li>
+
+                    <li class="ripple"><a href="../activo_fijo/tipoactivo.php"><span class="fa fa-file-code-o"></span>Registro tipo de Activo  </a>
+                      
                     </li>
 
-                    <li class="ripple"><a  href="../institucion.php"><span class="fa "></span>Registro de Institución </a>   
+                     <li class="ripple"><a  href="../activo_fijo/encargado.php"><span class="fa "></span>Registro de Encargado  </a>   
                     </li>
 
-                    <li class="ripple"><a href="../departamentos_activo.php"><span class="fa "></span>Registro de Departamento </a>    
+                    <li class="ripple"><a  href="../activo_fijo/institucion.php"><span class="fa "></span>Registro de Institución </a>   
+                    </li>
+
+                    <li class="ripple"><a href="../activo_fijo/departamentos_activo.php"><span class="fa "></span>Registro de Departamento </a>    
                     </li>
                     
                   </ul>
