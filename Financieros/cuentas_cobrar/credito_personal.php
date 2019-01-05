@@ -1,3 +1,9 @@
+<?php
+include_once '../plantilla/cabecera.php';
+include_once '../plantilla/barraSuperior.php';
+include_once '../plantilla/barra_lateral_usuario.php';
+?>
+
 <script language="javascript">
     $(document).ready(function () {
 
@@ -13,11 +19,7 @@
         });
     });
 </script>
-<?php
-include_once '../plantilla/cabecera.php';
-include_once '../plantilla/barraSuperior.php';
-include_once '../plantilla/barra_lateral_usuario.php';
-?>
+
 
 <form action="" method="post" class="formNatural" name="credito_personal" id="credito_personal" onsubmit="return validarTablas_cper()" enctype="multipart/form-data" autocomplete="off" >
     <input type="hidden" id="pas_cp" name="pas_cp"/>

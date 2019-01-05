@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+include_once '../plantilla/cabecera.php';
+include_once '../plantilla/barraSuperior.php';
+include_once '../plantilla/barra_lateral_usuario.php';
 
-
-   <?php
-   //hola
-include_once 'menu.php';
-?>
+?>   
    
 <body id="mimin" class="dashboard">
 
@@ -13,8 +13,8 @@ include_once 'menu.php';
                 <div class="panel">
                   <div class="panel-body">
                       <div class="col-md-6 col-sm-12">
-                        <h3 class="animated fadeInLeft">Creditos en proceso</h3>
-                        <p class="animated fadeInDown"><span class="fa  fa-map-marker"></span> Batavia,Indonesia</p>
+                        <h3 class="animated fadeInLeft">Créditos en mora</h3>
+                        
 
                       
                     </div>
@@ -43,16 +43,19 @@ include_once 'menu.php';
                             <option>Cancel</option>
                         </select>
                     </div>
-
-
-
                     <div class="col-md-6">
                          <div class="col-lg-12">
                             <div class="input-group">
                               <input type="text" class="form-control" aria-label="...">
                               <div class="input-group-btn">
-                                <button type="button" class="btn btn-danger" aria-label="Help"><span class="glyphicon glyphicon-question-sign"></span></button>
-                               
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search<span class="caret"></span></button>
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                  <li><a href="#">Action</a></li>
+                                  <li><a href="#">Another action</a></li>
+                                  <li><a href="#">Something else here</a></li>
+                                  <li role="separator" class="divider"></li>
+                                  <li><a href="#">Separated link</a></li>
+                                </ul>
                               </div><!-- /btn-group -->
                             </div><!-- /input-group -->
                           </div><!-- /.col-lg-6 -->
@@ -64,12 +67,13 @@ include_once 'menu.php';
                     <thead>
                       <tr>
                         <th><input type="checkbox" class="icheck" name="checkbox1" /></th>
-                      
+                        <th>Codigo</th>
                         <th>Asesor</th>
                         <th>Solicitante</th>
                         <th>Incobrable</th>
                         <th>Tipo Prestamo</th>
                         <th>Monto solicitado($)</th>
+                        <th>Mora Adeudada</th>
                         <th>Tiempo(Meses)</th>
                         <th>Ver pagos</th>
                       </tr>
@@ -77,30 +81,11 @@ include_once 'menu.php';
                     <tbody>
                      
                      
-				                 
+                    
                            
                       
                    
                       <tr>
-                        <td><input type="checkbox" class="icheck" name="checkbox1" /></td>
-                        <td>Colleen Hurst</td>
-                        <td>Javascript Developer</td>
-                        <td>San Francisco</td>
-                        <td>39</td>
-                        <td>2009/09/15</td>
-                        <td>$205,500</td>
-                      </tr>
-
-                      <tr>
-                        <td><input type="checkbox" class="icheck" name="checkbox1" /></td>
-                        <td>Colleen Hurst</td>
-                        <td>Javascript Developer</td>
-                        <td>San Francisco</td>
-                        <td>39</td>
-                        <td>2009/09/15</td>
-                        <td>$205,500</td>
-                      </tr>
-                       <tr>
                         <td><input type="checkbox" class="icheck" name="checkbox1" /></td>
                         <td>Colleen Hurst</td>
                         <td>Javascript Developer</td>
@@ -165,4 +150,3 @@ $(document).ready(function(){
 <!-- end: Javascript -->
 </body>
 </html>
-

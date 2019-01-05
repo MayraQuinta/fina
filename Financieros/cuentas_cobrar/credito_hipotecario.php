@@ -1,3 +1,11 @@
+<?php
+//iiggg
+include_once '../plantilla/cabecera.php';
+include_once '../plantilla/barraSuperior.php';
+include_once '../plantilla/barra_lateral_usuario.php';
+include_once '../app/Conexion.php';
+?>
+
 <script language="javascript">
     $(document).ready(function () {
 
@@ -16,15 +24,6 @@
     });
 
 </script>
-
-
-<?php
-//iiggg
-include_once '../plantilla/cabecera.php';
-include_once '../plantilla/barraSuperior.php';
-include_once '../plantilla/barra_lateral_usuario.php';
-include_once '../app/Conexion.php';
-?>
 
 <form action="" method="post" name="credito_hipotecario" id="credito_personal" onsubmit="return validarTablas_hp()" enctype="multipart/form-data">
     <input type="hidden" id="pas_hp" name="pas_cp"/>
