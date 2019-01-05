@@ -8,7 +8,7 @@
   <meta name="keyword" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
  
-  <title aria-label="Hide Sidebar" >ANÁLISIS FINANCIEROS</title>
+  <title aria-label="Hide Sidebar" >Sistema Financiero</title>
 
   <!-- start: Css -->
   <link rel="stylesheet" type="text/css" href="../asset/css/bootstrap.min.css">
