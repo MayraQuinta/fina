@@ -181,6 +181,6 @@ $(document).ready(function(){
       });
 });
 </script>
-<!-- end: Javascript -->
+<!--  -->
 </body>
 </html>
