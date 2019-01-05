@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <?php
 include_once '../plantilla/cabecera.php';
 include_once '../plantilla/barraSuperior.php';
@@ -14,7 +13,7 @@ include_once '../plantilla/barra_lateral_usuario.php';
                 <div class="panel">
                   <div class="panel-body">
                       <div class="col-md-6 col-sm-12">
-                        <h3 class="animated fadeInLeft">Cuentas Incobrables</h3>
+                        <h3 class="animated fadeInLeft">Créditos en mora</h3>
                         
 
                       
@@ -36,7 +35,7 @@ include_once '../plantilla/barra_lateral_usuario.php';
                 <div class="panel">
                   <div class="panel-body">
                   <div class="col-md-12 padding-0" style="padding-bottom:20px;">
-                    <div class="col-md-4" style="padding-left:10px;">
+                    <div class="col-md-6" style="padding-left:10px;">
                         <input type="checkbox" class="icheck pull-left" name="checkbox1"/>
                         <select>
                             <option>Delete</option>
@@ -49,8 +48,14 @@ include_once '../plantilla/barra_lateral_usuario.php';
                             <div class="input-group">
                               <input type="text" class="form-control" aria-label="...">
                               <div class="input-group-btn">
-                                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Buscar<span class="caret"></span></button>
-                               
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search<span class="caret"></span></button>
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                  <li><a href="#">Action</a></li>
+                                  <li><a href="#">Another action</a></li>
+                                  <li><a href="#">Something else here</a></li>
+                                  <li role="separator" class="divider"></li>
+                                  <li><a href="#">Separated link</a></li>
+                                </ul>
                               </div><!-- /btn-group -->
                             </div><!-- /input-group -->
                           </div><!-- /.col-lg-6 -->
@@ -62,11 +67,14 @@ include_once '../plantilla/barra_lateral_usuario.php';
                     <thead>
                       <tr>
                         <th><input type="checkbox" class="icheck" name="checkbox1" /></th>
-                        <th>Tipo Prestamo</th>
+                        <th>Codigo</th>
                         <th>Asesor</th>
                         <th>Solicitante</th>
-                        <th>Monto adeudado($)</th>
-                        <th>Tiempo(Mese)</th>
+                        <th>Incobrable</th>
+                        <th>Tipo Prestamo</th>
+                        <th>Monto solicitado($)</th>
+                        <th>Mora Adeudada</th>
+                        <th>Tiempo(Meses)</th>
                         <th>Ver pagos</th>
                       </tr>
                     </thead>
@@ -74,7 +82,7 @@ include_once '../plantilla/barra_lateral_usuario.php';
                      
                      
                     
-                    
+                           
                       
                    
                       <tr>

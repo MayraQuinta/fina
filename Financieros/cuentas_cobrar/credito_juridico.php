@@ -1,27 +1,4 @@
-<style>
-    .rojo{
-        color: red;
-    }
-    
-</style>
 
-<script language="javascript">
-    $(document).ready(function () {
-
-        $('form').keypress(function (e) {
-            if (e == 13) {
-                return false;
-            }
-        });
-
-        $('input').keypress(function (e) {
-            if (e.which == 13) {
-                return false;
-            }
-        });
-
-    });
-</script>
 <?php
 include_once '../plantilla/cabecera.php';
 include_once '../plantilla/barraSuperior.php';
@@ -74,6 +51,31 @@ if (isset($_REQUEST['nameEnviar'])) {
 }else {
 
 ?>
+
+<style>
+    .rojo{
+        color: red;
+    }
+    
+</style>
+
+<script language="javascript">
+    $(document).ready(function () {
+
+        $('form').keypress(function (e) {
+            if (e == 13) {
+                return false;
+            }
+        });
+
+        $('input').keypress(function (e) {
+            if (e.which == 13) {
+                return false;
+            }
+        });
+
+    });
+</script>
 
 <form action="credito_juridico.php" autocomplete="off" method="get" name="credito_personal" id="credito_personal" >
     <input type="hidden" id="pas_cp" name="pas_cp"/>

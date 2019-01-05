@@ -14,7 +14,7 @@ include_once '../plantilla/barra_lateral_usuario.php';
                 <div class="panel">
                   <div class="panel-body">
                       <div class="col-md-6 col-sm-12">
-                        <h3 class="animated fadeInLeft">Cuentas Incobrables</h3>
+                        <h3 class="animated fadeInLeft">Cartera Normal</h3>
                         
 
                       
@@ -36,7 +36,7 @@ include_once '../plantilla/barra_lateral_usuario.php';
                 <div class="panel">
                   <div class="panel-body">
                   <div class="col-md-12 padding-0" style="padding-bottom:20px;">
-                    <div class="col-md-4" style="padding-left:10px;">
+                    <div class="col-md-6" style="padding-left:10px;">
                         <input type="checkbox" class="icheck pull-left" name="checkbox1"/>
                         <select>
                             <option>Delete</option>
@@ -44,12 +44,15 @@ include_once '../plantilla/barra_lateral_usuario.php';
                             <option>Cancel</option>
                         </select>
                     </div>
+
+
+
                     <div class="col-md-6">
                          <div class="col-lg-12">
                             <div class="input-group">
                               <input type="text" class="form-control" aria-label="...">
                               <div class="input-group-btn">
-                                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Buscar<span class="caret"></span></button>
+                                <button type="button" class="btn btn-danger" aria-label="Help"><span class="glyphicon glyphicon-question-sign"></span></button>
                                
                               </div><!-- /btn-group -->
                             </div><!-- /input-group -->
@@ -62,22 +65,43 @@ include_once '../plantilla/barra_lateral_usuario.php';
                     <thead>
                       <tr>
                         <th><input type="checkbox" class="icheck" name="checkbox1" /></th>
-                        <th>Tipo Prestamo</th>
+                      
                         <th>Asesor</th>
                         <th>Solicitante</th>
-                        <th>Monto adeudado($)</th>
-                        <th>Tiempo(Mese)</th>
+                        <th>Incobrable</th>
+                        <th>Tipo Prestamo</th>
+                        <th>Monto solicitado($)</th>
+                        <th>Tiempo(Meses)</th>
                         <th>Ver pagos</th>
                       </tr>
                     </thead>
                     <tbody>
                      
                      
-                    
-                    
+				                 
+                           
                       
                    
                       <tr>
+                        <td><input type="checkbox" class="icheck" name="checkbox1" /></td>
+                        <td>Colleen Hurst</td>
+                        <td>Javascript Developer</td>
+                        <td>San Francisco</td>
+                        <td>39</td>
+                        <td>2009/09/15</td>
+                        <td>$205,500</td>
+                      </tr>
+
+                      <tr>
+                        <td><input type="checkbox" class="icheck" name="checkbox1" /></td>
+                        <td>Colleen Hurst</td>
+                        <td>Javascript Developer</td>
+                        <td>San Francisco</td>
+                        <td>39</td>
+                        <td>2009/09/15</td>
+                        <td>$205,500</td>
+                      </tr>
+                       <tr>
                         <td><input type="checkbox" class="icheck" name="checkbox1" /></td>
                         <td>Colleen Hurst</td>
                         <td>Javascript Developer</td>
@@ -142,3 +166,4 @@ $(document).ready(function(){
 <!-- end: Javascript -->
 </body>
 </html>
+
