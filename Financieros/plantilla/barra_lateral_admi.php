@@ -2,7 +2,7 @@
        
             <!-- User Info -->
             
-            <!-- #User Info -->
+            <!-- #User o -->
             <!-- Menu -->
              <div class="container-fluid mimin-wrapper">
   

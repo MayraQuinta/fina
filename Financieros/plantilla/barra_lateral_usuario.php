@@ -2,7 +2,7 @@
 
       <div class="container-fluid mimin-wrapper">
   
-          <!-- start:Left Menu -->
+          <!-- start:L Menu -->
             <div id="left-menu">
               <div class="sub-left-menu scroll">
                 <ul class="nav nav-list">

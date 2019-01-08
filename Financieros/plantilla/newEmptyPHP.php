@@ -1,6 +1,6 @@
 <?PHP
 include_once './cabecera.php';
-
+//
 ?>
 <script type="text/javascript" src="../js/jquery.min2.2.4.js"></script>
 
