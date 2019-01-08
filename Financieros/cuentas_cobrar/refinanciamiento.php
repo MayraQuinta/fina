@@ -28,17 +28,31 @@ $lista_prestamo_natural = repositorio_prestamo::lista_refinanciamiento_naturales
 ?>    
 
 
-<section class="content">
+<div id="content" align="center">
+                <div class="panel">
+                  <div class="panel-body">
+                      <div class="col-md-6 col-sm-12">
+                        <h3 class="animated fadeInLeft">Refinanciamiento</h3>
+                        
+
+                      
+                    </div>
+                  
+                    </div>
+                  </div>                                       
+                   
+     
+ <section class="content">
     <div class="container-fluid">
         <div class="panel" name="libros">
             <div class="panel-heading text-center">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Creditos en Proceso</h3>
+                        <h3>Crédito de Refinanciamiento</h3>
                     </div>
                 </div>
             </div>
-            <div class="panel-body">
+            <div class="panel-body">  
                 <table padding="20px" class="table table-striped" id="data-table-simple">
                     <thead class="">
                     <th class="text-center">Refinanciar</th>

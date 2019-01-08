@@ -11,29 +11,31 @@ include_once '../app/Conexion.php';
 ?>
 
    <!-- start: content -->
-            <div id="content" align="center">
+      <div id="content" align="center">
                 <div class="panel">
                   <div class="panel-body">
                       <div class="col-md-6 col-sm-12">
-                        <h3 class="animated fadeInLeft">Customer Service</h3>
+                        <h3 class="animated fadeInLeft">Registro</h3>
                         
 
                       
                     </div>
                   
                     </div>
-                  </div>                    
+                  </div>                                       
                    
      
- <body id="mimin" class="dashboard">
-
-<div class="col-md-6" align="center">
-                  <div class="col-md-12 panel">
-                    <div class="col-md-12 panel-heading">
-                      <h4>Departamentos</h4>
+ <section class="content">
+    <div class="container-fluid">
+        <div class="panel" name="libros">
+            <div class="panel-heading text-center">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Registro Departamento</h3>
                     </div>
-                    <div class="col-md-12 panel-body" style="padding-bottom:30px;">
-                      <div class="col-md-12">
+                </div>
+            </div>
+            <div class="panel-body">  
 
                       <?php
 

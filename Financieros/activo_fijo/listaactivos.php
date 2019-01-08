@@ -58,21 +58,32 @@ and institucion.id_institucion=activo.id_institucion and encargado.id_encargado=
 ");
 ?>
    
-<body id="mimin" class="dashboard">
-
-     <div id="content">
+<div id="content" align="center">
                 <div class="panel">
                   <div class="panel-body">
                       <div class="col-md-6 col-sm-12">
                         <h3 class="animated fadeInLeft">Activos</h3>
-                        <p class="animated fadeInDown"><span ></span> Sistema Financiero</p>
+                        
 
                       
                     </div>
                   
                     </div>
-                  </div>                    
-     </div>  
+                  </div>                                       
+                   
+     
+ <section class="content">
+    <div class="container-fluid">
+        <div class="panel" name="libros">
+            <div class="panel-heading text-center">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Listado de Activos</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body">  
+                      
 
        
       <div class="container-fluid mimin-wrapper" id="contenido">
@@ -88,17 +99,7 @@ and institucion.id_institucion=activo.id_institucion and encargado.id_encargado=
                   <div class="panel-body">
                   <div class="col-md-12 padding-0" style="padding-bottom:20px;">
                     
-                    <div class="col-md-6">
-                         <div class="col-lg-12">
-                            <div class="input-group">
-                              <input type="text" class="form-control" aria-label="...">
-                              <div class="input-group-btn">
-                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search<span class="caret"></span></button>
-                                
-                              </div><!-- /btn-group -->
-                            </div><!-- /input-group -->
-                          </div><!-- /.col-lg-6 -->
-                    </div>
+                
                  </div>
                   <div class="responsive-table">
                       
@@ -109,8 +110,8 @@ and institucion.id_institucion=activo.id_institucion and encargado.id_encargado=
                       <tr>
                         
                         <th>Correlativos</th>
-                        <th>Departamento</th>
-                        <th>Institucion</th>
+                        <th>Clasificación</th>
+                        <th>Institución</th>
                         <th>Encargado</th>
                         <th>Precio($)</th>
                         <th>Acciones</th>

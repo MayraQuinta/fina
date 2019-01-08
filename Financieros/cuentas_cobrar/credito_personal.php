@@ -21,6 +21,32 @@ include_once '../plantilla/barra_lateral_usuario.php';
 </script>
 
 
+<div id="content" >
+                <div class="panel">
+                  <div class="panel-body">
+                      <div class="col-md-6 col-sm-12">
+                        <h3 class="animated fadeInLeft"><strong>Registro Crédito</strong></h3>
+                        
+
+                      
+                    </div>
+                  
+                    </div>
+                  </div>                                       
+                   
+     <br>
+ <section class="content">
+    <div class="container-fluid">
+        <div class="panel" name="libros">
+            <div class="panel-heading text-center">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Crédito Personal</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body">  
+
 <form action="" method="post" class="formNatural" name="credito_personal" id="credito_personal" onsubmit="return validarTablas_cper()" enctype="multipart/form-data" autocomplete="off" >
     <input type="hidden" id="pas_cp" name="pas_cp"/>
     <input type="hidden" id="n" name="n" value="1"/>
@@ -47,7 +73,7 @@ include_once '../plantilla/barra_lateral_usuario.php';
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label>Tipo Credito</label>
+                                                <label>Tipo Crédito</label>
                                                 <select class="form-control accion_select" onchange="cambiar(this.value)" id="cual" name="cual" >
                                                     <option value="1" >PERSONAL</option>
                                                     <option value="2" >HIPOTECARIO</option>
@@ -65,12 +91,12 @@ include_once '../plantilla/barra_lateral_usuario.php';
                                 <table class="table table-striped table-bordered" id="tabla_cliente_cpersonal">
                                     <caption>CLIENTE</caption>
                                     <thead>
-                                    <th>Codigo</th>
+                                    <th>Código</th>
                                     <th>Nombre</th>
                                     <th>Dui</th>
                                     <th>Nit</th>
-                                    <th>Telefono</th>
-                                    <th>Direccion</th>  
+                                    <th>Teléfono</th>
+                                    <th>Dirección</th>  
                                     </thead>
                                     <tbody>
 
@@ -81,8 +107,8 @@ include_once '../plantilla/barra_lateral_usuario.php';
                                     <thead>
                                     <th>&nbsp;</th>    
                                     <th>Nombre</th>
-                                    <th>Telefono</th>
-                                    <th>Direccion</th>                                   
+                                    <th>Teléfono</th>
+                                    <th>Dirección</th>                                   
                                     </thead>
                                     <tbody>
 
@@ -95,7 +121,7 @@ include_once '../plantilla/barra_lateral_usuario.php';
             </div>
         </div>
         <!--    FIN DE DATOS-->
-
+        
         <!--INICIO BIEN-->
         <div class="container-fluid" id="containeBien" style="display: none ">
             <!-- Basic Validation -->
@@ -113,7 +139,7 @@ include_once '../plantilla/barra_lateral_usuario.php';
                                             <div class="form-line">
 
                                                 <span class="input-group-addon" id="basic-addon1">UBICACION</span>
-                                                <input type="text"class="form-control text-center"  id="hubica" name="hubica" placeholder="UBICACION...">
+                                                <input type="text" class="form-control text-center"  id="hubica" name="hubica" placeholder="UBICACION...">
 
                                             </div>
                                         </div>
@@ -166,7 +192,7 @@ include_once '../plantilla/barra_lateral_usuario.php';
                                         <div class="form-group">
                                             <div class="form-line">
                                                 <span class="input-group-addon" id="basic-addon1">NOMBRE</span>
-                                                <input type="text"class="form-control text-center" required="" minlength="3" id="Nombre_fia_per" name="Nombre_fia_per" placeholder="NOMBRE...">
+                                                <input type="text" class="form-control text-center" required="" minlength="3" id="Nombre_fia_per" name="Nombre_fia_per" placeholder="NOMBRE...">
                                             </div>
                                         </div>
                                     </div>
@@ -363,15 +389,21 @@ include_once '../plantilla/barra_lateral_usuario.php';
                                     <div class="col-md-3">
                                         <div class="text-center">
 
-                                            <button type="button" onclick="cuota_per()" class="btn btn-primary m-t-15 waves-effect">CALCULAR</button>
+                                            <button type="button" onclick="cuota_per()" class="btn ripple-infinite btn-round btn-primary"><div>
+                                      <span>Calcular</span>
+                                    </div></button>
                                         </div></div>
                                 </div>
                                 <div class="text-center">
 
                                 </div>
                                 <div class="row"><div class="text-center">
-                                        <button type="button" style="visibility: hidden" onclick="cuota_per()" class="btn btn-primary m-t-15 waves-effect">CALCULAR</button>
+                                        <button type="button" style="visibility: hidden" onclick="cuota_per()" class="btn ripple-infinite btn-round btn-primary"><div>
+                                      <span>Calcular</span>
+                                    </div></button>
                                     </div></div>
+
+
                                 <div class="row clearfix">
 
 
@@ -424,10 +456,18 @@ include_once '../plantilla/barra_lateral_usuario.php';
                                 </div>
 
 
-                                <div class="text-center">
-                                    <button type="submit" form="credito_personal" class="btn btn-primary m-t-15 waves-effect">GUARDAR</button>
-                                    <button type="reset" form="credito_personal" class="btn btn-primary m-t-15 waves-effect">CANCELAR</button>
-                                </div>
+                                <div class="col-md-12 panel-footer">
+                            <div class="text-center">
+                                <button type="submit" class="btn ripple-infinite btn-round btn-primary" form="credito_personal" ><div>
+                                      <span>Guardar</span>
+                                    </div></button>
+                                <button type="reset" class="btn ripple-infinite btn-round btn-primary" form="credito_personal" >
+                                    <div>
+                                      <span>Cancelar</span>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
 
                             </div>
                         </div>

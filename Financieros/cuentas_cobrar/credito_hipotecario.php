@@ -25,6 +25,33 @@ include_once '../app/Conexion.php';
 
 </script>
 
+<div id="content" align="center">
+                <div class="panel">
+                  <div class="panel-body">
+                      <div class="col-md-6 col-sm-12">
+                        <h3 class="animated fadeInLeft">Registro Crédito</h3>
+                        
+
+                      
+                    </div>
+                  
+                    </div>
+                  </div>                                       
+                   
+     
+ <section class="content">
+    <div class="container-fluid">
+        <div class="panel" name="libros">
+            <div class="panel-heading text-center">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Crédito Hipotecario</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body">  
+
+
 <form action="" method="post" name="credito_hipotecario" id="credito_personal" onsubmit="return validarTablas_hp()" enctype="multipart/form-data">
     <input type="hidden" id="pas_hp" name="pas_cp"/>
     <input type="radio" id="uno" checked="" style="visibility: hidden"/>

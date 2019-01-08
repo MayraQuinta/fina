@@ -1,3 +1,9 @@
+<?php
+include_once '../plantilla/cabecera.php';
+include_once '../plantilla/barraSuperior.php';
+include_once '../plantilla/barra_lateral_usuario.php';
+?>
+
 <script language="javascript">
     $(document).ready(function () {
 
@@ -18,11 +24,31 @@
 
     });
 </script>
-<?php
-include_once '../plantilla/cabecera.php';
-include_once '../plantilla/barraSuperior.php';
-include_once '../plantilla/barra_lateral_usuario.php';
-?>
+<div id="content" align="center">
+                <div class="panel">
+                  <div class="panel-body">
+                      <div class="col-md-6 col-sm-12">
+                        <h3 class="animated fadeInLeft">Abono</h3>
+                        
+
+                      
+                    </div>
+                  
+                    </div>
+                  </div>                                       
+                   
+     
+ <section class="content">
+    <div class="container-fluid">
+        <div class="panel" name="libros">
+            <div class="panel-heading text-center">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Abono</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body">
 
 
 <section class="content">

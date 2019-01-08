@@ -10,29 +10,31 @@ include_once '../plantilla/barra_lateral_usuario.php';
 include_once '../app/Conexion.php';
 ?>
    <!-- start: content -->
-            <div id="content">
+            <div id="content" align="center">
                 <div class="panel">
                   <div class="panel-body">
                       <div class="col-md-6 col-sm-12">
-                        <h3 class="animated fadeInLeft">Registro de Activos</h3>
-                        <p class="animated fadeInDown"><span class="fa  fa-map-marker"></span> Batavia,Indonesia</p>
+                        <h3 class="animated fadeInLeft">Registro</h3>
+                        
 
                       
                     </div>
                   
                     </div>
-                  </div>                    
-                </div>   
+                  </div>                                       
+                   
      
- <body id="mimin" class="dashboard">
-
-<div class="col-md-9" align="center">
-                  <div class="col-md-12 panel">
-                    <div class="col-md-12 panel-heading">
-                      <h4>Registro de Activo Fijo</h4>
+ <section class="content">
+    <div class="container-fluid">
+        <div class="panel" name="libros">
+            <div class="panel-heading text-center">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Registro Activo Fijo</h3>
                     </div>
-                    <div class="col-md-12 panel-body" style="padding-bottom:30px;">
-                      <div class="col-md-12">
+                </div>
+            </div>
+            <div class="panel-body">  
 
 <?php
 
@@ -136,19 +138,18 @@ $sql = "INSERT INTO activo (id_tipo, id_departamento, id_institucion, id_usuario
 
                                              
 
-                                              <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                        <div class="form-group form-animate-text" style="margin-top:40px !important;">
                               <input type="text" class="form-text"  name="descripcion" required="" aria-required="true">
                               <span class="bar"></span>
                               <label>Descripción</label>
                             </div>   
 
-                            <div class="form-group form-animate-text">
-                          <input type="text"  name="fecha" class="form-text mask-selectonfocus " required>
-                          <span class="bar"></span>
-                          <label><span class="fa fa-calendar"></span> Fecha de adquisición</label>
-
-              
-                        </div>
+                        <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                                            <label>Fecha Adquisicion</label><br>
+                                          <span class="bar" id="basic-addon1"></span>
+                                                <input type="date"  class="form-text mask-selectonfocus " required="" name="fecha" placeholder="FECHA ADQUISICION">
+                                            </div>
+                                      
                                     
                                  
  

@@ -77,6 +77,33 @@ if (isset($_REQUEST['nameEnviar'])) {
     });
 </script>
 
+<div id="content" align="center">
+                <div class="panel">
+                  <div class="panel-body">
+                      <div class="col-md-6 col-sm-12">
+                        <h3 class="animated fadeInLeft">Registro Crédito</h3>
+                        
+
+                      
+                    </div>
+                  
+                    </div>
+                  </div>                                       
+                   
+     
+ <section class="content">
+    <div class="container-fluid">
+        <div class="panel" name="libros">
+            <div class="panel-heading text-center">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Crédito Jurídico</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body">  
+
+
 <form action="credito_juridico.php" autocomplete="off" method="get" name="credito_personal" id="credito_personal" >
     <input type="hidden" id="pas_cp" name="pas_cp"/>
     <input type="radio" id="uno" checked="" style="visibility: hidden"/>

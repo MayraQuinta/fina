@@ -90,15 +90,17 @@ if (isset($_REQUEST['nameEnviar'])) {
                   </div>                    
                    
      
- <body id="mimin" class="dashboard">
-
-<div class="col-md-6" align="center">
-                  <div class="col-md-12 panel">
-                    <div class="col-md-12 panel-heading">
-                      <h4>Persona Jurídica</h4>
+ <section class="content">
+    <div class="container-fluid">
+        <div class="panel" name="libros">
+            <div class="panel-heading text-center">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Persona Jurídica</h3>
                     </div>
-                    <div class="col-md-15 panel-body" style="padding-bottom:30px;">
-                      <div class="col-md-15"> 
+                </div>
+            </div>
+            <div class="panel-body">   
 
 <form action="registro_juridico.php" method="GET" autocomplete="off">
         <!--    INICIO DE DATOS-->
@@ -286,7 +288,7 @@ if (isset($_REQUEST['nameEnviar'])) {
                             </div>
                         </div>
                     </div>
-                </div>
+                
 
             </div>
 
@@ -379,15 +381,20 @@ if (isset($_REQUEST['nameEnviar'])) {
                         </div>
                     </div>
                 </div>
-                <div class="row clearfix">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="card">
+             </div>
+
+                <div class="col-md-12 panel-footer">
                             <div class="text-center">
-                                <button type="submit" name="nameEnviar" class="btn btn-primary m-t-15 waves-effect" value="ok">GUARDAR</button>
+                                <button type="submit" class="btn ripple-infinite btn-round btn-primary" value="ok" name="nameEnviar"><div>
+                                      <span>Guardar</span>
+                                    </div></button>
+                                <button type="reset" class="btn ripple-infinite btn-round btn-primary">
+                                    <div>
+                                      <span>Cancelar</span>
+                                    </div>
+                                </button>
                             </div>
                         </div>
-                    </div>
-                </div>
 
             </div>
 

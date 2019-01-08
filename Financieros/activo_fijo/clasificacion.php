@@ -76,30 +76,31 @@ if (isset($_REQUEST['nameEnviar'])) {
     ?>
 
    <!-- start: content -->
-            <div id="content">
+            <div id="content" align="center">
                 <div class="panel">
                   <div class="panel-body">
                       <div class="col-md-6 col-sm-12">
-                        <h3 class="animated fadeInLeft">Customer Service</h3>
-                        <p class="animated fadeInDown"><span class="fa  fa-map-marker"></span> Batavia,Indonesia</p>
+                        <h3 class="animated fadeInLeft">R</h3>
+                        
 
                       
                     </div>
                   
                     </div>
-                  </div>                    
-                </div>   
-
-<body id="mimin" class="dashboard">
+                  </div>                                       
+                   
      
-      <div class="container-fluid mimin-wrapper">
-
-          <div id="content">
-            
-            <div class="col-md-12">
-                <div class="panel">
-                    <div class="panel-heading"></div>
-                    <div class="panel-body">
+ <section class="content">
+    <div class="container-fluid">
+        <div class="panel" name="libros">
+            <div class="panel-heading text-center">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Clasificación</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body">  
                         <form id="example1" action="#">
                             <h1>Cliente</h1>
                             <fieldset>

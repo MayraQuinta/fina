@@ -1,3 +1,11 @@
+<?php
+//iiggg
+include_once '../plantilla/cabecera.php';
+include_once '../plantilla/barraSuperior.php';
+include_once '../plantilla/barra_lateral_usuario.php';
+include_once '../app/Conexion.php';
+?>
+
 <script language="javascript">
     $(document).ready(function () {
 
@@ -16,9 +24,6 @@
     });
 </script>
 <?php
-include_once '../plantilla/cabecera.php';
-include_once '../plantilla/barraSuperior.php';
-include_once '../plantilla/barra_lateral_usuario.php';
 
 if (isset($_REQUEST['nameEnviar'])) {
 
@@ -74,7 +79,31 @@ if (isset($_REQUEST['nameEnviar'])) {
          </script>';
 } else {
     ?>
+<div id="content" align="center">
+                <div class="panel">
+                  <div class="panel-body">
+                      <div class="col-md-6 col-sm-12">
+                        <h3 class="animated fadeInLeft">Estados</h3>
+                        
 
+                      
+                    </div>
+                  
+                    </div>
+                  </div>                                       
+                   
+     
+ <section class="content">
+    <div class="container-fluid">
+        <div class="panel" name="libros">
+            <div class="panel-heading text-center">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Estado Financiero</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body">
 <form action="estados_financieros.php" method="get" name="credito_personal" id="credito_personal" autocomplete="off">
         <input type="hidden" id="pas_cp" name="pas_cp"/>
         <input type="radio" id="uno" checked="" style="visibility: hidden"/>
@@ -103,7 +132,7 @@ if (isset($_REQUEST['nameEnviar'])) {
 
                                                     </i><label for="" style="font-size:16px">Periodo</label>
                                                     
-                                                    <input type="number" class="form-control" name="NamePeriodo" autofocus min="2000" max="2016">
+                                                    <input type="number" class="form-control" name="NamePeriodo" autofocus min="2000" max="2018">
                                                 </div>              
                                             </div>
                                             

@@ -8,17 +8,21 @@
                 <ul class="nav nav-list">
                     <li><div class="left-bg"></div></li>
                     <li class="time">
-                      <h1 class="animated fadeInLeft">21:00</h1>
-                      <p class="animated fadeInRight">Sat,October 1st 2029</p>
+                      <h1 class="animated fadeInLeft"><strong>21:00</strong></h1>
+                      <p class="animated fadeInRight"><strong>Sat,October 1st 2029</strong></p>
                     </li>
 
+<li class="ripple"><a href="../home/home_usuario.php">
+                    <span class="fa-home fa"></span>Inicio </a>
+                      
+                    </li>
                  <li class="ripple"><a style="color: #dc7777">
                     <span class="fa-home fa"></span>CUENTAS POR COBRAR </a>
                       
                     </li>
                     
                     <li class="active ripple">
-                      <a class="tree-toggle nav-header" ><span class="fa fa-pencil-square" ></span>Registro de Clientes 
+                      <a class="tree-toggle nav-header" ><span class="fa fa-pencil-square" ></span><strong>Registro de Clientes</strong> 
                         <span class="fa-angle-right fa right-arrow text-right"></span>
                       </a>
                       <ul class="nav nav-list tree" >
@@ -28,7 +32,7 @@
                     </li>
                     <li class="ripple">
                       <a class="tree-toggle nav-header">
-                        <span class="fa-diamond fa"></span> Registro de Crédito
+                        <span class="fa-diamond fa"></span><strong> Registro de Crédito</strong>
                         <span class="fa-angle-right fa right-arrow text-right"></span>
                       </a>
                       <ul class="nav nav-list tree">
@@ -46,18 +50,18 @@
                       </a>
                       <ul class="nav nav-list tree">
                         <li><a href="../cuentas_cobrar/cartera_normal.php">Normal</a></li>
-                        <li><a href="../cuentas_cobrar/cartera_incobrable.php">Mora</a></li>
-                        <li><a href="../cuentas_cobrar/cartera_mora.php">Incobrables</a></li>
+                        <li><a href="../cuentas_cobrar/cartera_mora.php">Mora</a></li>
+                        <li><a href="../cuentas_cobrar/cartera_incobrable.php">Incobrables</a></li>
                       </ul>
                     </li>
                     <li class="ripple"><a href="../cuentas_cobrar/refinanciamiento.php">
                     <span class="fa fa-pencil-square"></span>Refinanciamiento </a>
                       
                     </li>
-                    <li class="ripple"><a class="tree-toggle nav-header" href="../cuentas_cobrar/estados_financieros.php"><span class="fa fa-check-square-o"></span>Estados Financieros   </a>
+                    <li class="ripple"><a href="../cuentas_cobrar/estados_financieros.php"><span class="fa fa-check-square-o"></span>Estados Financieros   </a>
                       
                     </li>
-                    <li class="ripple"><a class="tree-toggle nav-header" href="../cuentas_cobrar/abono.php"><span class="fa fa-table"></span> Registro de Abono  </a>
+                    <li class="ripple"><a href="../cuentas_cobrar/abono.php"><span class="fa fa-table"></span> Registro de Abono  </a>
                       
                     </li>
 
@@ -67,8 +71,12 @@
                       
                     </li>
 
-                    <li class="ripple"><a class="tree-toggle nav-header" href="../activo_fijo/listaactivos.php"><span class="fa fa-envelope-o"></span>Lista de Activo  </a>
+                    <li class="ripple"><a href="../activo_fijo/listaactivos.php"><span class="fa fa-envelope-o"></span>Lista de Activo  </a>
                       </li>
+
+                      <li class="ripple"><a href="../activo_fijo/registroactivo.php"><span class="fa fa-file-code-o"></span>Registro Activo  </a>
+                      
+                    </li>
 
                     <li class="ripple"><a href="../activo_fijo/tipoactivo.php"><span class="fa fa-file-code-o"></span>Registro Tipo de Activo  </a>
                       

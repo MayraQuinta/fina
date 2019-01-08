@@ -3,9 +3,12 @@
  */
 
 body {
-  background-image:url(../asset/img/imagenn.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: url('../asset/img/imagenn.jpg');
+  background-repeat: repeat-x;
+  height: 100px;
+  left: 0;
+  position: relative;
+  margin-left: -2px;
   font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 13px;
   background-color:#f0f3f4;
@@ -300,7 +303,16 @@ p.quote{
 /*end: product grid*/
 
 /*start: Login*/
- .form-signin-wrapper{background: #0d7965 !important;}
+ .form-signin-wrapper{
+  
+  background: url('../img/logo13.jpg');
+  background-repeat: repeat-x;
+  height: 500px;
+  left: 0;
+  position: relative;
+  margin-left: 0px;
+  
+}
  .form-signin{
          max-width: 330px;
          padding: 15px;
@@ -309,7 +321,13 @@ p.quote{
     .form-signin a{color: #fff !important;font-weight: bold;}
     .form-signin .btn{margin-top: 30px;}
     .form-signin .form-group{margin-bottom: 20px !important;}
-    .form-signin .panel{background: #2196f3;color: #fff;padding: 10px;border:none !important;box-shadow: 0 7px 16px #c7c70c, 0 4px 5px #159a35;}
+    .form-signin .panel{
+          background: #6cd0efab;
+    color: var(--primary);
+    padding: 10px;
+    border: none !important;
+    box-shadow: 0 7px 20px 4px #1646d0, 0 4px 5px #5e6632;
+    }
     .form-signin .panel-body{padding-bottom: 50px;padding-top: 30px;}
     .form-signin .atomic-number{font-size: 20px;}
     .form-signin .atomic-symbol{font-size: 10em !important;font-weight: 500;padding-bottom: 20spx;}
@@ -471,11 +489,25 @@ p.quote{
   border-radius:0px;
   padding: 0px;
   border: none;
+  
+  color: #333 !important;
 }
+
+.panel-default{
+  border-radius:0px;
+  padding: 0px;
+  border: none;
+  background: #e6daf1;
+  color: #333 !important;
+}
+
+
+
 
 .panel-heading{
   line-height: 1.42857143 !important;
   color: #fffdfd !important;
+
 }
 
 .panel-heading,.fc-head{
@@ -1946,7 +1978,7 @@ ul li a:focus {
 /*-----Left menu-------*/
 #left-menu{}
 #left-menu .left-bg {
-  background: url('../img/left-bg.png');
+  background: url('../img/des.jpg');
   background-repeat: repeat-x;
   height: 100px;
   left: 0;
@@ -1956,7 +1988,7 @@ ul li a:focus {
 
 
 #left-menu .sub-left-menu {
-  background-color: #fff;
+  background-color: #e6daf1;
   left: 0;
   padding-top: 50px;
   z-index: 222;
@@ -2015,7 +2047,7 @@ ul li a:focus {
   font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 70px;
   text-align: center;
-  color: #918C8C;
+  color: #870bca;
 }
 
 #left-menu .sub-left-menu .time p {

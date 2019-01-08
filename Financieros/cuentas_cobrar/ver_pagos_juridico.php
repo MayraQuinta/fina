@@ -12,19 +12,34 @@ include_once '../app/Conexion.php';
 Conexion::abrir_conexion();
 $pagos = repositorio_expediente_juridico::lista_pagos_previos_jurdico(Conexion::obtener_conexion(), $_REQUEST['id_prestamo']);
 
-?>    
-<section class="content">
+?>
 
+<div id="content" align="center">
+                <div class="panel">
+                  <div class="panel-body">
+                      <div class="col-md-6 col-sm-12">
+                        <h3 class="animated fadeInLeft">Pagos</h3>
+                        
+
+                      
+                    </div>
+                  
+                    </div>
+                  </div>                                       
+                   
+     
+ <section class="content">
     <div class="container-fluid">
         <div class="panel" name="libros">
             <div class="panel-heading text-center">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>HISTORIAL DE PAGOS</h3>
+                        <h3>Historial de Pagos</h3>
                     </div>
                 </div>
             </div>
-            <div class="panel-body">
+            <div class="panel-body">  
+
                 <table class="table table-striped table-bordered" id="tabla_cliente_juridico">
 
                     <thead>

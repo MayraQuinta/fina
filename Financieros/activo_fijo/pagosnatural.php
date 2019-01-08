@@ -9,33 +9,31 @@ include_once '../plantilla/barra_lateral_usuario.php';
 include_once '../app/Conexion.php';
 ?>
    
-<body id="mimin" class="dashboard">
-
-     <div id="content">
+<div id="content" align="center">
                 <div class="panel">
                   <div class="panel-body">
                       <div class="col-md-6 col-sm-12">
-                        <h3 class="animated fadeInLeft">Historial de pagos</h3>
-                        <p class="animated fadeInDown"><span class="fa  fa-map-marker"></span> Batavia,Indonesia</p>
+                        <h3 class="animated fadeInLeft">Pagos</h3>
+                        
 
                       
                     </div>
                   
                     </div>
-                  </div>                    
-     </div>   
+                  </div>                                       
+                   
      
-      <div class="container-fluid mimin-wrapper">
-  
-      
-
-          <!-- start: Content -->
-          <div id="content">
-             
-            <div class="col-md-12 top-10 padding-0">
-              <div class="col-md-12">
-                <div class="panel">
-                  <div class="panel-body">
+ <section class="content">
+    <div class="container-fluid">
+        <div class="panel" name="libros">
+            <div class="panel-heading text-center">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Historial de Pagos</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body">  
                   <div class="col-md-12 padding-0" style="padding-bottom:20px;">
                     <div class="col-md-6" style="padding-left:10px;">
                         <input type="checkbox" class="icheck pull-left" name="checkbox1"/>

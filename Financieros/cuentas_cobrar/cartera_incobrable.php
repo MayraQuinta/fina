@@ -29,7 +29,19 @@ $lista_prestamo = repositorio_prestamo::lista_prestamo_incobrable_juridico(Conex
 $lista_prestamo_natural = repositorio_prestamo::lista_prestamo_incobrable_naturales(Conexion::obtener_conexion());
 ?>    
 
+<div id="content" align="center">
+                <div class="panel">
+                  <div class="panel-body">
+                      <div class="col-md-6 col-sm-12">
+                        <h3 class="animated fadeInLeft">Registro</h3>
+                        
 
+                      
+                    </div>
+                  
+                    </div>
+                  </div>                    
+                   
 <section class="content">
     <div class="container-fluid">
         <div class="panel" name="libros">

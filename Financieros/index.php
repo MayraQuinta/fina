@@ -91,26 +91,26 @@
           <div class="panel periodic-login">
               <span class="atomic-number"></span>
               <div class="panel-body text-center">
-                  <h1 class="atomic-mass">SISTEMA FINANCIERO</h1>
-                  <p class="atomic-mass">2018</p>
-                  <div class="col-sm-12 text-center">
+                  <h1 class="atomic-mass"><strong>SISTEMA FINANCIERO</strong></h1>
+                  <p class="atomic-mass" ></p>
+                  <!--  <div class="col-sm-12 text-center">
                     <img src="../asset/img/imagenn.jpg" style="width: 100px;height:100px;">
                   </div>
                   
 
-                  <i class="icons icon-arrow-down"></i>
+                  <i class="icons icon-arrow-down"></i>-->
                   <div class="form-group form-animate-text" style="margin-top:40px !important;">
                     <input type="text" class="form-text" name="nameUsuario" required autocomplete="off">
                     <span class="bar"></span>
-                    <label>Usuario</label>
+                    <label ><strong>Usuario</strong></label>
                   </div>
                   <div class="form-group form-animate-text" style="margin-top:40px !important;">
                     <input type="password" class="form-text" name="namePass" required>
                     <span class="bar"></span>
-                    <label>Contraseña</label>
+                    <label><strong>Contraseña</strong></label>
                   </div>
                   <div class="col-xs-12">
-                        <button class="btn btn-block bg-blue waves-effect" type="submit" name="nameEnviar" value="ok" style="background-color: #FF8E31;"><i class="fa fa-sign-in fa-lg fa-fw"></i><span>Iniciar</span>       
+                        <button class="btn btn-block bg-blue waves-effect" type="submit" name="nameEnviar" value="ok" style="background-color: #FF8E31;"><i class="fa fa-sign-in fa-lg fa-fw"></i><span><strong>Iniciar</strong></span>       
                       <div class="dot"></div>
                                 </div>
               </div>
@@ -158,7 +158,14 @@
 
          body {    height: 100vh;    display: flex;    justify-content: center;    align-items: center;    flex-flow: wrap;    background: var(--bg);    font-size: 15px;    font-family: 'Titillium Web', sans-serif;}
          h1 {    color: var(--solid);    font-size: 2rem;    margin-top: 2rem;   }
-         .btn {    position: center;    margin: 0 auto;    width: var(--btn-w);    color: var(--primary);    border: .15em solid var(--primary);    text-align: center;    font-size: 1.3em;    line-height: 1em;    cursor: pointer;    }
+         .btn {    position: center;  
+           margin: 0 auto;   
+            width: var(--btn-w);   
+             color: var(--primary);  
+               border: .15em solid var(--primary); 
+                  text-align: center;    font-size: 1.3em;    
+                  line-height: 1em;    cursor: pointer;    }
+
          .dot {    content: '';    position: absolute;    top: 0;    width: var(--dot-w);    height: 100%;    border-radius: 100%;    transition: all 500ms ease;    display: none;}
          .dot:after {    content: '';    position: absolute;    left: calc(90% - .4em);    top: -.4em;    height: .8em;    width: .8em;    background: var(--primary);    border-radius: 1em;    border: .25em solid var(--solid);    box-shadow: 0 0 .7em var(--solid),                0 0 2em var(--primary);}
          .btn:hover .dot,.btn:focus .dot {    animation: atom 2s infinite linear;    display: block;}
