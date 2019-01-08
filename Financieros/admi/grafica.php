@@ -12,7 +12,7 @@ include_once '../app/Conexion.php';
 include_once '../repositorios/repositorio_expediente_juridico.php';
 include_once '../modelos/persona_juridica.php';
 include_once '../repositorios/repositorio_juridico.php';
-
+///
 Conexion::abrir_conexion();
 
 $lista_balance = repositorio_balance::lista_balance(Conexion::obtener_conexion(), $_REQUEST['id_juridico']);

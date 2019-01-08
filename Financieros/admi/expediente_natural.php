@@ -136,7 +136,7 @@ if (isset($_REQUEST['tipo'])) {
                                         <thead>
 
                                         <th class="text-center">Nombre</th>
-                                        <th class="text-center">Direccion</th>
+                                        <th class="text-center">Direccin</th>
                                         <th class="text-center">Dui</th>
                                         <th class="text-center">Nit</th>
                                         <th class="text-center">Correo</th>
