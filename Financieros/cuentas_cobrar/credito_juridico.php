@@ -135,7 +135,7 @@ if (isset($_REQUEST['nameEnviar'])) {
                                 <caption>CLIENTE</caption>
                                 <thead>
                                 <th>Codigo</th>
-                                <th>Nombre de la empresa</th>
+                                <th>Nombre de  empresa</th>
                                 <th>Numero de empresa</th>
                                 <th>Dui de Representante</th>
                                 <th>Nit de Representante</th>

@@ -334,7 +334,7 @@ include_once '../plantilla/barra_lateral_usuario.php';
         </div>
         <!--FIN DE REFERENCIA-->
 
-        <!--INICIO DATO DE CREDITO-->
+        <!--INICIO DATO  CREDITO-->
         <div class="container-fluid">
             <!-- Basic Validation -->
             <div class="row clearfix">

@@ -21,7 +21,7 @@ if (isset($_REQUEST['nameEnviar'])) {
     
     Conexion::abrir_conexion();
     
-    ////////esto es para guardar persona juridica
+    ////////esto es para guardar  juridica
     $juridica = new persona_juridica();
     $juridica->setId_nombre($_REQUEST['nameNombre']);
     $juridica->setNumero($_REQUEST['nameNumero']);

@@ -6,7 +6,7 @@ Conexion::abrir_conexion();
 
 $listado = repositorio_expediente_natural::obtener_persona_natural(Conexion::obtener_conexion(), $_POST['libro']);
 $id = $_POST['idtabla'];
-//$numero=$_POST['numero'];
+//$numero=$_POS['numero'];
 
 foreach ($listado as $fila) {
     ?>

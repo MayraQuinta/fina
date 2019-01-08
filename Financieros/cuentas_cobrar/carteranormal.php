@@ -28,7 +28,7 @@ include_once '../plantilla/barra_lateral_usuario.php';
   
       
 
-          <!-- start: Content -->
+          <!-- start Content -->
           <div id="content">
              
             <div class="col-md-12 top-10 padding-0">

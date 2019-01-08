@@ -12,7 +12,7 @@ $fila=$listado;// echo '<script language="javascript">alert("'.$fila->getId_nomb
 <script type="text/javascript">
     
      var codigo="<?php echo $fila->getId_persona_juridica(); ?>";    
-   //var pass=doSearch(codigo);
+   //var pass=doSerch(codigo);
    if(true){
         
         var nombre="<?php echo  $fila->getId_nombre(); ?>";

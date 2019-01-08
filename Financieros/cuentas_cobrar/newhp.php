@@ -9,7 +9,7 @@ include_once '../app/Conexion.php';
 
 
     Conexion::abrir_conexion();
-//echo '<script language="javascript">alert("juas");</script>'; 
+//echo '<script languag="javascript">alert("juas");</script>'; 
     
     
 

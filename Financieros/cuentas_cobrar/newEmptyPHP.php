@@ -11,7 +11,7 @@
                 des2 = document.getElementById("footer");
                 des.style.display = 'none';
                 des2.style.display = 'none';
-                //se imprime la pagina
+                //s imprime la pagina
                 window.print();
                 //reaparece el boton
                 des.style.display = 'inline';

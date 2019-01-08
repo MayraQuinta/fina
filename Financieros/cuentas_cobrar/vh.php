@@ -6,7 +6,7 @@ include_once '../plantilla/barra_lateral_usuario.php';
 <form action="" method="GET">
     
     <section class="content">
-        <!--    INICIO DE DATOS-->
+        <!--    INICIO  DATOS-->
         <div class="container-fluid">
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">

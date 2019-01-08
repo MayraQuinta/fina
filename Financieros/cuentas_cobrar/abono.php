@@ -52,7 +52,7 @@ include_once '../plantilla/barra_lateral_usuario.php';
 
 
 <section class="content">
-    <!--    INICIO DE DATOS-->
+    <!--    INICIO DE DATS-->
 
     <div class="container-fluid">
         <div class="row clearfix">

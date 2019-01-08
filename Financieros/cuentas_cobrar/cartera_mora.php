@@ -57,7 +57,7 @@ if (isset($_REQUEST['id_prestamo'])) {
                         <th class="text-center">Incobrable</th>
                         <th class="text-center">codigo</th>
                         <th class="text-center">Asesor</th>
-                        <th class="text-center">Solicitante</th>
+                        <th class="text-center">Solicitantes</th>
                         <th class="text-center">Tipo Prestamo</th>
                         <th class="text-center">Monto solicitado($)</th>
                         <th class="text-center">Tiempo(Meses)</th>

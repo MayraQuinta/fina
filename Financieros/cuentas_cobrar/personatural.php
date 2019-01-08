@@ -6,7 +6,7 @@
    <?php
 include_once 'menu.php';
 ?>
-   <!-- start: content -->
+   <!-- start: contnt -->
             <div id="content">
                 <div class="panel">
                   <div class="panel-body">

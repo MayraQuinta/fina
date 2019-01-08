@@ -56,7 +56,7 @@ $lista_prestamo_natural = repositorio_prestamo::lista_refinanciamiento_naturales
                 <table padding="20px" class="table table-striped" id="data-table-simple">
                     <thead class="">
                     <th class="text-center">Refinanciar</th>
-                    <th class="text-center">Asesor</th>
+                    <th class="text-center">Asesors</th>
                     <th class="text-center">Solicitante</th>
                     <th class="text-center">Tipo Prestamo</th>
                     <th class="text-center">Monto solicitado($)</th>

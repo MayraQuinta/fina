@@ -51,7 +51,7 @@ $lista_prestamo_natural = repositorio_prestamo::lista_prestamo_normales_naturale
             <div class="panel-heading text-center">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Créditos en Proceso</h3>
+                        <h3>Créditos  Proceso</h3>
                     </div>
                 </div>
             </div>

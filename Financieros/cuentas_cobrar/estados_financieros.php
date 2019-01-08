@@ -168,7 +168,7 @@ if (isset($_REQUEST['nameEnviar'])) {
                         <div class="card">
                             <div class="header">
                                 <a data-toggle="collapse" data-parent="#accordion" href="#collapse-balance">
-                                    <h2 class="text-center">BALANCE GENERAL</h2>
+                                    <h2 class="text-center">BALANC GENERAL</h2>
                                 </a>
                             </div>
                             <div id="collapse-balance" class="panel-collapse collapse">

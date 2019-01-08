@@ -80,7 +80,7 @@ include_once '../plantilla/barra_lateral_usuario.php';
                                     
                                         <div class="col-md-6">
                                             <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                            <span class="bar" id="basic-addon1">Telefono</span>
+                                            <span class="bar" id="basic-addon1">Telefoo</span>
                                             <input type="text" class="form-text" name="telefono_natural" id="ref_Telefono" placeholder="TELEFONO..." required="">
                                         </div>
                                     </div>

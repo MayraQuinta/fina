@@ -48,7 +48,7 @@ $lista_prestamo_natural = repositorio_prestamo::lista_prestamo_incobrable_natura
             <div class="panel-heading text-center">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Cartera de Creditos Incobrables</h3>
+                        <h3>Cartera de Credito Incobrables</h3>
                     </div>
                 </div>
             </div>

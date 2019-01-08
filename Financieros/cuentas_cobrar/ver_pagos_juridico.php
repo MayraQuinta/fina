@@ -8,7 +8,7 @@ include_once '../modelos/expediente_juridico.php';
 include_once '../repositorios/repositorio_expediente_juridico.php';
 include_once '../repositorios/repositorio_juridico.php';
 include_once '../app/Conexion.php';
-
+//
 Conexion::abrir_conexion();
 $pagos = repositorio_expediente_juridico::lista_pagos_previos_jurdico(Conexion::obtener_conexion(), $_REQUEST['id_prestamo']);
 
