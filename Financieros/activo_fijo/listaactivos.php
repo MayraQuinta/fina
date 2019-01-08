@@ -75,13 +75,7 @@ and institucion.id_institucion=activo.id_institucion and encargado.id_encargado=
  <section class="content">
     <div class="container-fluid">
         <div class="panel" name="libros">
-            <div class="panel-heading text-center">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h3>Listado de Activos</h3>
-                    </div>
-                </div>
-            </div>
+           
             <div class="panel-body">  
                       
 
