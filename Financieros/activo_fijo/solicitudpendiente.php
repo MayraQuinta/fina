@@ -38,7 +38,7 @@ include_once '../app/Conexion.php';
                     <div class="col-md-6" style="padding-left:10px;">
                         <input type="checkbox" class="icheck pull-left" name="checkbox1"/>
                         <select>
-                            <option>Delete</option>
+                            <option></option>
                             <option>Ignore</option>
                             <option>Cancel</option>
                         </select>

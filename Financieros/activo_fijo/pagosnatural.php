@@ -57,7 +57,7 @@ include_once '../app/Conexion.php';
                                   <li><a href="#">Separated link</a></li>
                                 </ul>
                               </div><!-- /btn-group -->
-                            </div><!-- /input-group -->
+                            </div><!-- /inputroup -->
                           </div><!-- /.col-lg-6 -->
                     </div>
                  </div>

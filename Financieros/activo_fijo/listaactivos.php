@@ -29,7 +29,7 @@ include_once '../app/Conexion.php';
 ?>
 
 <?php
-// AGRAGAR CONTRASENA SI TIENEN CONTRA EL XAMPP
+// AGRAGAR CONTRSENA SI TIENEN CONTRA EL XAMPP
 $con =new mysqli('localhost','root','','instituciones_financieras');
 $datos=$con->query("SELECT
 activo.fecha_adquisicion AS fecha,

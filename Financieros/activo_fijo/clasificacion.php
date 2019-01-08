@@ -399,6 +399,6 @@ $('.mask-money').mask('000.000.000.000.000,00', {reverse: true});
 </script>
 
 
-<!-- end: Javascript -->
+<!-- end: Javascrt -->
 </body>
 </html>

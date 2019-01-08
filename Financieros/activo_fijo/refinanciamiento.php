@@ -29,7 +29,7 @@ include_once '../app/Conexion.php';
   
       
 
-          <!-- start: Content -->
+          <!-- start: Contt -->
           <div id="content">
              
             <div class="col-md-12 top-10 padding-0">

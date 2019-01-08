@@ -8,7 +8,7 @@ include_once '../plantilla/barraSuperior.php';
 include_once '../plantilla/barra_lateral_usuario.php';
 include_once '../app/Conexion.php';
 ?>
-<!-- start: content -->
+<!-- start: contt -->
           <div id="content" align="center">
                 <div class="panel">
                   <div class="panel-body">

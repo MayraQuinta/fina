@@ -2,7 +2,7 @@
 include_once '../app/Conexion.php';
 include_once '../modelos/Activo.php';
 include_once '../repositorios/repositorio_activo.php';
-
+//&
 Conexion::abrir_conexion();
 $listado = Repositorio_activo::lista_activo_inventario(Conexion::obtener_conexion(), "");
 ?>

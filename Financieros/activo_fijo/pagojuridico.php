@@ -58,7 +58,7 @@ include_once '../app/Conexion.php';
                                   <li role="separator" class="divider"></li>
                                   <li><a href="#">Separated link</a></li>
                                 </ul>
-                              </div><!-- /btn-group -->
+                              </div><!-- /btn-oup -->
                             </div><!-- /input-group -->
                           </div><!-- /.col-lg-6 -->
                     </div>
