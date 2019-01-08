@@ -4,9 +4,12 @@
 
 
    <?php
-include_once 'menu.php';
+include_once '../plantilla/cabecera.php';
+include_once '../plantilla/barraSuperior.php';
+include_once '../plantilla/barra_lateral_usuario.php';
+include_once '../app/Conexion.php';
 ?>
-   <!-- start: contnt -->
+   <!-- sta content -->
             <div id="content">
                 <div class="panel">
                   <div class="panel-body">
