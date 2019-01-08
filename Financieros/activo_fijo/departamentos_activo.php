@@ -10,7 +10,7 @@ include_once '../plantilla/barra_lateral_usuario.php';
 include_once '../app/Conexion.php';
 ?>
 
-   <!--  content -->
+   <!-- start: content -->
       <div id="content" align="center">
                 <div class="panel">
                   <div class="panel-body">
