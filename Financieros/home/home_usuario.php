@@ -18,7 +18,7 @@ include_once '../plantilla/barra_lateral_usuario.php';
                 <div class="col-md-12 col-sm-12 col-xs-12">
                 <div id="carousel-example3" class="carousel slide" data-ride="carousel">
 
-                    <!-- Indicators -->
+                    <!-- Indicors -->
                     <ol class="carousel-indicators">
                       <li data-target="#carousel-example3" data-slide-to="0" class="active">
                       </li>
