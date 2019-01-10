@@ -145,7 +145,7 @@ if (isset($_REQUEST['nameEnviar'])) {
                                             <div class="form-group form-animate-text" style="margin-top:40px !important;">
                                             <input type="text" class="form-text" name="nameDuiJuridico" id="Dui_fia_per"  required="">
                                             <span class="bar"></span>
-                                            <label><span class="fa fa-credit-card"></span>   DUI (Encargado jurídico)</label> 
+                                            <label><span class="fa fa-credit-card"></span>   DUI(Encargado jurídico)</label> 
                                                 </div>
                                             </div>
                                         
@@ -155,7 +155,7 @@ if (isset($_REQUEST['nameEnviar'])) {
                                             <div class="form-group form-animate-text" style="margin-top:40px !important;">
                                                     <input type="text" class="form-text" name="nameNitJuridico" id="Nit_fia_per"  required="">
                                                 <span class="bar"></span>
-                                            <label><span class="fa fa-credit-card"></span>   NIT (Encargado jurídico)</label> 
+                                            <label><span class="fa fa-credit-card"></span>   NIT(Encargado jurídico)</label> 
 
                                                 </div>
                                             </div>
