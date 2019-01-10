@@ -27,7 +27,7 @@ include_once '../plantilla/barra_lateral_usuario.php';
           <ul class="nav nav-tabs" role="tablist" id="calculadoras-tabs">
             <li role="presentation" class="active"><a href="#pils" title="Calcula la cuota de tu Préstamo Personal" aria-controls="pils" role="tab" data-toggle="tab">Préstamo Personal</a></li>
             <li role="presentation"><a href="#extrafinanciamiento" title="Calcula la cuota de tu Extrafinanciamiento" aria-controls="extrafinanciamiento" role="tab" data-toggle="tab" id="extra-bt">Extrafinanciamiento</a></li>
-            <!-- <li role="presentation"><a href"#hipotecario" title="Calcula la cuota de tu Préstamo Hipotecario" aria-controls="hipotecario" role="tab" data-toggle="tab" id="hipo-bt">Préstamo Hipotecario</a></li> -->
+            <!-- <li ><a href"#hipotecario" title="Calcula la cuota de tu Préstamo Hipotecario" aria-controls="hipotecario" role="tab" data-toggle="tab" id="hipo-bt">Préstamo Hipotecario</a></li> -->
           </ul>
 
           <div class="tab-content">

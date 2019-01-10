@@ -8,7 +8,7 @@
                 <span class="middle"></span>
                 <span class="bottom"></span>
               </div>
-                <a   href="../asset/img/finsi.png" class="navbar-brand" style=" font-weight: bold;"  aria-label="Hide Sidebar">
+                <a  class="navbar-brand" style=" font-weight: bold;"  aria-label="Hide Sidebar">
                 
                  <b >Sistema Financiero</b>
                 </a>
