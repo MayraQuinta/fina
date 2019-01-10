@@ -83,7 +83,7 @@ if (isset($_REQUEST['nameEnviar'])) {
                 <div class="panel">
                   <div class="panel-body">
                       <div class="col-md-6 col-sm-12">
-                        <h3 class="animated fadeInLeft">Estados</h3>
+                        <h3 class="animated fadeInLeft">Cuentas por cobrar</h3>
                         
 
                       
@@ -99,7 +99,7 @@ if (isset($_REQUEST['nameEnviar'])) {
             <div class="panel-heading text-center">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Estado Financiero</h3>
+                        <h3>Estados financieros</h3>
                     </div>
                 </div>
             </div>
@@ -113,27 +113,30 @@ if (isset($_REQUEST['nameEnviar'])) {
                 <div class="row clearfix">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
-                            <div class="header">
-                                <h2 class="text-center">SELECCIONE LA EMPRESA</h2>
-                            </div>
+                            
                             <div class="body">
                                 <div class="row clearfix">
                                     <div class="col-md-12">
                                         <div class="form-group">
+                                         <div class="form-line">
                                             <div class="col-md-5">
                                                 <div class="input-field"><i class="fa fa-search prefix" aria-hidden="true">
 
-                                                    </i><label for="" style="font-size:16px">Buscar Empresa</label>
-                                                    <input type="text" id="buscar_cliente" class="form-control"  name="" autofocus onkeypress="return llenar_tabla_cliente(this)"  list="lista_personas_naturales2">
+                                                    </i><label >Buscar Empresa</label>
+                                                    <input type="text" id="buscar_cliente" class="form-control info"  autofocus onkeypress="return llenar_tabla_cliente(this)"  list="lista_personas_naturales2">
                                                 </div>              
                                             </div>
-                                            <div class="col-md-5">
-                                                <div class="input-field"><i class="fa fa-search prefix" aria-hidden="true">
-
-                                                    </i><label for="" style="font-size:16px">Periodo</label>
+                                        </div>
                                                     
-                                                    <input type="number" class="form-control" name="NamePeriodo" autofocus min="2000" max="2018">
+                                             <div class="form-line">
+                                            <div class="col-md-5">
+                                                <div class="input-field"><i aria-hidden="true">
+
+                                                    </i><label ><span class="fa fa-hourglass-2">    Periodo</span></label>
+                                                    
+                                                    <input type="number"  class="form-control info" name="NamePeriodo" autofocus min="2000" max="2018">
                                                 </div>              
+                                            </div>
                                             </div>
                                             
                                         </div>
@@ -141,13 +144,13 @@ if (isset($_REQUEST['nameEnviar'])) {
                                 </div>
 
                                 <table class="table table-striped table-bordered" id="tabla_cliente_juridico">
-                                    <caption>CLIENTE</caption>
+                                    <caption>Cliente</caption>
                                     <thead>
-                                    <th>Codigo</th>
+                                    <th>Código </th>
                                     <th>Nombre de la empresa</th>
-                                    <th>Numero de empresa</th>
-                                    <th>Dui de Representante</th>
-                                    <th>Nit de Representante</th>
+                                    <th>No. Empresa</th>
+                                    <th>DUI(Encargado)</th>
+                                    <th>NIT(Encargado)</th>
 
                                     </thead>
                                     <tbody>
@@ -167,126 +170,127 @@ if (isset($_REQUEST['nameEnviar'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="header">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse-balance">
-                                    <h2 class="text-center">BALANC GENERAL</h2>
+                                <a data-toggle="collapse"  href="#collapse-balance">
+                                    <h2 class="text-center">Balance general</h2>
                                 </a>
                             </div>
                             <div id="collapse-balance" class="panel-collapse collapse">
                                 <div class="body">
                                     <div class="row clearfix">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <div class="form-line">
-                                                    <span class="input-group-addon" id="basic-addon1">EFECTIVO($)</span>
-                                                    <input type="number"   min="0" step="any" class="form-control text-center" required="" name="nameEfectivo" placeholder="EFECTIVO($)">
-                                                </div>
-                                            </div>
+                                        <div class="col-md-3">
+                                        <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                                        <input type="number"   min="0" step="any" class="form-text" required="" name="nameEfectivo" >
+                                        <span class="bar"></span>
+                                        <label><span class="fa fa-dollar"></span>   Efectivo</label>
+                                        </div>
                                         </div>
 
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <div class="form-line">
-                                                    <span class="input-group-addon" id="basic-addon1">VALORES NEGOCIABLES($)</span>
-                                                    <input type="number"  min="0" step="any"class="form-control text-center" name="nameNegociable" placeholder="VALORES NEGOCIABLES($)" required="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
 
-                                    <div class="row clearfix">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <div class="form-line">
-                                                    <span class="input-group-addon" id="basic-addon1">CUENTAS POR COBRAR($)</span>
-                                                    <input type="number"  min="0" step="any" class="form-control text-center" name="NameCuentaXcobrar" placeholder="CUENTAS POR COBRAR($)" required="">
-                                                </div>
-                                            </div>
+
+                                        <div class="col-md-3">
+                                        <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                                        <input type="number"  min="0" step="any"  class="form-text"  name="nameNegociable" 
+                                         required="">
+                                        <span class="bar"></span>
+                                        <label><span class="fa fa-dollar"></span>   Valores negociables</label>
+                                                
+                                        </div>
+                                        </div>
+                                  
+
+                                   
+                                        <div class="col-md-3">
+                                        <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                                        <input type="number"  min="0" step="any" class="form-text" name="NameCuentaXcobrar"  required="">
+                                        <span class="bar"></span>
+                                        <label><span class="fa fa-dollar"></span>   Cuentas por cobrar</label>
+                                               
+                                         
+                                        </div>
                                         </div>
 
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <div class="form-line">
-                                                    <span class="input-group-addon" id="basic-addon1">INVENTARIOS($)</span>
-                                                    <input type="number"  min="0" step="any" class="form-control text-center" name="NameInventario" placeholder="INVENTARIOS($)" required="">
-                                                </div>
-                                            </div>
+                                        <div class="col-md-3">
+                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                                         <input type="number"  min="0" step="any" class="form-text" name="NameInventario"  required="">
+                                         <span class="bar"></span>
+                                         <label><span class="fa fa-dollar"></span>   Inventarios</label>
                                         </div>
+                                        </div>
+                                       
+                                   
+                                        <div class="col-md-3">
+                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                                         <input type="number"  min="0" step="any" class="form-text" name="NameTerreno"  required="">
+                                         <span class="bar"></span>
+                                        <label><span class="fa fa-dollar"></span>   Terrenos</label>
+                                        </div>
+                                        </div>
+                                        
+                                   
+                                        <div class="col-md-3">
+                                        <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                                        <input type="number"  min="0" step="any" class="form-text" name="NameEdificio"  required="">
+                                        <span class="bar"></span>
+                                        <label><span class="fa fa-dollar"></span>   Edificio y equipo</label>
+                                        </div>
+                                         </div>
+
+                                      
+                                  
+                                        <div class="col-md-3">
+                                        <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                                        <input type="number"  min="0" step="any" class="form-text" name="NameDepreciacion"  required="">
+                                        <span class="bar"></span>
+                                        <label><span class="fa fa-dollar"></span>   Depreciación acumulada</label>
+                                        </div>
+                                        </div>
+                                     
+                              
+                                      
+                                        <div class="col-md-3">
+                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                                         <input type="number"  min="0" step="any" class="form-text" name="NameCuentaXpagar" required="">
+                                         <span class="bar"></span>
+                                         <label><span class="fa fa-dollar"></span>   Cuentas por pagar</label>
+                                         </div>
+                                         </div>
+                                        
+                                    
+                                        <div class="col-md-3">
+                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                                         <input type="number"  min="0" step="any" class="form-text" name="NameDocumentoXpagar"  required="">
+                                         <span class="bar"></span>
+                                        <label><span class="fa fa-dollar"></span>   Documentos por pagar</label>
+                                        </div>
+                                        </div>
+
+                                   
+                                        <div class="col-md-3">
+                                        <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                                         <input type="number"  min="0" step="any" class="form-text" name="NameDeuda"  required="">
+                                         <span class="bar"></span>
+                                        <label><span class="fa fa-dollar"></span>   Deuda a largo plazo</label>
+                                         </div>
+                                         </div>
+                                           
+                                 
+                                        <div class="col-md-3">
+                                       <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                                        <input type="number"  min="0" step="any" class="form-text" name="NameAcciones"  required="">
+                                        <span class="bar"></span>
+                                        <label><span class="fa fa-dollar"></span>   Acciones comunes</label>
+                                         </div>
+                                        </div>
+                               
+                                   
+                                        <div class="col-md-3">
+                                       <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                                        <input type="number"  min="0" step="any" class="form-text" name="NameRetenidas"  required="">
+                                        <span class="bar"></span>
+                                        <label><span class="fa fa-dollar"></span>   Ganancias retenidas</label>
+                                       </div>
                                     </div>
-                                    <div class="row clearfix">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <div class="form-line">
-                                                    <span class="input-group-addon" id="basic-addon1">TERRENOS($)</span>
-                                                    <input type="number"  min="0" step="any" class="form-control text-center" name="NameTerreno" placeholder="TERRENOS($)" required="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <div class="form-line">
-                                                    <span class="input-group-addon" id="basic-addon1">EDIFICIO Y EQUIPO($)</span>
-                                                    <input type="number"  min="0" step="any" class="form-control text-center" name="NameEdificio" placeholder="EDIFICIO Y EQUIPO($)" required="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row clearfix">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <div class="form-line">
-                                                    <span class="input-group-addon" id="basic-addon1">DEPRECIACION ACUMULADA($)</span>
-                                                    <input type="number"  min="0" step="any" class="form-control text-center" name="NameDepreciacion" placeholder="DEPRECIACION ACUMULADA($)" required="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row clearfix">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <div class="form-line">
-                                                    <span class="input-group-addon" id="basic-addon1">CUENTAS POR PAGAR($)</span>
-                                                    <input type="number"  min="0" step="any" class="form-control text-center" name="NameCuentaXpagar" placeholder="CUENTAS POR PAGAR($)" required="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <div class="form-line">
-                                                    <span class="input-group-addon" id="basic-addon1">DOCUMENTOS POR PAGAR($)</span>
-                                                    <input type="number"  min="0" step="any" class="form-control text-center" name="NameDocumentoXpagar" placeholder="DOCUMENTOS POR PAGAR($)" required="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row clearfix">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <div class="form-line">
-                                                    <span class="input-group-addon" id="basic-addon1">DEUDA A LARGO PLAZO</span>
-                                                    <input type="number"  min="0" step="any" class="form-control text-center" name="NameDeuda" placeholder="DEUDA A LARGO PLAZO($)" required="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <div class="form-line">
-                                                    <span class="input-group-addon" id="basic-addon1">ACCIONES COMUNES($)</span>
-                                                    <input type="number"  min="0" step="any" class="form-control text-center" name="NameAcciones" placeholder="ACCIONES COMUNES($)" required="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row clearfix">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <div class="form-line">
-                                                    <span class="input-group-addon" id="basic-addon1">GANANCIAS RETENIDAS($)</span>
-                                                    <input type="number"  min="0" step="any" class="form-control text-center" name="NameRetenidas" placeholder="GANANCIAS RETENIDAS($)" required="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                               
                             </div>
                         </div>
                     </div>
@@ -305,80 +309,88 @@ if (isset($_REQUEST['nameEnviar'])) {
                         <div class="card">
                             <div class="header">
                                 <a  data-toggle="collapse" data-parent="#accordion" href="#collapse-estado">
-                                    <h2 class="text-center">ESTADO DE RESULTADOS</h2>
+                                    <h2 class="text-center">Estado de resultados</h2>
                                 </a>
                             </div>
                             <div id="collapse-estado" class="panel-collapse collapse">
                                 <div class="body">
                                     <div class="row clearfix">
+                                        <div class="col-md-3">
+                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                                        <input type="number" min="0" step="any" class="form-text" name="nameIngresoVenta"  required="">
+                                        <span class="bar"></span>
+                                        <label><span class="fa fa-dollar"></span>   Ingresos por venta</label>
+                                        </div>
+                                        </div>
+                                     
+
+                                        <div class="col-md-4">
+                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                                        <input type="number"  min="0" step="any" class="form-text" name="nameCostoVenta"  required="">
+                                         <span class="bar"></span>
+                                        <label><span class="fa fa-dollar"></span>   Costos de los bienes vendidos</label>
+
+                                         </div>
+                                        </div>
+                                  
+
+                             
+                                        <div class="col-md-4">
+                                         
+                                                <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                                                    <input type="number"  min="0" step="any" class="form-text" name="nameGastoVenta"  required="">
+                                                  <span class="bar"></span>
+                                        <label><span class="fa fa-dollar"></span>   Gasto de venta</label>
+                                            </div>
+                                            </div>
+                                     
+
+                                        <div class="col-md-4">
+                                        
+                                                <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                                                   
+                                                    <input type="number"  min="0" step="any" class="form-text" name="nameGastoAdmi"  required="">
+                                               <span class="bar"></span>
+                                        <label><span class="fa fa-dollar"></span>   Gastos generales y administración</label>
+                                            </div>
+                                            </div>
+                                         
+                                     
+                                 
+                                  
+                                        <div class="col-md-4">
+                                          
+                                                <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                                                   
+                                                    <input type="number"  min="0" step="any" class="form-text" name="nameGastoArrendamiento"  required="">
+                                               <span class="bar"></span>
+                                        <label><span class="fa fa-dollar"></span>   Gastos de arrendamiento</label>
+                                            </div>
+                                            </div>
+                                     
+                                        <div class="col-md-3">
+                                           
+                                               <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                                                   
+                                                    <input type="number"  min="0" step="any" class="form-text" name="nameGastoDepreciacion"  required="">
+                                                <span class="bar"></span>
+                                        <label><span class="fa fa-dollar"></span>   Gastos por depreciación</label>
+                                            </div>
+                                            </div>
+                                      
+                               
+                                 
                                         <div class="col-md-6">
-                                            <div class="form-group">
-                                                <div class="form-line">
-                                                    <span class="input-group-addon" id="basic-addon1">INGRESOS POR VENTA($)</span>
-                                                    <input type="number" min="0" step="any" class="form-control text-center" name="nameIngresoVenta" placeholder="INGRESO DE VENTAS($)" required="">
-                                                </div>
+                                      <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                                                    
+                                                    <input type="number"  min="0" step="any" class="form-text" name="nameGastoInteres"  required="">
+                                               <span class="bar"></span>
+                                        <label><span class="fa fa-dollar"></span>   Gastos por interes</label>
                                             </div>
                                         </div>
 
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <div class="form-line">
-                                                    <span class="input-group-addon" id="basic-addon1">COSTOS DE LOS BIENES VENDIDOS($)</span>
-                                                    <input type="number"  min="0" step="any"class="form-control text-center" name="nameCostoVenta" placeholder="COSTOS DE LOS BIENES VENDIDOS($)" required="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
 
-                                    <div class="row clearfix">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <div class="form-line">
-                                                    <span class="input-group-addon" id="basic-addon1">GASTO DE VENTA($)</span>
-                                                    <input type="number"  min="0" step="any" class="form-control text-center" name="nameGastoVenta" placeholder="GASTOS DE VENTAS($)" required="">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <div class="form-line">
-                                                    <span class="input-group-addon" id="basic-addon1">GASTOS GENERALES Y ADMINISTRACION($)</span>
-                                                    <input type="number"  min="0" step="any" class="form-control text-center" name="nameGastoAdmi" placeholder="GASTOS GENERALES Y ADMINISTRACION" required="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row clearfix">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <div class="form-line">
-                                                    <span class="input-group-addon" id="basic-addon1">GASTOS DE ARRENDAMIENTO($)</span>
-                                                    <input type="number"  min="0" step="any" class="form-control text-center" name="nameGastoArrendamiento" placeholder="GASTOS DE ARRENDAMIENTO($)" required="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <div class="form-line">
-                                                    <span class="input-group-addon" id="basic-addon1">GASTOS POR DEPRECIACION($)</span>
-                                                    <input type="number"  min="0" step="any" class="form-control text-center" name="nameGastoDepreciacion" placeholder="GASTOS POR DEPRECIACION($)" required="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row clearfix">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <div class="form-line">
-                                                    <span class="input-group-addon" id="basic-addon1">GASTOS POR INTERES($)</span>
-                                                    <input type="number"  min="0" step="any" class="form-control text-center" name="nameGastoInteres" placeholder="GASTOS POR INTERESES" required="">
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                    </div>
+                                 
                                 </div>
                             </div>
                         </div>
@@ -388,9 +400,15 @@ if (isset($_REQUEST['nameEnviar'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="text-center">
-                                <button type="submit" name="nameEnviar" class="btn btn-primary m-t-15 waves-effect" value="ok">GUARDAR</button>
+                                <button type="submit" name="nameEnviar" class="btn ripple-infinite btn-round btn-primary" value="ok">
+                                     <div>
+                                      <span>Guardar</span>
+                                    </div>
+                                </button>
                             </div>
                         </div>
+
+                       
                     </div>
                 </div>
 

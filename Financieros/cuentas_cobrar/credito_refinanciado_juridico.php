@@ -1,3 +1,14 @@
+<?php
+include_once '../app/Conexion.php';
+include_once '../plantilla/cabecera.php';
+include_once '../plantilla/barraSuperior.php';
+include_once '../plantilla/barra_lateral_usuario.php';
+include_once '../repositorios/repositorio_prestamo.php';
+?>
+
+
+
+
 <style>
     .rojo{
         color: red;
@@ -23,11 +34,7 @@
     });
 </script>
 <?php
-include_once '../app/Conexion.php';
-include_once '../plantilla/cabecera.php';
-include_once '../plantilla/barraSuperior.php';
-include_once '../plantilla/barra_lateral_usuario.php';
-include_once '../repositorios/repositorio_prestamo.php';
+
 
 Conexion::abrir_conexion();
 
@@ -287,11 +294,7 @@ $datos = repositorio_prestamo::llenar_refinanciamiento_juridico(Conexion::obtene
                         </button>    
 
                           </div>  
-                                <div class="text-center">
-                                    <button type="submit" name="nameEnviar" value="ok" class="btn btn-primary m-t-15 waves-effect">GUARDAR</button>
-                                    <button type="reset"  class="btn btn-primary m-t-15 waves-effect">CANCELAR</button>
-                                </div>
-
+                               
                             </div>
                         </div>
                     </div>

@@ -58,7 +58,7 @@
                     
                       
                     </li>
-                    <li class="ripple"><a href="../cuentas_cobrar/estados_financieros.php"><span class="fa fa-check-square-o"></span>Estados Financieros  <span class="fa-angle-double-right fa right-arrow text-right"> </a>
+                    <li class="ripple"><a href="../cuentas_cobrar/estados_financieros.php"><span class="fa fa-check-square-o"></span>Estados financieros  <span class="fa-angle-double-right fa right-arrow text-right"> </a>
                       
                     </li>
                     <li class="ripple"><a href="../cuentas_cobrar/abono.php"><span class="fa fa-table"></span> Registro de Abono  <span class="fa-angle-double-right fa right-arrow text-right"></a>
