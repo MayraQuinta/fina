@@ -10,11 +10,11 @@ include_once '../plantilla/barra_lateral_usuario.php';
 include_once '../app/Conexion.php';
 ?>
    <!-- start: conte -->
-            <div id="content" align="center">
+            <div id="content" >
                 <div class="panel">
                   <div class="panel-body">
                       <div class="col-md-6 col-sm-12">
-                        <h3 class="animated fadeInLeft">Registro</h3>
+                        <h3 class="animated fadeInLeft">ACTIVO FIJO</h3>
                         
 
                       
@@ -30,7 +30,7 @@ include_once '../app/Conexion.php';
             <div class="panel-heading text-center">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Registro Activo Fijo</h3>
+                        <h3>Registro de activo</h3>
                     </div>
                 </div>
             </div>
@@ -94,9 +94,9 @@ $sql = "INSERT INTO activo (id_tipo, id_departamento, id_institucion, id_usuario
 
                                             <div class="form-line">
                                                 <div class="form-line">
-                                                   <span class="input-group-addon" id="basic-addon1">Seleccione Tipo de  activo</span>
-                                                    <select class="form-control success" name="select_tipo" placeholder="Cantidad" required="">
-                                                        <option  value="" disabled="">Seleccione Tipo de  activo</option>
+                                                   <span class="input-group-addon" id="basic-addon1">Seleccione tipo de activo</span>
+                                                    <select class="form-control info" name="select_tipo" placeholder="Cantidad" required="">
+                                                        <option  value="" disabled="">Seleccione tipo de activo</option>
                                                         <?php foreach ($lista_tipo as $lista2) { ?>
 
                                                         <option value="<?php echo $lista2->getId_tipo(); ?>"><?php echo $lista2->getId_correlativo(). "--". $lista2->getId_nombre(); ?>
@@ -114,8 +114,8 @@ $sql = "INSERT INTO activo (id_tipo, id_departamento, id_institucion, id_usuario
                                           <div class="form-group">
                                             <div class="form-line">
                                                 <div class="form-line">
-                                                   <span class="input-group-addon" id="basic-addon1">Seleccione Departamento</span>
-                                                    <select class="form-control success" name="select_departamento"  required="">
+                                                   <span class="input-group-addon" id="basic-addon1">Seleccione departamento</span>
+                                                    <select class="form-control info" name="select_departamento"  required="">
                                                         <?php foreach ($lista_depatamento as $lista) { ?>
 
                                                         <option value="<?php echo $lista->getId_departamento(); ?>"><?php echo $lista->getCorrelativo()."--". $lista->getNombre(); ?></option>
@@ -131,7 +131,7 @@ $sql = "INSERT INTO activo (id_tipo, id_departamento, id_institucion, id_usuario
                                           <div class="form-group">
                                         <div class="form-line">
                                                <span class="input-group-addon" id="basic-addon1">Cantidad</span>
-                                                <input type="number" min="0" step="any" class="form-control success" name="cantidad" placeholder="Unidades" required="">
+                                                <input type="number" min="0" step="any" class="form-control info" name="cantidad" placeholder="Unidades" required="">
 
                                             </div>
                                             </div> 
@@ -141,19 +141,17 @@ $sql = "INSERT INTO activo (id_tipo, id_departamento, id_institucion, id_usuario
                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
                               <input type="text" class="form-text"  name="descripcion" required="" aria-required="true">
                               <span class="bar"></span>
-                              <label>Descripción</label>
+                              <label><span class="fa fa-edit"></span>   Descripción</label>
                             </div>   
 
                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                            <label>Fecha Adquisicion</label><br>
+                                            <label><span class="fa fa-calendar"></span>  Fecha de adquisición</label><br>
                                           <span class="bar" id="basic-addon1"></span>
                                                 <input type="date"  class="form-text mask-selectonfocus " required="" name="fecha" placeholder="FECHA ADQUISICION">
                                             </div>
                                       
                                     
-                                 
- 
-
+                                
    </div> 
 
  <div class="col-md-5">
@@ -161,8 +159,8 @@ $sql = "INSERT INTO activo (id_tipo, id_departamento, id_institucion, id_usuario
   <div class="form-group">
                                             <div class="form-line">
                                                 <div class="form-line">
-                                                   <span class="input-group-addon" id="basic-addon1">Seleccione la institución</span>
-                                                    <select class="form-control success" name="select_institucion" required="">
+                                                   <span class="input-group-addon" id="basic-addon1">Seleccione institución</span>
+                                                    <select class="form-control info" name="select_institucion" required="">
                                                          <?php foreach ($lista_institucion as $lista) { ?>
 
                                                         <option value="<?php echo $lista->getId_departamento(); ?>">
@@ -183,8 +181,8 @@ $sql = "INSERT INTO activo (id_tipo, id_departamento, id_institucion, id_usuario
                                           <div class="form-group">
                                             <div class="form-line">
                                                 <div class="form-line">
-                                                   <span class="input-group-addon" id="basic-addon1">Seleccione Encargado</span>
-                                                    <select class="form-control success" name="select_encargado" required="">
+                                                   <span class="input-group-addon" id="basic-addon1">Seleccione encargado</span>
+                                                    <select class="form-control info" name="select_encargado" required="">
                                                         <option  value="" disabled="">Seleccione Encargado</option>
                                                         <?php foreach ($lista_encargado as $lista3) { ?>
 
@@ -202,7 +200,7 @@ $sql = "INSERT INTO activo (id_tipo, id_departamento, id_institucion, id_usuario
                                          <div class="form-group">
                                         <div class="form-line">
                                                  <span class="input-group-addon" id="basic-addon1">Tiempo de uso (Meses)</span>
-                                                <input type="number" min="0" step="any" class="form-control success" name="meses"  required="">
+                                                <input type="number" min="0" step="any" class="form-control info" name="meses"  required="">
 
                                             </div>
                                             </div>
@@ -211,24 +209,21 @@ $sql = "INSERT INTO activo (id_tipo, id_departamento, id_institucion, id_usuario
                                          <div class="form-group form-animate-text" style="margin-top:40px !important;">
                               <input type="text" class="form-text"  name="obsevaciones" required="" aria-required="true">
                               <span class="bar"></span>
-                              <label>Observación </label>
+                              <label><span class="fa fa-eye"></span>   Observación </label><br>
                             </div>
-
-
-
 
 
                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
                         <input type="text" name="precio" class="form-text mask-money" required="">
                         <span class="bar"></span>
-                        <label>Precio ($)</label>
+                        <label><span class="fa fa-dollar"></span>  Precio </label>
                       </div>
 
                          
  </div>
 
 
-             <div class="col-md-12 panel-footer">
+             <div class="col-md-12 panel-footer" align="center">
                              <button type="submit"  name="nameEnviar"class="btn ripple-infinite btn-round btn-primary" value="ok">
                             
                                     <div>

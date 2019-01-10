@@ -18,7 +18,7 @@
 
                     
                     <li class="active ripple">
-                      <a class="tree-toggle nav-header" style="color: #dc7777"><span class="fa-home fa" style="color: #dc7777"></span>Confirmación de Solicitudes de Creditos
+                      <a class="tree-toggle nav-header" style="color: #611f96"><span class="fa-home fa" style="color: #611f96"></span>Confirmación de Solicitudes de Creditos
                         <span ></span>
                       </a></li>
                       

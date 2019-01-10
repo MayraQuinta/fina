@@ -10,11 +10,11 @@ include_once '../plantilla/barra_lateral_usuario.php';
 include_once '../app/Conexion.php';
 ?>
    <!-- star content -->
-            <div id="content" align="center">
+            <div id="content" >
                 <div class="panel">
                   <div class="panel-body">
                       <div class="col-md-6 col-sm-12">
-                        <h3 class="animated fadeInLeft">Registro</h3>
+                        <h3 class="animated fadeInLeft">ACTIVO FIJO</h3>
                         
 
                       
@@ -30,7 +30,7 @@ include_once '../app/Conexion.php';
             <div class="panel-heading text-center">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Tipo de Activo</h3>
+                        <h3>Registro de tipo de activo</h3>
                     </div>
                 </div>
             </div>
@@ -71,13 +71,13 @@ $lista_clasificacion = repositorio_clasificacion::lista_clasificacion(Conexion::
                             <div class="form-group form-animate-text" style="margin-top:40px !important;">
                               <input type="text" class="form-text" id="validate_firstname" name="nameNombre"  required="" aria-required="true">
                               <span class="bar"></span>
-                              <label>Nombre *</label>
+                              <label><span class="fa fa-user"></span>   Nombre </label>
                             </div>
 <div class="form-group">
                                         <div class="form-line">
                                             <div class="form-line">
-                                                <select class="form-control success" name="NameSelect" required="">
-                                                    <option value="" disabled="">SELECCIONE LA CLASIFICACION</option>
+                                                <select class="form-control info" name="NameSelect" required="">
+                                                    <option value="" disabled="">Seleccione la clasificación</option>
                                                     
                                                        <?php foreach ($lista_clasificacion as $lista) { ?>
 
@@ -96,7 +96,7 @@ $lista_clasificacion = repositorio_clasificacion::lista_clasificacion(Conexion::
    </div> 
 
 
-             <div class="col-md-12 panel-footer">
+             <div class="col-md-12 panel-footer" align="center">
                              <button type="submit" name="nameEnviar" class="btn ripple-infinite btn-round btn-primary" value="ok">
                                     <div>
                                       <span>Guardar</span>

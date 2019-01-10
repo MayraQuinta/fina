@@ -80,11 +80,11 @@ if (isset($_REQUEST['nameEnviar'])) {
 $datos = repositorio_prestamo::llenar_refinanciamiento_juridico(Conexion::obtener_conexion(), $_REQUEST['id_juridico']);
 ?>
 
-<div id="content" align="center">
+<div id="content" >
                 <div class="panel">
                   <div class="panel-body">
                       <div class="col-md-6 col-sm-12">
-                        <h3 class="animated fadeInLeft">Registro Crédito</h3>
+                        <h3 class="animated fadeInLeft">Refinanciamiento</h3>
                         
 
                       
@@ -100,7 +100,7 @@ $datos = repositorio_prestamo::llenar_refinanciamiento_juridico(Conexion::obtene
             <div class="panel-heading text-center">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Crédito Refinanciado Jurídico</h3>
+                        <h3>Crédito  Jurídico (Refinanciado) </h3>
                     </div>
                 </div>
             </div>
@@ -116,19 +116,17 @@ $datos = repositorio_prestamo::llenar_refinanciamiento_juridico(Conexion::obtene
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
-                        <div class="header">
-                            <h2 class="text-center">DATOS DEL CLIENTE</h2>
-                        </div>
+                        
                         <div class="body">
                          
-                            <table class="table table-striped table-bordered" id="tabla_cliente_juridico">
-                                <caption>CLIENTE</caption>
+                            <table class="table table-striped table-bordered"  id="tabla_cliente_juridico">
+                                <h4 >Cliente</h4>
                                 <thead>
-                                <th>Codigo</th>
+                                <th>Código</th>
                                 <th>Nombre de la empresa</th>
                                 <th>Numero de empresa</th>
-                                <th>Dui de Representante</th>
-                                <th>Nit de Representante</th>
+                                <th>DUI(Encargado)</th>
+                                <th>NIT(Encargado)</th>
                                
                                 </thead>
                                 <tbody>
@@ -162,16 +160,15 @@ $datos = repositorio_prestamo::llenar_refinanciamiento_juridico(Conexion::obtene
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
-                        <div class="header"><a data-toggle="collapse" data-parent="#accordion" href="#collapse-credito">
-                                <h2 class="text-center">DATOS DE CREDITO</h2>
-                            </a></div>
+                        <h4 >Datos de crédito </h4>
                         <div id="collapse-credito" class="panel-collapse collapse in">
                             <div class="body">
                                 <div class="row clearfix">
                                     <div class="col-md-3">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <span class="input-group-addon" id="basic-addon1">NUEVO MONTO($)</span>
+                                           
+                                                <label><span class="fa fa-dollar"></span> Nuevo monto</label>
                                                 <input type="number" required="" min="1500" max="40000" class="form-control text-center" id="monto_per" name="monto_per" placeholder="min: 1,500 max: 40,000">
                                             </div>
                                         </div>
@@ -180,9 +177,9 @@ $datos = repositorio_prestamo::llenar_refinanciamiento_juridico(Conexion::obtene
                                     <div class="col-md-3">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <span class="input-group-addon" id="basic-addon1">PLAZO</span>
+                                                <label><span class="fa fa-hourglass-2"></span>   Plazo</label>
                                                 <select class="form-control show-tick" required="" id="mese_per" name="mese_per" onchange="interes_hp(this)">
-                                                    <option value="" disabled="" selected="">SELECCIONE EL NUMERO DE MESES</option>
+                                                    <option value="" disabled="" selected="">Numero de meses</option>
                                                     <?php
                                                     $n = 12;
                                                     for ($i = 0; $i <= 7; $i++) {//echo '<script language="javascript">alert("'.$n.'");</script>'; 
@@ -195,9 +192,11 @@ $datos = repositorio_prestamo::llenar_refinanciamiento_juridico(Conexion::obtene
                                         </div>
                                     </div>
 
+
+
                       <div class="col-md-3">
                                             <div class="row">
-                                                 <span class="input-group-addon rojo" id="basic-addon1">TASA DE INTERES</span>
+                                                 <label><span class="fa fa-money"></span>  Taza de Interes</label>
                                                 <div class="col-md-6">
                                                     <div class="form-line">
                                                        
@@ -217,9 +216,11 @@ $datos = repositorio_prestamo::llenar_refinanciamiento_juridico(Conexion::obtene
                                 <div class="text-center">
 
                                 </div>
-                                <div class="row"><div class="text-center">
-                                        <button type="button" style="visibility: hidden" onclick="cuota_per()" class="btn btn-primary m-t-15 waves-effect">CALCULAR</button>
-                                    </div></div>
+                                
+
+
+                           
+                        
                                 <div class="row clearfix">
 
 
@@ -271,7 +272,21 @@ $datos = repositorio_prestamo::llenar_refinanciamiento_juridico(Conexion::obtene
                                     </div>
                                 </div>
 
+<div class="col-md-12 panel-footer" align="center">
+                             <button type="submit" name="nameEnviar" class="btn ripple-infinite btn-round btn-primary" value="ok">
+          
+                                    <div>
+                                      <span>Guardar</span>
+                                    </div>
+                        </button>  
+                            <button type="reser" class="btn ripple-infinite btn-round btn-warning" value="ok">
+          
+                                    <div>
+                                      <span>Cancelar</span>
+                                    </div>
+                        </button>    
 
+                          </div>  
                                 <div class="text-center">
                                     <button type="submit" name="nameEnviar" value="ok" class="btn btn-primary m-t-15 waves-effect">GUARDAR</button>
                                     <button type="reset"  class="btn btn-primary m-t-15 waves-effect">CANCELAR</button>

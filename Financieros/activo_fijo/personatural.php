@@ -2,106 +2,117 @@
 
 <html lang="en">
 
+
    <?php
 include_once '../plantilla/cabecera.php';
 include_once '../plantilla/barraSuperior.php';
 include_once '../plantilla/barra_lateral_usuario.php';
 include_once '../app/Conexion.php';
 ?>
-
- <!-- start: contet -->
-           <div id="content" >
+   <!-- sta content -->
+            <div id="content">
                 <div class="panel">
                   <div class="panel-body">
                       <div class="col-md-6 col-sm-12">
-                        <h3 class="animated fadeInLeft">ACTIVO FIJO</h3>
-                        
+                        <h3 class="animated fadeInLeft">Customer Service</h3>
+                        <p class="animated fadeInDown"><span class="fa  fa-map-marker"></span> Batavia,Indonesia</p>
 
                       
                     </div>
                   
                     </div>
-                  </div>                                       
-                   
+                  </div>                    
+                </div>   
      
- <section class="content">
-    <div class="container-fluid">
-        <div class="panel" name="libros">
-            <div class="panel-heading text-center">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h3>Registro de encargado</h3>
+ <body id="mimin" class="dashboard">
+
+<div class="col-md-9" align="center">
+                  <div class="col-md-12 panel">
+                    <div class="col-md-12 panel-heading">
+                      <h4>Registro de cliente</h4>
                     </div>
-                </div>
-            </div>
-            <div class="panel-body">  
-<?php
+                    <div class="col-md-12 panel-body" style="padding-bottom:30px;">
+                      <div class="col-md-12">
 
-include_once '../app/Conexion.php';
-include_once '../repositorios/correlativos.php';
-Conexion::abrir_conexion();
+                        <form class="cmxform" id="signupForm" method="get" action="" novalidate="novalidate">
 
-if (isset($_REQUEST['nameEnviar'])) {
-    $nombre = $_REQUEST['nameNombre'];
-    $apellido = $_REQUEST['nameApellido'];
-    $dui = $_REQUEST['dui_natural'];
-    
-    $conexion = Conexion::obtener_conexion();
-    $correlativo = correlativos::obtener_correlativo($conexion, 'encargado');
+                          <div class="col-md-5">
+                           
 
-    $sql = "INSERT INTO encargado (nombre,apellido,dui) VALUES ('$nombre','$apellido','$dui')";
-    $sentencia = $conexion->prepare($sql);
-    $resultado = $sentencia->execute();
 
-    echo '<script>location.href ="encargado.php";</script>';
-} else {
-    ?>
-                      
-
-                        <form action="encargado.php" method="GET" autocomplete="off">
-
-                          <div class="col-md-6">
-                            <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                              <input type="text" class="form-text" id="validate_firstname" required="" name="nameNombre" aria-required="true">
+                                         
+   
+                                              <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                              <input type="text" class="form-text" id="validate_firstname" name="validate_firstname" required="" aria-required="true">
                               <span class="bar"></span>
-                              <label><span class="fa fa-user"></span>   Nombres</label>
-                            </div>
-                          </div>
+                              <label>Nombre </label>
+                            </div>   
 
-                          <div class="col-md-6">
-                            <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                           <input type="text" class="form-text" id="validate_firstname" required="" name="nameApellido" aria-required="true">
+
+                                              <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                              <input type="text" class="form-text" id="validate_firstname" name="validate_firstname" required="" aria-required="true">
                               <span class="bar"></span>
-                              <label><span class="fa fa-user"></span>   Apellidos</label>
-                            </div>
-                          </div>
+                              <label>DUI </label>
+                            </div>   
 
-                          <div class="col-md-6">
-      
-                          <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                          <input type="text" class="form-text mask-dui" required="" id="Dui_fia_per" name="dui_natural" aria-required="true">
+
+                                              <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                              <input type="text" class="form-text" id="validate_firstname" name="validate_firstname" required="" aria-required="true">
                               <span class="bar"></span>
-                              <label><span class="fa fa-credit-card"></span>   DUI</label>
+                              <label>Telefono</label>
+                            </div>   
+
+                           
+                                    
+                                 
+ 
+
+   </div> 
+
+ <div class="col-md-5">
+
+
+ 
+
+                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                              <input type="text" class="form-text" id="validate_firstname" name="validate_firstname" required="" aria-required="true">
+                              <span class="bar"></span>
+                              <label>Apellido</label>
                             </div>
-                        
-                            
-                          </div> 
 
 
-                             <div class="col-md-12 panel-footer" align="center">
-                             <button type="submit" name="nameEnviar" class="btn ripple-infinite btn-round btn-primary" value="ok">
-          
+                                              <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                              <input type="text" class="form-text" id="validate_firstname" name="validate_firstname" required="" aria-required="true">
+                              <span class="bar"></span>
+                              <label>NIT </label>
+                            </div>
+
+
+                                              <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                              <input type="text" class="form-text" id="validate_firstname" name="validate_firstname" required="" aria-required="true">
+                              <span class="bar"></span>
+                              <label>Direccion </label>
+                            </div>      
+                         
+ </div>
+
+
+             <div class="col-md-12 panel-footer">
+                             <button class="btn ripple-infinite btn-round btn-primary">
                                     <div>
                                       <span>Guardar</span>
                                     </div>
+                        </button>   
+                         <button class="btn ripple-infinite btn-round btn-danger">
+                                    <div>
+                                      <span>Cancelar</span>
+                                    </div>
                         </button>     
 
-                          </div>    
+                          </div>                         
+                      
+                        
                       </form>
-     <?php
-}
-
-?>
 
                     </div>
                   </div>
@@ -180,7 +191,31 @@ if (isset($_REQUEST['nameEnviar'])) {
     $('.mask-phone').mask('0000-0000');
     $('.mask-phone_with_ddd').mask('(00) 0000-0000');
     $('.mask-phone_us').mask('(000) 000-0000');
-    $('.mask-dui').mask('00000000-0');
+    $('.mask-mixed').mask('AAA 000-S0S');
+    $('.mask-cpf').mask('000.000.000-00', {reverse: true});
+    $('.mask-money').mask('000.000.000.000.000,00', {reverse: true});
+    $('.mask-money2').mask("#.##0,00", {reverse: true});
+    $('.mask-ip_address').mask('0ZZ.0ZZ.0ZZ.0ZZ', {
+      translation: {
+        'Z': {
+          pattern: /[0-9]/, optional: true
+        }
+      }
+    });
+    $('.mask-ip_address').mask('099.099.099.099');
+    $('.mask-percent').mask('##0,00%', {reverse: true});
+    $('.mask-clear-if-not-match').mask("00/00/0000", {clearIfNotMatch: true});
+    $('.mask-placeholder').mask("00/00/0000", {placeholder: "__/__/____"});
+    $('.mask-fallback').mask("00r00r0000", {
+      translation: {
+        'r': {
+          pattern: /[\/]/, 
+          fallback: '/'
+        }, 
+        placeholder: "__/__/____"
+      }
+    });
+    $('.mask-selectonfocus').mask("00/00/0000", {selectOnFocus: true});
 
     var options =  {onKeyPress: function(cep, e, field, options){
       var masks = ['00000-000', '0-00-00-00'];
@@ -208,7 +243,8 @@ if (isset($_REQUEST['nameEnviar'])) {
       }
     };
 
-  
+    $('.mask-cep_with_callback').mask('00000-000', options2);
+
     var SPMaskBehavior = function (val) {
       return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
     },
@@ -316,6 +352,10 @@ if (isset($_REQUEST['nameEnviar'])) {
   });
 </script>
 <!-- end: Javascript -->
-
+   
+  <!-- end: Javascript -->
   </body>
 </html>
+
+
+

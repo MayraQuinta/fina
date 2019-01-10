@@ -33,7 +33,7 @@ $lista_prestamo_natural = repositorio_prestamo::lista_prestamo_normales_naturale
                 <div class="panel">
                   <div class="panel-body">
                       <div class="col-md-6 col-sm-12">
-                        <h3 class="animated fadeInLeft">Registro</h3>
+                        <h3 class="animated fadeInLeft">Cartera de clientes</h3>
                         
 
                       
@@ -51,13 +51,13 @@ $lista_prestamo_natural = repositorio_prestamo::lista_prestamo_normales_naturale
             <div class="panel-heading text-center">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Créditos  Proceso</h3>
+                        <h3>Créditos en proceso</h3>
                     </div>
                 </div>
             </div>
             <div class="panel-body">
-                <table padding="20px" class="table table-striped" id="data-table-simple">
-                    <thead class="">
+                <table padding="20px" class="table table-striped table-bordered" id="tabla_cliente_cpersonal">
+                    <thead class="" align="center">
                     <th class="text-center">Incobrable</th>
                     <th class="text-center">Asesor</th>
                     <th class="text-center">Solicitante</th>
@@ -72,7 +72,7 @@ $lista_prestamo_natural = repositorio_prestamo::lista_prestamo_normales_naturale
                             <tr>
                                <td class="text-center">
                                    <button class="btn btn-danger" onclick="hacer_incobrable('<?php echo $lista['8'];?>')"> 
-                                        <i class="Medium material-icons prefix">delete</i> 
+                                             <i class="fa fa-trash"></i>  
                                     </button>
                                 </td>
                                 <th class="text-center"><?php echo $lista['4'];?></th>
@@ -83,7 +83,7 @@ $lista_prestamo_natural = repositorio_prestamo::lista_prestamo_normales_naturale
                                 <th class="text-center"><?php echo $lista['6'];?></th>
                                  <td class="text-center">
                                      <button class="btn btn-success" onclick="abrir_pagos_juridicos('<?php echo $lista['8'];?>')"> 
-                                        <i class="Medium material-icons prefix">visibility</i> 
+                                        <i class="fa fa-eye"></i> 
                                     </button>
                                 </td>
                             </tr>
@@ -93,7 +93,7 @@ $lista_prestamo_natural = repositorio_prestamo::lista_prestamo_normales_naturale
                             <tr>
                                <td class="text-center">
                                    <button class="btn btn-danger" onclick="hacer_incobrable('<?php echo $lista2['6'];?>')"> 
-                                        <i class="Medium material-icons prefix">delete</i> 
+                                      <i class="fa fa-trash"></i>  
                                     </button>
                                 </td>
                                 <th class="text-center"><?php echo $lista2['0'];?></th>
@@ -104,7 +104,7 @@ $lista_prestamo_natural = repositorio_prestamo::lista_prestamo_normales_naturale
                                 <th class="text-center"><?php echo $lista2['5'];?></th>
                                  <td class="text-center">
                                      <button class="btn btn-success" onclick="abrir_pagos_natural('<?php echo $lista2['6'];?>')"> 
-                                        <i class="Medium material-icons prefix">visibility</i> 
+                                        <i class="fa fa-eye"></i> 
                                     </button>
                                 </td>
                             </tr>

@@ -10,7 +10,7 @@ body {
   position: relative;
   margin-left: -2px;
   font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 13px;
+  font-size: 17px;
   background-color:#f0f3f4;
   line-height: 1.42857143 !important;
   color: #1b98ce !important;
@@ -1098,7 +1098,7 @@ ul li a:focus {
   .badge-primary {
     color: #fff !important;
     border: none !important;
-    background-color: #1c84c6 !important;
+    background-color: #27c24c !important;
   }
 
   .btn-success,
@@ -1116,7 +1116,8 @@ ul li a:focus {
   .badge-info {
     color: #fff !important;
     border: none !important;
-    background-color: #73CAEF !important;
+    background-color: #198c34 !important;
+
   }
 
   .btn-danger,
@@ -1125,7 +1126,7 @@ ul li a:focus {
   .badge-danger {
     color: #fff !important;
     border: none !important;
-    background-color: #FF6656 !important;
+    background-color: #d01111 !important;
   }
 
   .btn-warning,
@@ -1816,7 +1817,7 @@ ul li a:focus {
 
   .navbar {
     height: 60px;
-    background-color: #870bca;
+    background-color: #611f96;
     color: #fff;
     border: none;
   }
@@ -2074,15 +2075,15 @@ ul li a:focus {
   float: left;
   padding: 20px;
   padding-top: 35px;
-  background-color:#870bca;
+  background-color:#611f96;
   padding-bottom: 11px;
   color: #C62828;
   cursor: pointer;
-  -webkit-box-shadow: 0px 9px 0px 0px #870bca, 0 -9px 0px 0px #870bca, 4px 0 15px -4px rgba(0, 0, 0, 0.16), -4px 0 15px -4px rgba(0, 0, 0, 0.12);
-  -moz-box-shadow: 0px 9px 0px 0px #870bca, 0 -9px 0px 0px #870bca, 4px 0 15px -4px rgba(0, 0, 0, 0.16), -4px 0 15px -4px rgba(0, 0, 0, 0.12);
-  -ms-box-shadow: 0px 9px 0px 0px #870bca, 0 -9px 0px 0px #870bca, 4px 0 15px -4px rgba(0, 0, 0, 0.16), -4px 0 15px -4px rgba(0, 0, 0, 0.12);
-  -o-box-shadow: 0px 9px 0px 0px #870bca, 0 -9px 0px 0px #870bca, 4px 0 15px -4px rgba(0, 0, 0, 0.16), -4px 0 15px -4px rgba(0, 0, 0, 0.12);
-  box-shadow: 0px 9px 0px 0px #870bca, 0 -9px 0px 0px #870bca, 4px 0 15px -4px rgba(0, 0, 0, 0.16), -4px 0 15px -4px rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0px 9px 0px 0px #611f96, 0 -9px 0px 0px #611f96, 4px 0 15px -4px rgba(0, 0, 0, 0.16), -4px 0 15px -4px rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0px 9px 0px 0px #611f96, 0 -9px 0px 0px #611f96, 4px 0 15px -4px rgba(0, 0, 0, 0.16), -4px 0 15px -4px rgba(0, 0, 0, 0.12);
+  -ms-box-shadow: 0px 9px 0px 0px #611f96, 0 -9px 0px 0px #611f96, 4px 0 15px -4px rgba(0, 0, 0, 0.16), -4px 0 15px -4px rgba(0, 0, 0, 0.12);
+  -o-box-shadow: 0px 9px 0px 0px #611f96, 0 -9px 0px 0px #611f96, 4px 0 15px -4px rgba(0, 0, 0, 0.16), -4px 0 15px -4px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 9px 0px 0px #611f96, 0 -9px 0px 0px #611f96, 4px 0 15px -4px rgba(0, 0, 0, 0.16), -4px 0 15px -4px rgba(0, 0, 0, 0.12);
 }
 
 

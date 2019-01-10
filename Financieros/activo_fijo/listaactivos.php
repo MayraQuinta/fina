@@ -58,11 +58,11 @@ and institucion.id_institucion=activo.id_institucion and encargado.id_encargado=
 ");
 ?>
    
-<div id="content" align="center">
+<div id="content">
                 <div class="panel">
                   <div class="panel-body">
-                      <div class="col-md-6 col-sm-12">
-                        <h3 class="animated fadeInLeft">Activos</h3>
+                      <div  href="../asset/img/finsi.png" class="col-md-6 col-sm-12">
+                        <h3 class="animated fadeInLeft">ACTIVO FIJO</h3>
                         
 
                       
@@ -74,7 +74,10 @@ and institucion.id_institucion=activo.id_institucion and encargado.id_encargado=
      
  <section class="content">
     <div class="container-fluid">
+
+
         <div class="panel" name="libros">
+
            
             <div class="panel-body">  
                       
@@ -82,7 +85,9 @@ and institucion.id_institucion=activo.id_institucion and encargado.id_encargado=
        
       <div class="container-fluid mimin-wrapper" id="contenido">
   
-     
+     <div class="header">
+                                <h2 class="text-center">Lista de activos</h2>
+                            </div>
 
           <!-- start: Content -->
           <section class="content" >
@@ -102,14 +107,12 @@ and institucion.id_institucion=activo.id_institucion and encargado.id_encargado=
 
                     <thead>
                       <tr>
-                        
                         <th>Correlativos</th>
                         <th>Clasificación</th>
                         <th>Institución</th>
                         <th>Encargado</th>
                         <th>Precio($)</th>
                         <th>Acciones</th>
-                       
                       </tr>
                     </thead>
                     <tbody class="buscar">
@@ -132,28 +135,8 @@ and institucion.id_institucion=activo.id_institucion and encargado.id_encargado=
                     </tbody>
                   </table>
                   </div>
-                  <div class="col-md-6" style="padding-top:20px;">
-                    <span>showing 0-10 of 30 items</span>
-                  </div>
-                  <div class="col-md-6">
-                        <ul class="pagination pull-right">
-                          <li>
-                            <a href="#" aria-label="Previous">
-                              <span aria-hidden="true">&laquo;</span>
-                            </a>
-                          </li>
-                          <li class="active"><a href="#">1</a></li>
-                          <li><a href="#">2</a></li>
-                          <li><a href="#">3</a></li>
-                          <li><a href="#">4</a></li>
-                          <li><a href="#">5</a></li>
-                          <li>
-                            <a href="#" aria-label="Next">
-                              <span aria-hidden="true">&raquo;</span>
-                            </a>
-                          </li>
-                        </ul>
-                  </div>
+                 
+                 
                 </div>
               </div>
             </div>  

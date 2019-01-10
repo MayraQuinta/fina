@@ -18,7 +18,7 @@ $pagos = repositorio_expediente_juridico::lista_pagos_previos_jurdico(Conexion::
                 <div class="panel">
                   <div class="panel-body">
                       <div class="col-md-6 col-sm-12">
-                        <h3 class="animated fadeInLeft">Pagos</h3>
+                        <h3 class="animated fadeInLeft">Registros jurídicos</h3>
                         
 
                       
@@ -67,8 +67,21 @@ $pagos = repositorio_expediente_juridico::lista_pagos_previos_jurdico(Conexion::
                     </tbody>
                 </table>
             </div>
+
+            <div class="col-md-12 panel-footer">
+                            <div class="text-center">
+                                
+                                <button href="cartera_normal.php" type="submit" class="btn ripple-infinite btn-round btn-success">
+                                    <div>
+                                      <span>Volver</span>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
         </div>
+
     </div>
+     
 </section>
 
 

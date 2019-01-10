@@ -11,11 +11,11 @@ include_once '../app/Conexion.php';
 ?>
 
    <!--  conten -->
-      <div id="content" align="center">
+      <div id="content" >
                 <div class="panel">
                   <div class="panel-body">
                       <div class="col-md-6 col-sm-12">
-                        <h3 class="animated fadeInLeft">Registro</h3>
+                        <h3 class="animated fadeInLeft">ACTIVO FIJO</h3>
                         
 
                       
@@ -31,7 +31,7 @@ include_once '../app/Conexion.php';
             <div class="panel-heading text-center">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Registro Departamento</h3>
+                        <h3>Registro de departamento</h3>
                     </div>
                 </div>
             </div>
@@ -67,7 +67,7 @@ if (isset($_REQUEST['nameEnviar'])) {
                               
 
                               <span class="bar"></span>
-                              <label>Nombre *</label>
+                              <label><span class="fa fa-institution"></span>   Nombre de departamento</label>
                             </div>
 
                          
@@ -77,13 +77,14 @@ if (isset($_REQUEST['nameEnviar'])) {
    </div> 
 
 
-             <div class="col-md-12 panel-footer">
+             <div class="col-md-12 panel-footer" align="center">
                              <button type="submit" name="nameEnviar" class="btn ripple-infinite btn-round btn-primary" value="ok">
                             
                                     <div>
                                       <span>Guardar</span>
                                     </div>
-                        </button>     
+                        </button>  
+
 
                           </div>                         
                       

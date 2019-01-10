@@ -28,7 +28,7 @@ $lista_prestamo_natural = repositorio_prestamo::lista_refinanciamiento_naturales
 ?>    
 
 
-<div id="content" align="center">
+<div id="content" >
                 <div class="panel">
                   <div class="panel-body">
                       <div class="col-md-6 col-sm-12">
@@ -53,16 +53,16 @@ $lista_prestamo_natural = repositorio_prestamo::lista_refinanciamiento_naturales
                 </div>
             </div>
             <div class="panel-body">  
-                <table padding="20px" class="table table-striped" id="data-table-simple">
+                <table padding="20px" class="table table-striped table-bordered" id="tabla_cliente_cpersonal">
                     <thead class="">
                     <th class="text-center">Refinanciar</th>
-                    <th class="text-center">Asesors</th>
+                    <th class="text-center">Asesor</th>
                     <th class="text-center">Solicitante</th>
                     <th class="text-center">Tipo Prestamo</th>
                     <th class="text-center">Monto solicitado($)</th>
                     <th class="text-center">Saldo Actual($)</th>
-                    <th class="text-center">Tiempo(Meses)</th>
-                    <th class="text-center">Ver Pagoss</th>
+                    <th class="text-center">Meses</th>
+                    <th class="text-center">Pagos</th>
 
                     </thead>
                     <tbody>
@@ -70,7 +70,7 @@ $lista_prestamo_natural = repositorio_prestamo::lista_refinanciamiento_naturales
                             <tr>
                                <td class="text-center">
                                    <button class="btn btn-danger" onclick="refinanciar('<?php echo $lista['8'];?>', '<?php echo $lista['7'];?>')"> 
-                                        <i class="Medium material-icons prefix">refresh</i> 
+                                        <i class="fa fa-money"></i> 
                                     </button>
                                 </td>
                                 <th class="text-center"><?php echo $lista['4'];?></th>
@@ -83,7 +83,7 @@ $lista_prestamo_natural = repositorio_prestamo::lista_refinanciamiento_naturales
                                 <th class="text-center"><?php echo $lista['6'];?></th>
                                  <td class="text-center">
                                      <button class="btn btn-success" onclick="abrir_pagos_juridicos('<?php echo $lista['8'];?>')"> 
-                                        <i class="Medium material-icons prefix">visibility</i> 
+                                          <i class="fa fa-eye"></i>
                                     </button>
                                 </td>
                             </tr>
@@ -93,7 +93,7 @@ $lista_prestamo_natural = repositorio_prestamo::lista_refinanciamiento_naturales
                             <tr>
                                <td class="text-center">
                                    <button class="btn btn-danger" onclick="refinanciar('<?php echo $lista2['6'];?>')"> 
-                                        <i class="Medium material-icons prefix">refresh</i> 
+                                     <i class="fa fa-money"></i> 
                                     </button>
                                 </td>
                                 <th class="text-center"><?php echo $lista2['0'];?></th>
@@ -105,7 +105,7 @@ $lista_prestamo_natural = repositorio_prestamo::lista_refinanciamiento_naturales
                                 <th class="text-center"><?php echo $lista2['5'];?></th>
                                  <td class="text-center">
                                      <button class="btn btn-success" onclick="abrir_pagos_natural('<?php echo $lista2['6'];?>')"> 
-                                        <i class="Medium material-icons prefix">visibility</i> 
+                                         <i class="fa fa-eye"></i>
                                     </button>
                                 </td>
                             </tr>

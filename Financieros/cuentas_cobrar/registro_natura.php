@@ -13,7 +13,7 @@ include_once '../plantilla/barra_lateral_usuario.php';
                 <div class="panel-default">
                   <div class="panel-body">
                       <div class="col-md-6 col-sm-12">
-                        <h3 class="animated fadeInLeft">Registro</h3>
+                        <h3 class="animated fadeInLeft">Registro de Clientes</h3>
                         
 
                       
@@ -29,7 +29,7 @@ include_once '../plantilla/barra_lateral_usuario.php';
             <div class="panel-heading text-center">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Persona Natural</h3>
+                        <h3>Persona natural</h3>
                     </div>
                 </div>
             </div>
@@ -44,17 +44,18 @@ include_once '../plantilla/barra_lateral_usuario.php';
                                         
                                             <div class="col-md-6">
 
-                                            <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                            <span class="bar" id="validate_firstname">Nombre</span>
-                                            <input type="text"  class="form-text" name="nombre_natural" placeholder="NOMBRE..." required="" aria-required="true">
+                                            <div class="form-group form-animate-text" style="margin-top:40px !important;">    
+                                            <input type="text"  class="form-text" name="nombre_natural"  required="" aria-required="true">
+                                             <span class="bar"></span>
+                                            <label><span class="fa fa-user"></span > Nombres</label>
                                         </div>
                                     </div>
-                                 
-                                
+
                                         <div class="col-md-6">
                                             <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                            <span class="bar" id="basic-addon1">Apellido</span>
-                                            <input type="text" class="form-text" name="apellido_natural" placeholder="APELLIDO..." required="">
+                                            <input type="text" class="form-text" name="apellido_natural"  required="" aria-required="true">
+                                            <span class="bar"></span>
+                                            <label><span class="fa fa-user"></span> Apellidos</label>
                                         </div>
                                     </div>
                              
@@ -62,16 +63,19 @@ include_once '../plantilla/barra_lateral_usuario.php';
                                     
                                         <div class="col-md-6">
                                             <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                            <span class="bar" id="basic-addon1">Dui</span>
-                                            <input type="text" class="form-text" name="dui_natural"  id="Dui_fia_per" placeholder="DUI..." required="">
+                                             <input type="text" class="form-text" name="dui_natural"  id="Dui_fia_per"  required="">
+                                           <span class="bar"></span>
+                                            <label><span class="fa fa-credit-card"></span>   DUI</label>
                                         </div>
                                     </div>
                                  
                                 
                                         <div class="col-md-6">
                                             <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                            <span class="bar" id="basic-addon1">Nit</span>
-                                            <input type="text" class="form-text" name="nit_natural" id="Nit_fia_per" placeholder="NIT..." required="">
+                            
+                                            <input type="text" class="form-text" name="nit_natural" id="Nit_fia_per" required="">
+                                             <span class="bar"></span>
+                                            <label><span class="fa fa-credit-card"></span>   NIT</label>
                                         </div>
                                     </div>
                 
@@ -80,16 +84,18 @@ include_once '../plantilla/barra_lateral_usuario.php';
                                     
                                         <div class="col-md-6">
                                             <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                            <span class="bar" id="basic-addon1">Telefoo</span>
-                                            <input type="text" class="form-text" name="telefono_natural" id="ref_Telefono" placeholder="TELEFONO..." required="">
+                                            <input type="text" class="form-text" name="telefono_natural" id="ref_Telefono" required="">
+                                             <span class="bar"></span>
+                                            <label><span class="fa fa-phone"></span>   Teléfono</label>
                                         </div>
                                     </div>
                                 
                                 
                                         <div class="col-md-6">
                                             <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                            <span class="bar" id="basic-addon1">Dirección</span>
-                                            <input type="text" class="form-text" name="direccion_natural" placeholder="DIRECCION..." required="">
+                                            <input type="text" class="form-text" name="direccion_natural" required="">
+                                             <span class="bar"></span>
+                                            <label><span class="fa fa-book"></span>   Dirección</label>
                                         </div>
                                     </div>
                                 
@@ -101,7 +107,7 @@ include_once '../plantilla/barra_lateral_usuario.php';
                                 <button type="submit" class="btn ripple-infinite btn-round btn-primary"><div>
                                       <span>Guardar</span>
                                     </div></button>
-                                <button type="reset" class="btn ripple-infinite btn-round btn-primary">
+                                <button type="reset" class="btn ripple-infinite btn-round btn-warning">
                                     <div>
                                       <span>Cancelar</span>
                                     </div>
