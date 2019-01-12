@@ -74,7 +74,7 @@ function selector_Cliente() {
                                             <div class="input-field"><i class="fa fa-search prefix" aria-hidden="true">
 
                                                 </i><label for="" style="font-size:16px">Buscar Cliente</label>
-                                                <input type="text" id="buscar_cliente"  name="" onselect="selector_Cliente()" class="form-control" list="lista_personas_naturales">
+                                                <input type="text" id="buscar_cliente"  onchange="selector_Cliente()" class="form-control" list="lista_personas_naturales">
                                             </div>              
                                         </div>
                                         <div class="col-md-6">
