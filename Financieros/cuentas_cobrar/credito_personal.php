@@ -2,8 +2,14 @@
 include_once '../plantilla/cabecera.php';
 include_once '../plantilla/barraSuperior.php';
 include_once '../plantilla/barra_lateral_usuario.php';
-?>
 
+
+?>
+<script>
+function selector_Cliente() {
+  alert("has seleccionado ");
+}
+</script>
 <script language="javascript">
     $(document).ready(function () {
 
@@ -68,7 +74,7 @@ include_once '../plantilla/barra_lateral_usuario.php';
                                             <div class="input-field"><i class="fa fa-search prefix" aria-hidden="true">
 
                                                 </i><label for="" style="font-size:16px">Buscar Cliente</label>
-                                                <input type="text" id="buscar_cliente"  name="" autofocus onkeypress="return llenar_tabla_cliente(this)" class="form-control" list="lista_personas_naturales">
+                                                <input type="text" id="buscar_cliente"  name="" onselect="selector_Cliente()" class="form-control" list="lista_personas_naturales">
                                             </div>              
                                         </div>
                                         <div class="col-md-6">
