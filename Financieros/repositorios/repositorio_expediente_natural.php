@@ -218,7 +218,11 @@ persona_juridica.id_persona_juridica= $codigo ";
                 $sql = "SELECT
                 persona_natural.id_persona_natural as id,
                 (CONCAT(persona_natural.nombre,' ',persona_natural.apellido))  as nombre,
-                persona_natural.apellido
+                persona_natural.apellido,
+                persona_natural.dui as dui,
+                persona_natural.nit as nit,
+                persona_natural.telefono as telefono,
+                persona_natural.direccion as direccion
                 FROM
                 persona_natural
                 WHERE

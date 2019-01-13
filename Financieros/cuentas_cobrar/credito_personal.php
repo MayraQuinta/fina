@@ -7,12 +7,29 @@ include_once '../plantilla/barra_lateral_usuario.php';
 ?>
 <script>
 function selector_Cliente() {
-  alert("has seleccionado ");
+    value = document.getElementById("selector").value;
+    val  = value.split(',');
+    
+    id = val[0];
+    nombre = val[1];
+    dui = val[2];
+    nit = val[3];
+    telefono = val[4];
+    direccion = val[5];
+    var fila = "<tr><td>"+id
+    +"</td><td>"+nombre
+    +"</td><td>"+dui
+    +"</td><td>"+nit
+    +"</td><td>"+telefono
+    +"</td><td>"+direccion
+    +"</td></tr>";
+    var tabla = document.createElement("TR");
+   	tabla.innerHTML=fila;
+    document.getElementById("cliente").appendChild(tabla);
 }
 </script>
 <script language="javascript">
     $(document).ready(function () {
-
         $('form').keypress(function (e) {
             if (e == 13) {
                 return false;
@@ -74,7 +91,19 @@ function selector_Cliente() {
                                             <div class="input-field"><i class="fa fa-search prefix" aria-hidden="true">
 
                                                 </i><label for="" style="font-size:16px">Buscar Cliente</label>
-                                                <input type="text" id="buscar_cliente"  onchange="selector_Cliente()" class="form-control" list="lista_personas_naturales">
+                                                <select id="selector" name="selector" onchange="selector_Cliente()" class="form-control">
+                                                <?php
+                                                   include_once '../app/Conexion.php';
+                                                    include_once '../repositorios/repositorio_expediente_natural.php';
+                                                    Conexion::abrir_conexion();
+                                                    $listado = repositorio_expediente_natural::lista_persona_natural(Conexion::obtener_conexion());
+                                                    echo '<option value="0" label="Seleccione un Cliente" >';
+                                                    foreach ($listado as $fila) {
+                                                        echo '<option  value="' . $fila[0] .','.$fila[1].','.$fila[3].','.$fila[4].','.$fila[5].','.$fila[6].'" label="' . $fila[1] .'" >';
+                                                    }
+                                                    ?>
+                                                </select>
+                                               <!-- <input type="text" id="buscar_cliente" autofocus o="return llenar_tabla_cliente(this)" class="form-control" list="lista_personas_naturales">-->
                                             </div>              
                                         </div>
                                         <div class="col-md-6">
@@ -104,7 +133,7 @@ function selector_Cliente() {
                                     <th>Teléfono</th>
                                     <th>Dirección</th>  
                                     </thead>
-                                    <tbody>
+                                    <tbody id="cliente">
 
                                     </tbody>
                                 </table>
@@ -494,7 +523,7 @@ function selector_Cliente() {
     Conexion::abrir_conexion();
     $listado = repositorio_expediente_natural::lista_persona_natural(Conexion::obtener_conexion());
     foreach ($listado as $fila) {
-        echo '<option value="' . $fila[1] .' '. $fila[2] . '" label="' . $fila[0] . '" > ';
+        echo '<option  value="' . $fila[1] .' '. $fila[2] . '" label="' . $fila[0] . '" > ';
     }
     ?>
 </datalist>
@@ -502,7 +531,7 @@ function selector_Cliente() {
 <script language="javascript">
     function llenar_tabla_cliente(valor) {
         var depto = valor.value;
-        var n = document.getElementById("n").value;
+        alert(depto);
         var depto = $("#lista_personas_naturales option[value='" + $('#buscar_cliente').val() + "']").attr('label');//alert(depto);
         $("#lista_personas_naturales").load(" #lista_personas_naturales");//para actuaizar la datalist cuando registra 
 //var numero=valor.id.substr(7)
