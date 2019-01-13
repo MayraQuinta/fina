@@ -16,6 +16,8 @@ function selector_Cliente() {
     nit = val[3];
     telefono = val[4];
     direccion = val[5];
+    var tabla = document.createElement("TR");
+    document.getElementById("cliente").innerHTML='';
     var fila = "<tr><td>"+id
     +"</td><td>"+nombre
     +"</td><td>"+dui
@@ -23,7 +25,6 @@ function selector_Cliente() {
     +"</td><td>"+telefono
     +"</td><td>"+direccion
     +"</td></tr>";
-    var tabla = document.createElement("TR");
    	tabla.innerHTML=fila;
     document.getElementById("cliente").appendChild(tabla);
 }
