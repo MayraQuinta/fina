@@ -3,7 +3,30 @@ include_once '../plantilla/cabecera.php';
 include_once '../plantilla/barraSuperior.php';
 include_once '../plantilla/barra_lateral_usuario.php';
 ?>
-
+<script>
+function selector_Cliente() {
+    value = document.getElementById("selector").value;
+    val  = value.split(',');
+    
+    id = val[0];
+    nombre = val[1];
+    dui = val[2];
+    nit = val[3];
+    prestamo = val[4];
+    saldo = val[5];
+    var tabla = document.createElement("TR");
+    document.getElementById("cliente").innerHTML='';
+    var fila = "<tr><td>"+id
+    +"</td><td>"+nombre
+    +"</td><td>"+dui
+    +"</td><td>"+nit
+    +"</td><td>"+prestamo
+    +"</td><td>"+saldo
+    +"</td></tr>";
+   	tabla.innerHTML=fila;
+    document.getElementById("cliente").appendChild(tabla);
+}
+</script>
 <script language="javascript">
     $(document).ready(function () {
 
@@ -83,7 +106,32 @@ include_once '../plantilla/barra_lateral_usuario.php';
                                             <div class="input-field"><i class="fa fa-search prefix" aria-hidden="true">
 
                                                 </i><label for="" style="font-size:16px">Buscar Cliente</label>
-                                                <input type="text" id="buscar_cliente_abono"  name="buscar_cliente_abono" autofocus onkeypress="llenar_tabla_cliente_abono(this)" list="lista_personas_cliente_abono" class="form-control">
+                                                <select id="selector" name="selector" onchange="selector_Cliente()" class="form-control">
+                                                
+                                                   <?php
+                                                    include_once '../app/Conexion.php';
+                                                    include_once '../modelos/persona_juridica.php';
+                                                    include_once '../repositorios/repositorio_expediente_natural.php';
+                                                    include_once '../repositorios/repositorio_juridico.php';
+                                                    Conexion::abrir_conexion();
+                                                    
+                                                    $listado1 = repositorio_juridico::lista_persona_abono_juridica(Conexion::obtener_conexion());
+                                                   // $l=count($listado1);
+                                                    echo '<option value="0" label="Seleccione un Cliente" >';
+                                                    foreach ($listado1 as $filaJ) {
+                                                        echo '<option value="' .$filaJ[0].','.$filaJ[1].','.$filaJ[2].','.$filaJ[3].','.$filaJ[4].','.$filaJ[5]. '" label="' . $filaJ[1] ."-J". '" > ';
+                                                    }
+                                                    
+                                                    $listado = repositorio_expediente_natural::lista_persona_natural_abono(Conexion::obtener_conexion());
+                                                    foreach ($listado as $fila) {
+                                                        echo '<option  value="' . $fila[0] .','.$fila[1].','.$fila[3].','.$fila[4].','.$fila[5].','.$fila[6].'" label="' . $fila[1] ."-N".'" >';
+                                                    }
+                                                    
+                                                    
+                                                    
+                                                    ?>
+                                                </select>
+                                                <!--<input type="text" id="buscar_cliente_abono"  name="buscar_cliente_abono" autofocus onkeypress="llenar_tabla_cliente_abono(this)" list="lista_personas_cliente_abono" class="form-control">-->
                                             </div>              
                                         </div>
                                     </div>
@@ -103,7 +151,7 @@ include_once '../plantilla/barra_lateral_usuario.php';
                                 <th>Saldo Actual</th>  
                                 <th>Cuota</th>  
                                 </thead>
-                                <tbody>
+                                <tbody id="cliente">
 
                                 </tbody>
                             </table>
@@ -234,7 +282,7 @@ include_once '../plantilla/barra_lateral_usuario.php';
     $listado1 = repositorio_juridico::lista_persona_juridca(Conexion::obtener_conexion());
     $l=count($listado1);
     for ($i=0 ; $i < $l ; $i++) {
-        echo '<option value="' . $listado1[$i]->getId_nombre() . '" label="' . $listado1[$i]->getId_persona_juridica() . '-J" > ';
+        echo '<option value="' . $filaJ[0]->getId_nombre() . '" label="' . $filaJ[1]->getId_persona_juridica() . '-J" > ';
     }
     
     $listado = repositorio_expediente_natural::lista_clientes(Conexion::obtener_conexion());

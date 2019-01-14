@@ -234,6 +234,29 @@ persona_natural.monto = 0";
         }
         return $resultado;
     }
+    public static function lista_persona_natural_abono($conexion) {
+        $resultado = "";
+        if (isset($conexion)) {
+            try {
+                $sql = "SELECT
+                pn.id_persona_natural as id,
+                (CONCAT(pn.nombre,' ',pn.apellido))  as nombre,
+                pn.apellido,
+                pn.dui as dui,
+                pn.nit as nit,
+                p.prestamo_original as prestamo,
+                p.saldo_actual as saldo
+                FROM
+                persona_natural as pn, prestamo as p, expediente_natural as en
+                WHERE 
+                en.persona_natural = pn.id_persona_natural AND p.id_prestamo = en.id_prestamo";
+                $resultado = $conexion->query($sql);
+            } catch (PDOException $ex) {
+                print 'ERROR: ' . $ex->getMessage();
+            }
+        }
+        return $resultado;
+    }
 
     public static function lista_clientes($conexion) {
         $resultado = "";
@@ -242,7 +265,9 @@ persona_natural.monto = 0";
                 $sql = "SELECT
                 persona_natural.id_persona_natural as id,
                 (CONCAT(persona_natural.nombre,' ',persona_natural.apellido))  as nombre,
-                persona_natural.apellido
+                persona_natural.apellido,
+                persona_natural.dui as dui,
+                persona_natural.nit as nit
                 FROM
                 persona_natural
                   WHERE
