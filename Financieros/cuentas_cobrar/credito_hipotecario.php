@@ -5,7 +5,30 @@ include_once '../plantilla/barraSuperior.php';
 include_once '../plantilla/barra_lateral_usuario.php';
 include_once '../app/Conexion.php';
 ?>
-
+<script>
+function selector_Cliente() {
+    value = document.getElementById("selector").value;
+    val  = value.split(',');
+    
+    id = val[0];
+    nombre = val[1];
+    dui = val[2];
+    nit = val[3];
+    telefono = val[4];
+    direccion = val[5];
+    var tabla = document.createElement("TR");
+    document.getElementById("cliente").innerHTML='';
+    var fila = "<tr><td>"+id
+    +"</td><td>"+nombre
+    +"</td><td>"+dui
+    +"</td><td>"+nit
+    +"</td><td>"+telefono
+    +"</td><td>"+direccion
+    +"</td></tr>";
+   	tabla.innerHTML=fila;
+    document.getElementById("cliente").appendChild(tabla);
+}
+</script>
 <script language="javascript">
     $(document).ready(function () {
 
@@ -72,7 +95,20 @@ include_once '../app/Conexion.php';
                                             <div class="input-field"><i class="fa fa-search prefix" aria-hidden="true">
 
                                                 </i><label for="" style="font-size:16px">Buscar Cliente</label>
-                                                <input type="text" id="buscar_cliente_hp"  name="" autofocus onkeypress="return llenar_tabla_cliente_hp(this)" list="lista_personas_naturales_hp">
+                                                <select id="selector" name="selector" onchange="selector_Cliente()" class="form-control">
+                                                <?php
+                                                       include_once '../app/Conexion.php';
+                                                       include_once '../modelos/Libros.php';
+                                                       include_once '../repositorios/repositorio_expediente_natural.php';
+                                                       Conexion::abrir_conexion();
+                                                       $listado = repositorio_expediente_natural::lista_persona_natural(Conexion::obtener_conexion());
+                                                    echo '<option value="0" label="Seleccione un Cliente" >';
+                                                    foreach ($listado as $fila) {
+                                                        echo '<option  value="' . $fila[0] .','.$fila[1].','.$fila[3].','.$fila[4].','.$fila[5].','.$fila[6].'" label="' . $fila[1] .'" >';
+                                                    }
+                                                    ?>
+                                                </select>
+                                               <!-- <input type="text" id="buscar_cliente_hp"  name="" autofocus onkeypress="return llenar_tabla_cliente_hp(this)" list="lista_personas_naturales_hp">-->
                                             </div>              
                                         </div>
                                     </div>
@@ -89,7 +125,7 @@ include_once '../app/Conexion.php';
                                 <th>Telefono</th>
                                 <th>Direccion</th>  
                                 </thead>
-                                <tbody>
+                                <tbody id="cliente">
 
                                 </tbody>
                             </table>                            
