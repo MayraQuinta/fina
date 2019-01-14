@@ -26,7 +26,7 @@ class repositorio_expediente_natural {
                 $apellido = $persona->getApellido();
                 $direccion = $persona->getDireccion();
                 $telefono = $persona->getTelefono();
-//                $cod= $persona->getId_persona_natural();
+              $cod= $persona->getId_persona_natural();
                 //$correo = $persona->getCorreo();
 
 

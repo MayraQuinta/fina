@@ -137,7 +137,7 @@ function abrir_pagos_natural(id_prestamo) {
     }
 
 function refinanciar(id_prestamo ,id_juridico ){
-    location.href="credito_refinanciado_juridico.php?id_prestamo=" +id_prestamo+"&id_juridico="+id_juridico+ "_parent";
+    location.href="credito_refinanciado_juridico.php?id_prestamo=" +id_prestamo+"&id_juridico="+id_juridico,"_parent";
 }
 
 </script>

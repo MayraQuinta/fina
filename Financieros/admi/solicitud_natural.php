@@ -56,7 +56,7 @@ $lista_prestamo = repositorio_prestamo::lista_prestamo_pendiente_natural(Conexio
                         <?php foreach ($lista_prestamo as $lista) { ?>
                             <tr>
                                 <td class="text-center">
-                                    <button class="btn btn-success" onclick="aprobar_credito('<?php echo $lista['6'];?>')"> 
+                                    <button class="btn btn-success" onclick="aprobar_credito('<?php echo $lista['8'];?>')"> 
                                         <i class="Medium material-icons prefix ">check_circle</i> 
                                     </button>
                                 </td>
@@ -67,7 +67,7 @@ $lista_prestamo = repositorio_prestamo::lista_prestamo_pendiente_natural(Conexio
                                 <th class="text-center"><?php echo "$". $lista['4'];?></th>
                                 <th class="text-center"><?php echo $lista['5'];?></th>
                                  <td class="text-center">
-                                     <button class="btn btn-danger" onclick="abrir_expediente('<?php echo $lista['6'];?>', '<?php echo $lista['3'];?>')"> 
+                                     <button class="btn btn-danger" onclick="abrir_expediente('<?php echo $lista['8'];?>', '<?php echo $lista['3'];?>')"> 
                                         <i class="Medium material-icons prefix">visibility</i> 
                                     </button>
                                 </td>
@@ -95,9 +95,9 @@ function aprobar_credito(id_prestamo){
     location.href="solicitud_natural.php?id_prestamo=" +id_prestamo, "_parent";
 }
 
-function aprobar_credito(id_prestamo){
-    location.href="solicitud_pendiente.php?id_prestamo=" +id_prestamo, "_parent";
-}
+//function aprobar_credito(id_prestamo){
+//    location.href="solicitud_pendiente.php?id_prestamo=" +id_prestamo, "_parent";
+//}
 
 </script>
 

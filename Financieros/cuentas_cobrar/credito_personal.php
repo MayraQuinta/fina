@@ -828,7 +828,6 @@ if (isset($_REQUEST["pas_cp"])) {
         $fiador->setDireccion($_REQUEST["Direccion_fia_per"]);
         $fiador->setDui($_REQUEST["Dui_fia_per"]);
         $fiador->setNit($_REQUEST["Nit_fia_per"]);
-        $fiador->setId_persona_natural($_REQUEST["codCliente_cpersonal"]);
         $fiador->setId_telefono($_REQUEST["Telefono_fia_per"]);
         $fiador->setLugar_trabajo($_REQUEST["Trabajo_fia_per"]);
         $prestamo = new presamo();
@@ -854,13 +853,13 @@ if (isset($_REQUEST["pas_cp"])) {
             $prestamo1 = repositorio_prestamo::obtenerU_ultimo_prestamo(Conexion::obtener_conexion());
             $expediente = new expediente_natural();
             $expediente->setId_prestamo($prestamo1);
-            $expediente->setPersona_natural($_REQUEST["codCliente_cpersonal"]);
+            $expediente->setPersona_natural($_REQUEST["selector"]);
             repositorio_expediente_natural::insertar_expediente(Conexion::obtener_conexion(), $expediente);
             for ($i = 0; $i < $l; $i++) {
                 $referencias->setNombre($nombres[$i]);
                 $referencias->setApellido($apellidos[$i]);
                 $referencias->setTelefono($tels[$i]);
-                $referencias->setId_persona_natural($_REQUEST["codCliente_cpersonal"]);
+                $referencias->setId_persona_natural($_REQUEST["selector"]);
                 if (repositorio_referencias::insertar_referencia(Conexion::obtener_conexion(), $referencias)) {
                     echo "<script type='text/javascript'>";
                     echo 'swal({
@@ -902,7 +901,7 @@ if (isset($_REQUEST["pas_cp"])) {
         //echo '<script language="javascript">alert("'.$nombre_archivo.'");</script>'; 
         $bien = new bien_hipotecario();
         $bien->setDescripcion($_REQUEST["descr"]);
-        $bien->setId_persona_natural($_REQUEST["codCliente_cpersonal"]);
+        $bien->setId_persona_natural($_REQUEST["selector"]);
         $bien->setOtros_datos("no");
         $bien->setUbicacion($_REQUEST["hubica"]);
 
@@ -929,7 +928,7 @@ if (isset($_REQUEST["pas_cp"])) {
             $prestamo1 = repositorio_prestamo::obtenerU_ultimo_prestamo(Conexion::obtener_conexion());
             $expediente = new expediente_natural();
             $expediente->setId_prestamo($prestamo1);
-            $expediente->setPersona_natural($_REQUEST["codCliente_cpersonal"]);
+            $expediente->setPersona_natural($_REQUEST["selector"]);
             repositorio_expediente_natural::insertar_expediente(Conexion::obtener_conexion(), $expediente);
             repositorio_expediente_natural::insertar_bien(Conexion::obtener_conexion(), $bien);
             echo "<script type='text/javascript'>";
@@ -961,7 +960,7 @@ if (isset($_REQUEST["pas_cp"])) {
         $fiador->setDireccion($_REQUEST["Direccion_fia_per"]);
         $fiador->setDui($_REQUEST["Dui_fia_per"]);
         $fiador->setNit($_REQUEST["Nit_fia_per"]);
-        $fiador->setId_persona_natural($_REQUEST["codCliente_cpersonal"]);
+        $fiador->setId_persona_natural($_REQUEST["selector"]);
         $fiador->setId_telefono($_REQUEST["Telefono_fia_per"]);
         $fiador->setLugar_trabajo($_REQUEST["Trabajo_fia_per"]);
         $prestamo = new presamo();
@@ -987,13 +986,13 @@ if (isset($_REQUEST["pas_cp"])) {
             $prestamo1 = repositorio_prestamo::obtenerU_ultimo_prestamo(Conexion::obtener_conexion());
             $expediente = new expediente_natural();
             $expediente->setId_prestamo($prestamo1);
-            $expediente->setPersona_natural($_REQUEST["codCliente_cpersonal"]);
+            $expediente->setPersona_natural($_REQUEST["selector"]);
             repositorio_expediente_natural::insertar_expediente(Conexion::obtener_conexion(), $expediente);
             for ($i = 0; $i < $l; $i++) {
                 $referencias->setNombre($nombres[$i]);
                 $referencias->setApellido($apellidos[$i]);
                 $referencias->setTelefono($tels[$i]);
-                $referencias->setId_persona_natural($_REQUEST["codCliente_cpersonal"]);
+                $referencias->setId_persona_natural($_REQUEST["selector"]);
                 if (repositorio_referencias::insertar_referencia(Conexion::obtener_conexion(), $referencias)) {
                     echo "<script type='text/javascript'>";
                     echo 'swal({
@@ -1036,7 +1035,7 @@ if (isset($_REQUEST["pas_cp"])) {
         $fiador->setDireccion($_REQUEST["Direccion_fia_per"]);
         $fiador->setDui($_REQUEST["Dui_fia_per"]);
         $fiador->setNit($_REQUEST["Nit_fia_per"]);
-        $fiador->setId_persona_natural($_REQUEST["codCliente_cpersonal"]);
+        $fiador->setId_persona_natural($_REQUEST["selector"]);
         $fiador->setId_telefono($_REQUEST["Telefono_fia_per"]);
         $fiador->setLugar_trabajo($_REQUEST["Trabajo_fia_per"]);
         $prestamo = new presamo();
@@ -1062,13 +1061,13 @@ if (isset($_REQUEST["pas_cp"])) {
             $prestamo1 = repositorio_prestamo::obtenerU_ultimo_prestamo(Conexion::obtener_conexion());
             $expediente = new expediente_natural();
             $expediente->setId_prestamo($prestamo1);
-            $expediente->setPersona_natural($_REQUEST["codCliente_cpersonal"]);
+            $expediente->setPersona_natural($_REQUEST["selector"]);
             repositorio_expediente_natural::insertar_expediente(Conexion::obtener_conexion(), $expediente);
             for ($i = 0; $i < $l; $i++) {
                 $referencias->setNombre($nombres[$i]);
                 $referencias->setApellido($apellidos[$i]);
                 $referencias->setTelefono($tels[$i]);
-                $referencias->setId_persona_natural($_REQUEST["codCliente_cpersonal"]);
+                $referencias->setId_persona_natural($_REQUEST["selector"]);
                 if (repositorio_referencias::insertar_referencia(Conexion::obtener_conexion(), $referencias)) {
                     echo "<script type='text/javascript'>";
                     echo 'swal({
