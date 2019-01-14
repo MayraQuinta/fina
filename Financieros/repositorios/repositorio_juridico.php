@@ -103,7 +103,7 @@ class repositorio_juridico {
                         $juridica->setId_nombre($fila['nombre']);
                         $juridica->setNumero($fila['numero']);
                         $juridica->setDui($fila['dui']);
-                        $juridica->setDui($fila['nit']);
+                        $juridica->setNit($fila['nit']);
                         
                         $lista_juridica[] = $juridica;
                         
