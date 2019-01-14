@@ -30,13 +30,29 @@ $lista_prestamo = repositorio_prestamo::lista_prestamo_pendiente_juridica(Conexi
 ?>    
 
 
+<div id="content">
+                <div class="panel">
+                  <div class="panel-body">
+                      <div class="col-md-6 col-sm-12">
+                        <h3 class="animated fadeInLeft">Solicitud en Proceso</h3>
+                        
+
+                      
+                    </div>
+                  
+                    </div>
+                  </div>                    
+                   
+     
+ 
+
 <section class="content">
     <div class="container-fluid">
         <div class="panel" name="libros">
             <div class="panel-heading text-center">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Solicitudes de Creditos empresariales</h3>
+                        <h3>Solicitudes de Créditos Empresariales</h3>
                     </div>
                 </div>
             </div>

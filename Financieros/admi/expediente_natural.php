@@ -28,7 +28,21 @@ $prestamos_pendientes = repositorio_natural::lista_prestamo_previos_natural(Cone
 $lista_referencias = repositorio_natural::lista_referencias(Conexion::obtener_conexion(), $_REQUEST['id_natural']);
 $lista_fiador = repositorio_natural::lista_fiador(Conexion::obtener_conexion(), $_REQUEST['id_natural']);
 $lista_bienes = repositorio_natural::lista_bienes(Conexion::obtener_conexion(), $_REQUEST['id_natural']);
-?>    
+?> 
+
+<div id="content">
+                <div class="panel">
+                  <div class="panel-body">
+                      <div class="col-md-6 col-sm-12">
+                        <h3 class="animated fadeInLeft">Expediente</h3>
+                        
+
+                      
+                    </div>
+                  
+                    </div>
+                  </div>  
+
 <section class="content">
     <div class="container-fluid">
 
@@ -37,7 +51,7 @@ $lista_bienes = repositorio_natural::lista_bienes(Conexion::obtener_conexion(), 
                 <div class="card">
                     <div class="header">
                         <a href="#">
-                            <h3 class="text-center">DATOS DE CLIENTE</h3>
+                            <h3 class="panel-heading text-center">DATOS DE CLIENTE</h3>
                         </a>
                     </div>
                     <div id="" class="">
@@ -86,7 +100,7 @@ if (isset($_REQUEST['tipo'])) {
                         <div class="card">
                             <div class="header">
                                 <a href="#">
-                                    <h3 class="text-center">DATOS DE REFERENCIAS</h3>
+                                    <h3 class="panel-heading text-center">DATOS DE REFERENCIAS</h3>
                                 </a>
                             </div>
                             <div id="" class="">
@@ -126,7 +140,7 @@ if (isset($_REQUEST['tipo'])) {
                         <div class="card">
                             <div class="header">
                                 <a href="#">
-                                    <h3 class="text-center">DATOS DE FIADOR</h3>
+                                    <h3 class="panel-heading text-center">DATOS DE FIADOR</h3>
                                 </a>
                             </div>
                             <div id="" class="">
@@ -171,7 +185,7 @@ if (isset($_REQUEST['tipo'])) {
                         <div class="card">
                             <div class="header">
                                 <a href="#">
-                                    <h3 class="text-center">DATOS DEl BIEN HIPOTECARIO</h3>
+                                    <h3 class="panel-heading text-center">DATOS DEl BIEN HIPOTECARIO</h3>
                                 </a>
                             </div>
                             <div id="" class="">

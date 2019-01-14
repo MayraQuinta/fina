@@ -20,6 +20,20 @@ $lista = repositorio_balance::lista_balance_filtrada(Conexion::obtener_conexion(
 $lista_estado = repositorio_estado_resultado::lista_estado_filtrada(Conexion::obtener_conexion(),$_REQUEST['id_persona'], $_REQUEST['periodo']);
 ?>    
 
+<div id="content">
+                <div class="panel">
+                  <div class="panel-body">
+                      <div class="col-md-6 col-sm-12">
+                        <h3 class="animated fadeInLeft">Estado</h3>
+                        
+
+                      
+                    </div>
+                  
+                    </div>
+                  </div>                    
+                   
+
 <section class="content">
     <?php  foreach ($lista as $lista_balance){ ?>
     
@@ -29,7 +43,7 @@ $lista_estado = repositorio_estado_resultado::lista_estado_filtrada(Conexion::ob
                 <div class="card">
                     <div class="header">
                         <a href="#">
-                            <h3 class="text-center"><?php echo 'BALANCE GENERAL AL 31 DE DICIEMBRE' . ' ' . $_REQUEST['periodo']; ?></h3>
+                            <h3 class="panel-heading text-center"><?php echo 'BALANCE GENERAL AL 31 DE DICIEMBRE' . ' ' . $_REQUEST['periodo']; ?></h3>
                         </a>
                     </div>
                     <div id="" class="">
@@ -133,7 +147,7 @@ $lista_estado = repositorio_estado_resultado::lista_estado_filtrada(Conexion::ob
                 <div class="card">
                     <div class="header">
                         <a href="#">
-                            <h3 class="text-center"><?php echo 'ESTADO DE RESULTADO AL 31 DE DICIEMBRE' . ' ' . $_REQUEST['periodo']; ?></h3>
+                            <h3 class="panel-heading text-center"><?php echo 'ESTADO DE RESULTADO AL 31 DE DICIEMBRE' . ' ' . $_REQUEST['periodo']; ?></h3>
                         </a>
                     </div>
                     <div id="" class="">

@@ -30,7 +30,22 @@ for ($i = 0; $i < count($lista_balance); $i++) {
 
     $ratio[] = repositorio_expediente_juridico::calculo_ratios($balance, $estado);
 }
-?>    
+?> 
+<div id="content">
+                <div class="panel">
+                  <div class="panel-body">
+                      <div class="col-md-6 col-sm-12">
+                        <h3 class="animated fadeInLeft">Expediente</h3>
+                        
+
+                      
+                    </div>
+                  
+                    </div>
+                  </div>                    
+                   
+
+
 <section class="content">
     <div class="container-fluid">
 
@@ -39,7 +54,7 @@ for ($i = 0; $i < count($lista_balance); $i++) {
                 <div class="card">
                     <div class="header">
                         <a href="#">
-                            <h3 class="text-center">DATOS DE LA EMPRESA</h3>
+                            <h3 class="panel-heading text-center">DATOS DE LA EMPRESA</h3>
                         </a>
                     </div>
                     <div id="" class="">
