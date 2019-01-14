@@ -29,13 +29,29 @@ if (isset($_REQUEST['id_prestamo'])) {
 $lista_prestamo = repositorio_prestamo::lista_prestamo_pendiente_natural(Conexion::obtener_conexion());
 ?>    
 
+<div id="content">
+                <div class="panel">
+                  <div class="panel-body">
+                      <div class="col-md-6 col-sm-12">
+                        <h3 class="animated fadeInLeft">Solicitud en Proceso</h3>
+                        
+
+                      
+                    </div>
+                  
+                    </div>
+                  </div>                    
+                   
+     
+ 
+
 <section class="content">
     <div class="container-fluid">
         <div class="panel" name="libros">
             <div class="panel-heading text-center">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Solicitudes de Creditos Personales</h3>
+                        <h3>Solicitudes de Créditos Natural</h3>
                     </div>
                 </div>
             </div>
@@ -80,7 +96,7 @@ $lista_prestamo = repositorio_prestamo::lista_prestamo_pendiente_natural(Conexio
         </div>
     </div>
 </section>
-
+</div>
 <script>
 function abrir_expediente(id_natural,tipo){
     var url="./expediente_natural.php?id_natural=" +id_natural+"&tipo="+tipo;

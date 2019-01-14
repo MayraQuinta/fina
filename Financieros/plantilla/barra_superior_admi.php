@@ -9,7 +9,7 @@
                 <span class="bottom"></span>
               </div>
                 <a  class="navbar-brand"> 
-                <img src="../asset/img/minerva.gif" class="img-circle avatar" />
+                
                  <b>ANÁLISIS FINANCIERO</b>
                 </a>
 
