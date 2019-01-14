@@ -114,7 +114,7 @@ $datos = repositorio_prestamo::llenar_refinanciamiento_juridico(Conexion::obtene
             <div class="panel-body">  
 
 
-                <form action="credito_juridico.php" autocomplete="off" method="get" name="credito_personal" id="credito_personal" >
+                <form action="credito_refinanciado_juridico.php" autocomplete="off" method="get" name="credito_personal" id="credito_personal" >
                     <input type="hidden" id="pas_cp" value="<?php echo $_REQUEST['id_juridico'];?>" name="pas_cp"/>
     <input type="radio" id="uno" checked="" style="visibility: hidden"/>
     <section class="content">
