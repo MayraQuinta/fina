@@ -14,7 +14,20 @@ include_once '../app/Conexion.php';
 Conexion::abrir_conexion();
 $pagos = repositorio_expediente_juridico::lista_pagos_previos_natural(Conexion::obtener_conexion(), $_REQUEST['id_prestamo']);
 
-?>    
+?>  
+
+<div id="content">
+                <div class="panel">
+                  <div class="panel-body">
+                      <div class="col-md-6 col-sm-12">
+                        <h3 class="animated fadeInLeft">Pagos</h3>
+                        
+
+                      
+                    </div>
+                  
+                    </div>
+                  </div>    
 <section class="content">
 
     <div class="container-fluid">
