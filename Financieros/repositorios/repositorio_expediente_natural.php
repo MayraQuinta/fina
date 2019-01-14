@@ -245,7 +245,9 @@ persona_natural.monto = 0";
                 pn.dui as dui,
                 pn.nit as nit,
                 p.prestamo_original as prestamo,
-                p.saldo_actual as saldo
+                p.saldo_actual as saldo,
+                p.tasa_interes as tasa,
+                p.tiempo as meses
                 FROM
                 persona_natural as pn, prestamo as p, expediente_natural as en
                 WHERE 

@@ -129,7 +129,9 @@ class repositorio_juridico {
                 pj.dui as dui,
                 pj.nit as nit,
                 p.prestamo_original as prestamo,
-                p.saldo_actual as saldo_actual
+                p.saldo_actual as saldo_actual,
+                p.tasa_interes as tasa,
+                p.tiempo as meses
                 FROM
                 persona_juridica as pj,prestamo as p,expediente_juridico as ej
                 WHERE

@@ -5,6 +5,7 @@ include_once '../plantilla/barra_lateral_usuario.php';
 ?>
 <script>
 function selector_Cliente() {
+    var cuota_persona = 0;
     value = document.getElementById("selector").value;
     val  = value.split(',');
     
@@ -14,6 +15,10 @@ function selector_Cliente() {
     nit = val[3];
     prestamo = val[4];
     saldo = val[5];
+    tasa_persona = val[6]/100/12;
+    meses_persona= val[7];
+    cuota_persona = prestamo * ((Math.pow(1 + tasa_persona, meses_persona) * tasa_persona) / (Math.pow(1 + tasa_persona, meses_persona) - 1));
+    cuota_persona = cuota_persona.toFixed(2);
     var tabla = document.createElement("TR");
     document.getElementById("cliente").innerHTML='';
     var fila = "<tr><td>"+id
@@ -22,6 +27,7 @@ function selector_Cliente() {
     +"</td><td>"+nit
     +"</td><td>"+prestamo
     +"</td><td>"+saldo
+    +"</td><td>"+cuota_persona
     +"</td></tr>";
    	tabla.innerHTML=fila;
     document.getElementById("cliente").appendChild(tabla);
@@ -119,12 +125,12 @@ function selector_Cliente() {
                                                    // $l=count($listado1);
                                                     echo '<option value="0" label="Seleccione un Cliente" >';
                                                     foreach ($listado1 as $filaJ) {
-                                                        echo '<option value="' .$filaJ[0].','.$filaJ[1].','.$filaJ[2].','.$filaJ[3].','.$filaJ[4].','.$filaJ[5]. '" label="' . $filaJ[1] ."-J". '" > ';
+                                                        echo '<option value="' .$filaJ[0].','.$filaJ[1].','.$filaJ[2].','.$filaJ[3].','.$filaJ[4].','.$filaJ[5].','.$filaJ[6].','.$filaJ[7]. '" label="' . $filaJ[1] ."-J". '" > ';
                                                     }
                                                     
                                                     $listado = repositorio_expediente_natural::lista_persona_natural_abono(Conexion::obtener_conexion());
                                                     foreach ($listado as $fila) {
-                                                        echo '<option  value="' . $fila[0] .','.$fila[1].','.$fila[3].','.$fila[4].','.$fila[5].','.$fila[6].'" label="' . $fila[1] ."-N".'" >';
+                                                        echo '<option  value="' . $fila[0] .','.$fila[1].','.$fila[3].','.$fila[4].','.$fila[5].','.$fila[6].','.$fila[7].','.$fila[8].'" label="' . $fila[1] ."-N".'" >';
                                                     }
                                                     
                                                     
