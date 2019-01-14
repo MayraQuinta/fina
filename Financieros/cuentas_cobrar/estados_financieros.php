@@ -5,7 +5,28 @@ include_once '../plantilla/barraSuperior.php';
 include_once '../plantilla/barra_lateral_usuario.php';
 include_once '../app/Conexion.php';
 ?>
-
+<script>
+function selector_Cliente() {
+    value = document.getElementById("selector").value;
+    val  = value.split(',');
+    
+    id = val[0];
+    nombre = val[1];
+    numero = val[2];
+    dui = val[3];
+    nit = val[4];
+    var tabla = document.createElement("TR");
+    document.getElementById("cliente").innerHTML='';
+    var fila = "<tr><td>"+id
+    +"</td><td>"+nombre
+    +"</td><td>"+numero
+    +"</td><td>"+dui
+    +"</td><td>"+nit
+    +"</td></tr>";
+   	tabla.innerHTML=fila;
+    document.getElementById("cliente").appendChild(tabla);
+}
+</script>
 <script language="javascript">
     $(document).ready(function () {
 
@@ -123,7 +144,20 @@ if (isset($_REQUEST['nameEnviar'])) {
                                                 <div class="input-field"><i class="fa fa-search prefix" aria-hidden="true">
 
                                                     </i><label >Buscar Empresa</label>
-                                                    <input type="text" id="buscar_cliente" class="form-control info"  autofocus onkeypress="return llenar_tabla_cliente(this)"  list="lista_personas_naturales2">
+                                                    <select id="selector" name="selector" onchange="selector_Cliente()" class="form-control info">
+                                                <?php
+                                                    include_once '../app/Conexion.php';
+                                                    include_once '../modelos/persona_juridica.php';
+                                                    include_once '../repositorios/repositorio_juridico.php';
+                                                    Conexion::abrir_conexion();
+                                                    $listado = repositorio_juridico::lista_persona_juridca(Conexion::obtener_conexion());
+                                                    echo '<option value="0" label="Seleccione una Empresa" >';
+                                                    foreach ($listado as $fila) {
+                                                        echo '<option value="' .$fila->getId_persona_juridica().','.$fila->getId_nombre().','. $fila->getNumero().','.$fila->getDui().','.$fila->getNit(). '" label="' . $fila->getId_nombre() . '" > ';
+                                                    }
+                                                    ?>
+                                                </select>
+                                                   <!-- <input type="text" id="buscar_cliente" class="form-control info"  autofocus onkeypress="return llenar_tabla_cliente(this)"  list="lista_personas_naturales2">-->
                                                 </div>              
                                             </div>
                                         </div>
@@ -153,7 +187,7 @@ if (isset($_REQUEST['nameEnviar'])) {
                                     <th>NIT(Encargado)</th>
 
                                     </thead>
-                                    <tbody>
+                                    <tbody id="cliente">
 
                                     </tbody>
                                 </table>
