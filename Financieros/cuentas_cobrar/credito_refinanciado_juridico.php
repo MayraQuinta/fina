@@ -59,7 +59,7 @@ if (isset($_REQUEST['nameEnviar'])) {
     
     if (repositorio_prestamo::insertar_prestamo(Conexion::obtener_conexion(), $prestamo)) {
          $id_prestamo = repositorio_prestamo::obtenerU_ultimo_prestamo(Conexion::obtener_conexion());
-         $id_persona = $_REQUEST['codCliente_cpersonal'];
+         $id_persona = $_REQUEST['pas_cp'];
          echo $id_prestamo;
          echo $id_persona;
          
@@ -114,8 +114,8 @@ $datos = repositorio_prestamo::llenar_refinanciamiento_juridico(Conexion::obtene
             <div class="panel-body">  
 
 
-<form action="credito_juridico.php" autocomplete="off" method="get" name="credito_personal" id="credito_personal" >
-    <input type="hidden" id="pas_cp" name="pas_cp"/>
+                <form action="credito_juridico.php" autocomplete="off" method="get" name="credito_personal" id="credito_personal" >
+                    <input type="hidden" id="pas_cp" value="<?php echo $_REQUEST['id_juridico'];?>" name="pas_cp"/>
     <input type="radio" id="uno" checked="" style="visibility: hidden"/>
     <section class="content">
         <!--    INICIO  DATOS-->

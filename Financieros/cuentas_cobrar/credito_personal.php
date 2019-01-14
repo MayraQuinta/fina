@@ -828,6 +828,7 @@ if (isset($_REQUEST["pas_cp"])) {
         $fiador->setDireccion($_REQUEST["Direccion_fia_per"]);
         $fiador->setDui($_REQUEST["Dui_fia_per"]);
         $fiador->setNit($_REQUEST["Nit_fia_per"]);
+        $fiador->setId_persona_natural($_REQUEST["selector"]);
         $fiador->setId_telefono($_REQUEST["Telefono_fia_per"]);
         $fiador->setLugar_trabajo($_REQUEST["Trabajo_fia_per"]);
         $prestamo = new presamo();

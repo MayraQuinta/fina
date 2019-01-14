@@ -21,10 +21,9 @@ if (isset($_REQUEST['nameEnviar'])) {
         $prestamo->setFecha($devolucion);
     $prestamo->setTipo_credito("JURIDICO");
     Conexion::abrir_conexion();
-    
     if (repositorio_prestamo::insertar_prestamo(Conexion::obtener_conexion(), $prestamo)) {
          $id_prestamo = repositorio_prestamo::obtenerU_ultimo_prestamo(Conexion::obtener_conexion());
-         $id_persona = $_REQUEST['codCliente_cpersonal'];
+        $id_persona = $_REQUEST['pas_cp'];
          echo $id_prestamo;
          echo $id_persona;
          
