@@ -131,7 +131,10 @@ class repositorio_juridico {
                 p.prestamo_original as prestamo,
                 p.saldo_actual as saldo_actual,
                 p.tasa_interes as tasa,
-                p.tiempo as meses
+                p.tiempo as meses,
+                p.proximo_pago as proximo,
+                p.mora_acumulada as mora,
+                p.fecha as fecha
                 FROM
                 persona_juridica as pj,prestamo as p,expediente_juridico as ej
                 WHERE

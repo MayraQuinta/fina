@@ -4,23 +4,58 @@ include_once '../plantilla/barraSuperior.php';
 include_once '../plantilla/barra_lateral_usuario.php';
 ?>
 <script>
+//funcion de agregar cero si en caso en necesario en la fecha
+function addZero(i) {
+    if (i < 10) {
+        i = '0' + i;
+    }
+    return i;
+}//fin funcion addZero
 function selector_Cliente() {
     var cuota_persona = 0;
+    //inicia a sacar fecha del sistema
+    var hoy = new Date();
+        var dd = hoy.getDate();
+        var mm = hoy.getMonth()+1;
+        var yyyy = hoy.getFullYear();
+        dd = addZero(dd);
+        mm = addZero(mm);
+    var fecha= dd+'/'+mm+'/'+yyyy;
+    //fin de sacar fecha
+    //capturo el valr que trae el combo con la cadena
     value = document.getElementById("selector").value;
-    val  = value.split(',');
-    
+    //fin captura de cadena combo
+    val  = value.split(',');//saparador de datos
+    //inicia a separar datos en variables
     id = val[0];
     nombre = val[1];
     dui = val[2];
     nit = val[3];
     prestamo = val[4];
     saldo = val[5];
+    tasa=val[6];
     tasa_persona = val[6]/100/12;
     meses_persona= val[7];
+    proximo_pago =val[8];
+    mora_acumulada = val[9];
+    fecha_Prestamo = val[10];
+    //rearmando fechas
+    f = fecha_Prestamo.split('-');
+    newFecha_Prestamo = f[2]+'/'+f[1]+'/'+f[0];
+    f2 = proximo_pago.split('-');
+    newFecha_proximo = f2[2]+'/'+f2[1]+'/'+f2[0];
+    //fin de variable
+    //saco el dato de la couta con la formula
     cuota_persona = prestamo * ((Math.pow(1 + tasa_persona, meses_persona) * tasa_persona) / (Math.pow(1 + tasa_persona, meses_persona) - 1));
     cuota_persona = cuota_persona.toFixed(2);
+    //fin de formula
+    //creo un objeto para insertar un codigo html
     var tabla = document.createElement("TR");
+    //fin de objeto
+    //cada vez que seleccione se borrara
     document.getElementById("cliente").innerHTML='';
+    //fin de objeto
+    //crear cadena para ser insertada
     var fila = "<tr><td>"+id
     +"</td><td>"+nombre
     +"</td><td>"+dui
@@ -29,9 +64,26 @@ function selector_Cliente() {
     +"</td><td>"+saldo
     +"</td><td>"+cuota_persona
     +"</td></tr>";
-   	tabla.innerHTML=fila;
+    //fin cadena
+    //agregar datos de cadena
+    tabla.innerHTML=fila;
     document.getElementById("cliente").appendChild(tabla);
-}
+    //fin agregar
+    //busco cada imput de otra tabla y los inserto
+    document.abono_form.nprestamo_fat.value = 30;
+    document.abono_form.nombre_fat.value = nombre;
+    document.abono_form.fecha_pres_fat.value = newFecha_Prestamo;
+    document.abono_form.nit_fat.value = nit;
+    document.abono_form.dui_fat.value = dui;
+    document.abono_form.fecha_pago_fat.value = fecha;
+    document.abono_form.fecha_fin_fat.value = newFecha_proximo;
+    document.abono_form.monto_fat.value = prestamo;
+    document.abono_form.cuota_fat.value = cuota_persona;
+    document.abono_form.tasa_fat.value = tasa;
+    document.abono_form.saldo_act_fat.value = saldo;
+    document.abono_form.mora_fat.value = mora_acumulada;
+    //fin de insertar datos a inputs
+}//fin funcion selector cliente
 </script>
 <script language="javascript">
     $(document).ready(function () {
@@ -125,12 +177,12 @@ function selector_Cliente() {
                                                    // $l=count($listado1);
                                                     echo '<option value="0" label="Seleccione un Cliente" >';
                                                     foreach ($listado1 as $filaJ) {
-                                                        echo '<option value="' .$filaJ[0].','.$filaJ[1].','.$filaJ[2].','.$filaJ[3].','.$filaJ[4].','.$filaJ[5].','.$filaJ[6].','.$filaJ[7]. '" label="' . $filaJ[1] ."-J". '" > ';
+                                                        echo '<option value="' .$filaJ[0].','.$filaJ[1].','.$filaJ[2].','.$filaJ[3].','.$filaJ[4].','.$filaJ[5].','.$filaJ[6].','.$filaJ[7].','.$filaJ[8].','.$filaJ[9].','.$filaJ[10]. '" label="' . $filaJ[1] ."-J". '" > ';
                                                     }
                                                     
                                                     $listado = repositorio_expediente_natural::lista_persona_natural_abono(Conexion::obtener_conexion());
                                                     foreach ($listado as $fila) {
-                                                        echo '<option  value="' . $fila[0] .','.$fila[1].','.$fila[3].','.$fila[4].','.$fila[5].','.$fila[6].','.$fila[7].','.$fila[8].'" label="' . $fila[1] ."-N".'" >';
+                                                        echo '<option  value="' . $fila[0] .','.$fila[1].','.$fila[3].','.$fila[4].','.$fila[5].','.$fila[6].','.$fila[7].','.$fila[8].','.$fila[9].','.$fila[10].','.$fila[11].'" label="' . $fila[1] ."-N".'" >';
                                                     }
                                                     
                                                     
@@ -175,68 +227,64 @@ function selector_Cliente() {
                                     <button type="button" onclick="calcular_factura()" class="btn btn-primary m-t-15 waves-effect">CALCULAR</button>
                                 </div>
                             </div>
+                            <div id= "insertar_tabla"></div>
                            <div class="container-fluid" id="factura_N" >
                             <table class="table table-striped table-bordered" s id="factura_natural">
                                 <caption>FACTURA</caption>
 
-                                <tbody>
+                                <tbody id="facturaCli">
                                     <tr>
                                         <th colspan=4><p class="text-center">BanDejando   CREDITO FACIL </p></th>
                                     </tr>
                                     <tr>
-                                        <td id="nprestamo_fat"> n facura</td>
-                                        <td colspan="2" id="nombre_fat">nombre cliente</td>
-                                        <td id="fecha_pres_fat">fecha aplicacion</td>
+                                        <td id="nprestamo_fat"><span class="input-group-addon">Nº Factura<input type="text" name="nprestamo_fat" class="form-control" style="text-align:center" disabled></span> </td>
+                                        <td id="nombre_fat"><span class="input-group-addon">Nombre Cliente<input type="text" name="nombre_fat" class="form-control" style="text-align:center" disabled></span></td>
+                                        <td id="fecha_pres_fat"><span class="input-group-addon">Fecha Aplicacion:  <input type="text" name="fecha_pres_fat" style="text-align:center" disabled></span></td>
                                     </tr>
                                     <tr>
-                                        <td id="nit_fat">nit</td>
-                                        <td id="dui_fat">dui</td>
-                                        <td > </td>
-                                        <td id="fecha_pago_fat"> 12/12/1212</td>
+                                        <td id="nit_fat"><span class="input-group-addon">NIT<input type="text" name="nit_fat" class="form-control" style="text-align:center" disabled></span></td>
+                                        <td id="dui_fat"><span class="input-group-addon">DUI <input type="text" name="dui_fat" class="form-control" style="text-align:center" disabled></span></td>
+                                        <td id="fecha_pago_fat"><span class="input-group-addon">Fecha: <input type="text" name="fecha_pago_fat" style="text-align:center" disabled></span></td>
                                     </tr>
                                     <tr>
-                                        <td id="fecha_fin_fat">fecha vencimiento</td>
+                                        <td id="fecha_fin_fat"><span class="input-group-addon">Fecha Vencimiento <input type="text" name="fecha_fin_fat" style="text-align:center" disabled></span></td>
                                         <td id="fecha_ultimo_fat"></td>
                                         <td></td>
                                         <td> </td>
                                     </tr>
                                     <tr>
-                                        <td id="monto_fat">monto</td>
-                                        <td id="cuota_fat">valor cuota</td>
+                                        <td id="monto_fat"><span class="input-group-addon">Monto: $ <input type="text" name="monto_fat" style="text-align:center" disabled></span></td>
+                                        <td id="cuota_fat"><span class="input-group-addon">Valor Cuota: $ <input type="text" name="cuota_fat" style="text-align:center" disabled></span></td>
                                         <td colspan="2"> </td>
                                     <tr>
-                                        <td id="tasa_fat">tasa nominal</td>
+                                        <td id="tasa_fat"><span class="input-group-addon">Tasa Nominal: <input type="text" name="tasa_fat" style="text-align:center" disabled>%</span></td>
                                         <td colspan="3"> </td>
                                     </tr>
                                     <tr>
-                                        <td id="saldo_ant_fat">saldo acterior</td>
-                                        <td id="saldo_act_fat">saldo actual</td>
+                                        <td id="saldo_ant_fat"><span class="input-group-addon">Saldo Anterior: $ <input type="text" name="saldo_ant_fat" style="text-align:center" disabled></span></td>
+                                        <td id="saldo_act_fat"><span class="input-group-addon">Saldo Actual: $ <input type="text" name="saldo_act_fat" style="text-align:center" disabled></span></td>
                                         <td colspan="2"> </td>
                                     </tr>
                                     <tr>
                                         <td></td>
                                         <td></td>
-                                        <td ></td>
-                                        <td> </td>
+                                        <td></td>
                                     </tr>
 
                                     <tr>
-                                        <td>CAPITAL</td>
+                                        <td><span class="input-group-addon">CAPITAL:</span></td>
                                         <td></td>
-                                        <td ></td>
-                                        <td id="cap_fat"> $</td>
+                                        <td id="cap_fat">$ <input type="text" name="cap_fat" style="text-align:center" disabled></td>
                                     </tr>
                                     <tr>
-                                        <td>INTERES</td>
+                                        <td><span class="input-group-addon">INTERES:</span></td>
                                         <td></td>
-                                        <td></td>
-                                        <td id="int_fat"> $</td>
+                                        <td id="int_fat">$ <input type="text" name="int_fat" style="text-align:center" disabled></td>
                                     </tr>
                                     <tr>
-                                        <td>Mora</td>
+                                        <td><span class="input-group-addon">MORA:</span></td>
                                         <td></td>
-                                        <td></td>
-                                        <td id="mora_fat"> $</td>
+                                        <td id="mora_fat"> $ <input type="text" name="mora_fat" style="text-align:center" disabled></td>
                                     <tr>
 
                                         <td colspan="2"></td>
@@ -244,15 +292,13 @@ function selector_Cliente() {
                                         <td> </td>
                                     </tr>
                                     <tr>
-                                        <td id="nom_caj_fat">nobre user</td>
+                                        <td id="nom_caj_fat"><span class="input-group-addon">Asesor: <input type="text" class="form-control" name="nom_caj_fat" style="text-align:center" disabled> </span></td>
                                         <td></td>
-                                        <td ></td>
-                                        <td > </td>
+                                        <td></td>
                                     </tr>
-                                <td id="id_cajero_fat">cajero n</td>
-                                <td>TOTAL</td>
-                                <td></td>
-                                <td id="total_fat"> $</td>
+                                <td id="id_cajero_fat"><span class="input-group-addon">Cajero Nº <input type="text" name="id_cajero_fat" style="text-align:center" disabled></span></td>
+                                <td><span class="input-group-addon">TOTAL:</span></td>
+                                <td id="total_fat"> $ <input type="text" name="total_fat" style="text-align:center" disabled></td>
                                 </tr>
 
                                 </tbody>
