@@ -37,10 +37,11 @@
                       <ul class="nav nav-list tree">
                         <li><a href="../cuentas_cobrar/credito_personal.php">Personal</a></li>
                         <li><a href="../cuentas_cobrar/credito_juridico.php">Empresaria</a></li>
-                        <li><a href="../cuentas_cobrar/credito_hipotecario.php">Hipotecario</a></li>
+                      <!-- start:L Menu <li><a href="../cuentas_cobrar/credito_hipotecario.php">Hipotecario</a></li>
                         <li><a href="../cuentas_cobrar/credito_solidario.php">Solidario</a></li>
                         <li><a href="../cuentas_cobrar/credito_agropecuario.php">Agropecuario</a></li>
-                      </ul>
+                     
+                      -->  </ul>
                     </li>
                     <li class="ripple">
                       <a class="tree-toggle nav-header">
