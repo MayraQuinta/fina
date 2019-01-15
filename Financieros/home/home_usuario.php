@@ -4,10 +4,6 @@ include_once '../plantilla/barraSuperior.php';
 include_once '../plantilla/barra_lateral_usuario.php';
 
 ?>    
-<section>
-    <?php echo $_SESSION['user']; ?>
-</section>
-
 <div id="content">
           
             
@@ -49,7 +45,7 @@ include_once '../plantilla/barra_lateral_usuario.php';
 
                       <!-- Third slide -->
                       <div class="item">
-                        <img class="img-responsive" data-src="holder.js/900x500/auto/#777:#555/text:First slide" alt="First slide" src="../asset/img/logo9.jpg">
+                        <img class="img-responsive" data-src="holder.js/900x500/auto/#777:#555/text:First slide" alt="First slide" src="../asset/img/logo99.jpg">
                         <div class="carousel-caption">
                           
                           
