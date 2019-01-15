@@ -8,7 +8,7 @@
                 <span class="middle"></span>
                 <span class="bottom"></span>
               </div>
-                <a  class="navbar-brand"> 
+                <a href="../home/home_administrador.php" class="navbar-brand"> 
                 
                  <b>ANÁLISIS FINANCIERO</b>
                 </a>

@@ -9,6 +9,10 @@ include_once '../plantilla/barraSuperior.php';
 include_once '../plantilla/barra_lateral_usuario.php';
 ?>
 
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script type="text/javascript">
+            swal("Mensaje Simple!");
+        </script>
 <div id="content" >
                 <div class="panel-default">
                   <div class="panel-body">
@@ -45,7 +49,7 @@ include_once '../plantilla/barra_lateral_usuario.php';
                                             <div class="col-md-6">
 
                                             <div class="form-group form-animate-text" style="margin-top:40px !important;">    
-                                            <input type="text"  class="form-text" name="nombre_natural"  required="" aria-required="true">
+                                            <input type="text"  class="form-text" name="nombre_natural" id required="" aria-required="true">
                                              <span class="bar"></span>
                                             <label><span class="fa fa-user"></span > Nombres</label>
                                         </div>

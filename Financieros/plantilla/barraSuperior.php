@@ -8,8 +8,7 @@
                 <span class="middle"></span>
                 <span class="bottom"></span>
               </div>
-                <a  class="navbar-brand" style=" font-weight: bold;"  aria-label="Hide Sidebar">
-                
+                <a  href="../home/home_usuario.php" class="navbar-brand" style=" font-weight: bold;"  aria-label="Hide Sidebar">
                  <b >Sistema Financiero</b>
                 </a>
 

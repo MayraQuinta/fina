@@ -9,7 +9,37 @@
   <meta name="keyword" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title aria-label="Hide Sidebar" >Sistema Financiero</title>
-
+  <style>
+h1{
+color:blue;
+font-size:18px;
+text-align:center;
+}
+#cuerpo{
+width:400px;
+margin:10px;
+border:solid 1px #dadada;
+border-radius:5px;}
+#form{
+width:250px;
+margin:20px;
+padding:5px;
+text-align:right;
+}
+#text,#text2,#text3{
+padding:5px;
+margin:5px;
+border-radius:3px;
+border:solid 1px #999;
+}
+#error-name,#error-mail,#error-pass{
+color:red;
+text-align:center;
+padding-left:20px;
+}
+#mensaje{color:#999;}
+#mensaje1{color:red;}
+</style>
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
   <!-- start: Css -->
