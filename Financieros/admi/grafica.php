@@ -29,7 +29,20 @@ for ($i = 0; $i < count($lista_balance); $i++) {
 
     $ratio[] = repositorio_expediente_juridico::calculo_ratios($balance, $estado);
 }
-?>    
+?> 
+
+<div id="content">
+                <div class="panel">
+                  <div class="panel-body">
+                      <div class="col-md-6 col-sm-12">
+                        <h3 class="animated fadeInLeft">Gráficos</h3>
+                        
+
+                      
+                    </div>
+                  
+                    </div>
+                  </div>     
 <section class="content">
     <div class="container-fluid">
 
@@ -38,7 +51,7 @@ for ($i = 0; $i < count($lista_balance); $i++) {
                 <div class="card">
                     <div class="header">
                         <a href="#">
-                            <h3 class="text-center">LIQUIDEZ CORRIENTE</h3>
+                            <h3 class=" panel-heading text-center">LIQUIDEZ CORRIENTE</h3>
                         </a>
                     </div>
                     <div id="" class="">
@@ -99,7 +112,7 @@ for ($i = 0; $i < count($lista_balance); $i++) {
                 <div class="card">
                     <div class="header">
                         <a href="#">
-                            <h3 class="text-center">RAZON RAPIDA</h3>
+                            <h3 class="panel-heading text-center">RAZON RAPIDA</h3>
                         </a>
                     </div>
                     <div id="" class="">
@@ -160,7 +173,7 @@ for ($i = 0; $i < count($lista_balance); $i++) {
                 <div class="card">
                     <div class="header">
                         <a href="#">
-                            <h3 class="text-center">ROTACIÓN DE INVENTARIOS</h3>
+                            <h3 class="panel-heading text-center">ROTACIÓN DE INVENTARIOS</h3>
                         </a>
                     </div>
                     <div id="" class="">
@@ -221,7 +234,7 @@ for ($i = 0; $i < count($lista_balance); $i++) {
                 <div class="card">
                     <div class="header">
                         <a href="#">
-                            <h3 class="text-center">PERIODO PROMEDIO DE COBRO</h3>
+                            <h3 class="panel-heading text-center">PERIODO PROMEDIO DE COBRO</h3>
                         </a>
                     </div>
                     <div id="" class="">
@@ -282,7 +295,7 @@ for ($i = 0; $i < count($lista_balance); $i++) {
                 <div class="card">
                     <div class="header">
                         <a href="#">
-                            <h3 class="text-center">INDICE DE ENDEUDAMIENTO</h3>
+                            <h3 class="panel-heading text-center">INDICE DE ENDEUDAMIENTO</h3>
                         </a>
                     </div>
                     <div id="" class="">
@@ -343,7 +356,7 @@ for ($i = 0; $i < count($lista_balance); $i++) {
                 <div class="card">
                     <div class="header">
                         <a href="#">
-                            <h3 class="text-center">RAZON DE CARGO DE INTERES FIJO</h3>
+                            <h3 class="panel-heading text-center">RAZON DE CARGO DE INTERES FIJO</h3>
                         </a>
                     </div>
                     <div id="" class="">
@@ -404,7 +417,7 @@ for ($i = 0; $i < count($lista_balance); $i++) {
                 <div class="card">
                     <div class="header">
                         <a href="#">
-                            <h3 class="text-center">MARGEN DE UTILIDAD BRUTA</h3>
+                            <h3 class="panel-heading text-center">MARGEN DE UTILIDAD BRUTA</h3>
                         </a>
                     </div>
                     <div id="" class="">
@@ -465,7 +478,7 @@ for ($i = 0; $i < count($lista_balance); $i++) {
                 <div class="card">
                     <div class="header">
                         <a href="#">
-                            <h3 class="text-center">MARGEN DE UTILIDAD NETA</h3>
+                            <h3 class="panel-heading text-center">MARGEN DE UTILIDAD NETA</h3>
                         </a>
                     </div>
                     <div id="" class="">
@@ -526,7 +539,7 @@ for ($i = 0; $i < count($lista_balance); $i++) {
                 <div class="card">
                     <div class="header">
                         <a href="#">
-                            <h3 class="text-center">RENDIMIENTO DE ACTIVOS TOTALES</h3>
+                            <h3 class="panel-heading text-center">RENDIMIENTO DE ACTIVOS TOTALES</h3>
                         </a>
                     </div>
                     <div id="" class="">
@@ -587,7 +600,7 @@ for ($i = 0; $i < count($lista_balance); $i++) {
                 <div class="card">
                     <div class="header">
                         <a href="#">
-                            <h3 class="text-center">RENDIMIENTO SOBRE EL PATRIMONIO</h3>
+                            <h3 class="panel-heading text-center">RENDIMIENTO SOBRE EL PATRIMONIO</h3>
                         </a>
                     </div>
                     <div id="" class="">
