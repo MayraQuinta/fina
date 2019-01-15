@@ -66,6 +66,16 @@ $pagos = repositorio_expediente_juridico::lista_pagos_previos_natural(Conexion::
                     </tbody>
                 </table>
             </div>
+            <div class="col-md-12 panel-footer">
+                            <div class="text-center">
+                                
+                                <a href="javascript:history.back()" type="submit" class="btn ripple-infinite btn-round btn-success">
+                                    <div>
+                                      <span>Volver</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
         </div>
     </div>
 </section>

@@ -71,11 +71,11 @@ $pagos = repositorio_expediente_juridico::lista_pagos_previos_jurdico(Conexion::
             <div class="col-md-12 panel-footer">
                             <div class="text-center">
                                 
-                                <button href="cartera_normal.php" type="submit" class="btn ripple-infinite btn-round btn-success">
+                                <a href="javascript:history.back()" type="submit" class="btn ripple-infinite btn-round btn-success">
                                     <div>
                                       <span>Volver</span>
                                     </div>
-                                </button>
+                                </a>
                             </div>
                         </div>
         </div>

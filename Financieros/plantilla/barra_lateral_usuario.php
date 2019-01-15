@@ -54,14 +54,14 @@
                       </ul>
                     </li>
                     <li class="ripple"><a href="../cuentas_cobrar/refinanciamiento.php">
-                    <span class="fa fa-pencil-square"></span>Refinanciamiento <span class="fa-angle-double-right fa right-arrow text-right"></span></a>
+                    <span class="fa fa-pencil-square"></span>Refinanciamiento</a>
                     
                       
                     </li>
-                    <li class="ripple"><a href="../cuentas_cobrar/estados_financieros.php"><span class="fa fa-check-square-o"></span>Estados financieros  <span class="fa-angle-double-right fa right-arrow text-right"> </a>
+                    <li class="ripple"><a href="../cuentas_cobrar/estados_financieros.php"><span class="fa fa-check-square-o"></span>Estados financieros</a>
                       
                     </li>
-                    <li class="ripple"><a href="../cuentas_cobrar/abono.php"><span class="fa fa-table"></span> Registro de Abono  <span class="fa-angle-double-right fa right-arrow text-right"></a>
+                    <li class="ripple"><a href="../cuentas_cobrar/abono.php"><span class="fa fa-table"></span> Registro de Abono</a>
                       
                     </li>
 
@@ -72,21 +72,21 @@
                       
                     </li>
 
-                    <li class="ripple"><a href="../activo_fijo/listaactivos.php"><span class="fa fa-list"></span>Lista de activos  <span class="fa-angle-double-right fa right-arrow text-right"></a>
+                    <li class="ripple"><a href="../activo_fijo/listaactivos.php"><span class="fa fa-list"></span>Lista de activos</a>
                       </li>
 
-                      <li class="ripple"><a href="../activo_fijo/registroactivo.php"><span class="fa fa-plus-circle"></span>Registro de activo  <span class="fa-angle-double-right fa right-arrow text-right"></a>
+                      <li class="ripple"><a href="../activo_fijo/registroactivo.php"><span class="fa fa-plus-circle"></span>Registro de activo</a>
                       
                     </li>
 
-                    <li class="ripple"><a href="../activo_fijo/tipoactivo.php"><span class="fa fa-file-text-o"></span>Registro de tipo de activo  <span class="fa-angle-double-right fa right-arrow text-right"></a>
+                    <li class="ripple"><a href="../activo_fijo/tipoactivo.php"><span class="fa fa-file-text-o"></span>Registro de tipo de activo</a>
                       
                     </li>
 
-                     <li class="ripple"><a  href="../activo_fijo/encargado.php"><span class="fa fa-street-view"></span>Registro de encargado  <span class="fa-angle-double-right fa right-arrow text-right"></a>   
+                     <li class="ripple"><a  href="../activo_fijo/encargado.php"><span class="fa fa-street-view"></span>Registro de encargado</a>   
                     </li>
 
-                    <li class="ripple"><a  href="../activo_fijo/institucion.php"><span class="fa fa-institution"></span>Registro de institución <span class="fa-angle-double-right fa right-arrow text-right"></a>   
+                    <li class="ripple"><a  href="../activo_fijo/institucion.php"><span class="fa fa-institution"></span>Registro de institución</a>   
                     </li>
 
                     <li class="ripple"><a href="../activo_fijo/departamentos_activo.php"><span class="fa fa-institution"></span>Registro de departamento </a>    
