@@ -22,10 +22,7 @@
                    
                 </li>
                 <li >
-                    <a class="tree-toggle nav-header" style="color: #f8f9fb"><span class="fa fa-user-times" style="color: #f8f9fb"></span> Cerrar Sessión<span class="fa-angle-right fa right-arrow text-right" ></span></a>
-                    <ul class="nav nav-list tree">
-                        <li ><a href="../index.php" style="color: #f8f9fb">Salir</a></li>
-                      </ul>
+                    <a href="../index.php" style="color: #f8f9fb"><span class="fa fa-user-times" style="color: #f8f9fb"></span> Cerrar Sessión</a>
                  </li>
               </ul>
             </div>

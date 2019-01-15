@@ -6,6 +6,27 @@ include_once '../plantilla/barra_lateral_usuario.php';
 
 ?>
 <script>
+  $(document).ready(function(){
+    $('#plan_pago_personal').DataTable({
+      "order": [[1, "asc"]],
+      "language":{
+        "lengthMenu": "Mostrar _MENU_ registros por pagina",
+        "info": "Mostrando pagina _PAGE_ de _PAGES_",
+        "infoEmpty": "No hay registros disponibles",
+        "infoFiltered": "(filtrada de _MAX_ registros)",
+        "loadingRecords": "Cargando...",
+        "processing":     "Procesando...",
+        "search": "Buscar:",
+        "zeroRecords":    "No se encontraron registros coincidentes",
+        "paginate": {
+          "next":       "Siguiente",
+          "previous":   "Anterior"
+        },
+      }
+    });
+  });
+  </script>
+<script>
 function selector_Cliente() {
     value = document.getElementById("selector").value;
     val  = value.split(',');
@@ -474,11 +495,11 @@ function selector_Cliente() {
                                         </div>
                                     </div>
                                     <div class="text-center ">
-                                        <table class="table table-striped table-bordered" id="plan_pago_personal">
+                                        <table class="table table-striped table-bordered" id="plan_pago_personal" name="plan_pago_personal">
                                             <caption>PLAN DE PAGO</caption>
                                             <tbody>
                                                 <tr>
-                                                    <td>N </td>
+                                                    <td>Nº </td>
                                                     <td>Capital</td>
                                                     <td>Interes</td>
                                                     <td>Cuota</td>

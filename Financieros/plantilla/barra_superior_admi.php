@@ -21,11 +21,8 @@
                    <img src="../asset/img/minerva.gif" class="img-circle avatar" alt="user name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"/>
                    
                 </li>
-                <li >
-                    <a class="tree-toggle nav-header" style="color: #dc7777"><span class="fa fa-user-times" style="color: #dc7777"></span> Cerrar Session<span class="fa-angle-right fa right-arrow text-right" ></span></a>
-                    <ul class="nav nav-list tree">
-                        <li ><a href="../index.php" >Salir</a></li>
-                      </ul>
+                <li>
+                    <a href="../index.php" style="color: #f8f9fb"><span class="fa fa-user-times" style="color: #dc7777"></span> Cerrar Session</a>
                  </li>
               </ul>
             </div>

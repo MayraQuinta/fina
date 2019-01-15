@@ -23,7 +23,7 @@ if (isset($_REQUEST['nameEnviar'])) {
     Conexion::abrir_conexion();
     if (repositorio_prestamo::insertar_prestamo(Conexion::obtener_conexion(), $prestamo)) {
          $id_prestamo = repositorio_prestamo::obtenerU_ultimo_prestamo(Conexion::obtener_conexion());
-        $id_persona = $_REQUEST['pas_cp'];
+        $id_persona = $_REQUEST['selector'];
          echo $id_prestamo;
          echo $id_persona;
          
@@ -39,12 +39,11 @@ if (isset($_REQUEST['nameEnviar'])) {
              
          }
          
-         
-         
+       
     }
     
     
-    
+      
         
     
 }else {

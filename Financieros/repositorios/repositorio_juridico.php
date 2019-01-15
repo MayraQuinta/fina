@@ -91,7 +91,7 @@ class repositorio_juridico {
         if (isset($conexion)) {
             //echo 'hay conexion<br>';
             try {
-                $sql = "select * from persona_juridica";
+                $sql = "select * from persona_juridica as pj, expediente_juridico as ej ,prestamo as p where(pj.id_persona_juridica = ej.id_persona_juridica and ej.id_prestamo = p.id_prestamo )";
                 $sentencia = $conexion->prepare($sql);
                 $sentencia->execute();
                 $resultado = $sentencia->fetchAll();
@@ -104,6 +104,8 @@ class repositorio_juridico {
                         $juridica->setNumero($fila['numero']);
                         $juridica->setDui($fila['dui']);
                         $juridica->setNit($fila['nit']);
+                        //$juridica->setPrestamo($fila['id_prestamo']);
+                       
                         
                         $lista_juridica[] = $juridica;
                         
@@ -116,6 +118,30 @@ class repositorio_juridico {
             //echo 'no hay conexion<br>';
         }
         return $lista_juridica;
+    }
+    public static function lista_persona_abono_juridica($conexion) {
+        $resultado = "";
+        if (isset($conexion)) {
+            try {
+                $sql = "SELECT
+                pj.id_persona_juridica as id,
+                pj.nombre as nombre,
+                pj.dui as dui,
+                pj.nit as nit,
+                p.prestamo_original as prestamo,
+                p.saldo_actual as saldo_actual,
+                p.tasa_interes as tasa,
+                p.tiempo as meses
+                FROM
+                persona_juridica as pj,prestamo as p,expediente_juridico as ej
+                WHERE
+                ej.id_prestamo = p.id_prestamo AND ej.id_persona_juridica = pj.id_persona_juridica";
+                $resultado = $conexion->query($sql);
+            } catch (PDOException $ex) {
+                print 'ERROR: ' . $ex->getMessage();
+            }
+        }
+        return $resultado;
     }
     
      public static function lista_persona_juridcaAbono($conexion) {

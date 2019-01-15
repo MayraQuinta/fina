@@ -36,6 +36,7 @@
         <!--    SCRIPT-->
         <script type="text/javascript" src="../js/script.js"></script>
         <link href="../css/sweetalert.css" rel="stylesheet" />
+        <link href="../css/datables.min.css" rel="stylesheet" />
         <link href="../js/sweetalert.min.js" rel="stylesheet" />
         <link href="../js/sweetalert-dev.js" rel="stylesheet" />
 
@@ -52,6 +53,7 @@
 <!-- start: Javascript -->
 <script src="../asset/js/jquery.min.js"></script>
 <script src="../asset/js/jquery.ui.min.js"></script>
+<script src="../asset/js/jquery.datables.js"></script>
 <script src="../asset/js/bootstrap.min.js"></script>
 
 
