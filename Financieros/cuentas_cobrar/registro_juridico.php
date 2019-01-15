@@ -112,7 +112,7 @@ if (isset($_REQUEST['nameEnviar'])) {
                         <div class="card">
                             <div class="header">
                                 <a data-toggle="collapse"  href="#collapse-empresa">
-                                    <h2 class="text-center">Registro básicos</h2>
+                                    <h2 class="text-center">Registro Básico</h2>
                                 </a>
                             </div>
                             <div id="collapse-empresa" class="panel-collapse collapse">

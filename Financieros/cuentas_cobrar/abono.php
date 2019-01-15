@@ -1,3 +1,4 @@
+
 <?php
 include_once '../plantilla/cabecera.php';
 include_once '../plantilla/barraSuperior.php';
@@ -31,6 +32,7 @@ function selector_Cliente() {
     +"</td></tr>";
    	tabla.innerHTML=fila;
     document.getElementById("cliente").appendChild(tabla);
+    
 }
 </script>
 <script language="javascript">
@@ -73,7 +75,7 @@ function selector_Cliente() {
             <div class="panel-heading text-center">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Abono</h3>
+                        <h3>Abono de Clientes Naturales y Empresariales</h3>
                     </div>
                 </div>
             </div>
@@ -149,7 +151,7 @@ function selector_Cliente() {
                             <table class="table table-striped table-bordered" id="tabla_cliente_abono">
                                 <caption>CLIENTE</caption>
                                 <thead>
-                                <th>Codigo</th>
+                                <th>Código</th>
                                 <th>Nombre</th>
                                 <th><div id="tipoID">Dui</div></th>
                                 <th>Nit</th>
@@ -162,12 +164,12 @@ function selector_Cliente() {
                                 </tbody>
                             </table>
 
-                            <div class="select-dropdown">
+                           <div class="select-dropdown">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <div class="form-line">
                                             <label class="success">Abono</label>
-                                            <input type="text"class="form-control text-center" required="" minlength="1"  id="abono" name="abono"  placeholder="$$$">
+                                            <input type="text" class="form-control text-center" required="" minlength="1"  id="abono" name="abono"  placeholder="$$$">
                                         </div>
                                     </div>
                                 </div>
@@ -175,42 +177,42 @@ function selector_Cliente() {
                                     <button type="button" onclick="calcular_factura()" class="btn btn-primary m-t-15 waves-effect">CALCULAR</button>
                                 </div>
                             </div>
-                           <div class="container-fluid" id="factura_N" >
-                            <table class="table table-striped table-bordered" s id="factura_natural">
+                        <div class="container-fluid" id="factura_N" >
+                        <table class="table table-striped table-bordered" s id="factura_natural">
                                 <caption>FACTURA</caption>
 
-                                <tbody>
+                                <tbody id="factura_N">
                                     <tr>
-                                        <th colspan=4><p class="text-center">BanDejando   CREDITO FACIL </p></th>
+                                        <th colspan=4><p class="panel-heading text-center">CREDITO FACIL </p></th>
                                     </tr>
                                     <tr>
-                                        <td id="nprestamo_fat"> n facura</td>
-                                        <td colspan="2" id="nombre_fat">nombre cliente</td>
-                                        <td id="fecha_pres_fat">fecha aplicacion</td>
+                                        <td id="nprestamo_fat"> N° factura:</td>
+                                        <td colspan="2" id="nombre_fat">Nombre Cliente:</td>
+                                        <td id="fecha_pres_fat">Fecha Aplicacion:</td>
                                     </tr>
                                     <tr>
-                                        <td id="nit_fat">nit</td>
-                                        <td id="dui_fat">dui</td>
+                                        <td id="nit_fat">Nit:</td>
+                                        <td id="dui_fat">Dui:</td>
                                         <td > </td>
                                         <td id="fecha_pago_fat"> 12/12/1212</td>
                                     </tr>
                                     <tr>
-                                        <td id="fecha_fin_fat">fecha vencimiento</td>
+                                        <td id="fecha_fin_fat">Fecha Vencimiento:</td>
                                         <td id="fecha_ultimo_fat"></td>
                                         <td></td>
                                         <td> </td>
                                     </tr>
                                     <tr>
-                                        <td id="monto_fat">monto</td>
-                                        <td id="cuota_fat">valor cuota</td>
+                                        <td id="monto_fat">Monto:</td>
+                                        <td id="cuota_fat">Valor de Cuota:</td>
                                         <td colspan="2"> </td>
                                     <tr>
-                                        <td id="tasa_fat">tasa nominal</td>
+                                        <td id="tasa_fat">Tasa Nominal:</td>
                                         <td colspan="3"> </td>
                                     </tr>
                                     <tr>
-                                        <td id="saldo_ant_fat">saldo acterior</td>
-                                        <td id="saldo_act_fat">saldo actual</td>
+                                        <td id="saldo_ant_fat">Saldo Anterior:</td>
+                                        <td id="saldo_act_fat">Saldo Actual:</td>
                                         <td colspan="2"> </td>
                                     </tr>
                                     <tr>
@@ -221,19 +223,19 @@ function selector_Cliente() {
                                     </tr>
 
                                     <tr>
-                                        <td>CAPITAL</td>
+                                        <td>CAPITAL:</td>
                                         <td></td>
                                         <td ></td>
                                         <td id="cap_fat"> $</td>
                                     </tr>
                                     <tr>
-                                        <td>INTERES</td>
+                                        <td>INTERES:</td>
                                         <td></td>
                                         <td></td>
                                         <td id="int_fat"> $</td>
                                     </tr>
                                     <tr>
-                                        <td>Mora</td>
+                                        <td>Mora:</td>
                                         <td></td>
                                         <td></td>
                                         <td id="mora_fat"> $</td>
@@ -244,13 +246,13 @@ function selector_Cliente() {
                                         <td> </td>
                                     </tr>
                                     <tr>
-                                        <td id="nom_caj_fat">nobre user</td>
+                                        <td id="nom_caj_fat">Nombre Asesor:</td>
                                         <td></td>
                                         <td ></td>
                                         <td > </td>
                                     </tr>
-                                <td id="id_cajero_fat">cajero n</td>
-                                <td>TOTAL</td>
+                                <td id="id_cajero_fat">N° Cajero:</td>
+                                <td>TOTAL:</td>
                                 <td></td>
                                 <td id="total_fat"> $</td>
                                 </tr>
@@ -261,8 +263,8 @@ function selector_Cliente() {
                             </div>
 
                             <div class="text-center">
-                                <button type="submit" form="abono_form" class="btn  btn-primary m-t-15 waves-effect" >GUARDAR</button>
-                                <button type="reset" class="btn btn-primary m-t-15 waves-effect">CANCELAR</button>
+                                <button type="submit" form="abono_form" class="btn ripple-infinite btn-round btn-primary" >GUARDAR</button>
+                                <button type="reset" class="btn ripple-infinite btn-round btn-warning">CANCELAR</button>
                             </div>
                         </form>
                     </div>
