@@ -247,7 +247,10 @@ persona_natural.monto = 0";
                 p.prestamo_original as prestamo,
                 p.saldo_actual as saldo,
                 p.tasa_interes as tasa,
-                p.tiempo as meses
+                p.tiempo as meses,
+                p.proximo_pago as proximo,
+                p.mora_acumulada as mora,
+                p.fecha as fecha
                 FROM
                 persona_natural as pn, prestamo as p, expediente_natural as en
                 WHERE 

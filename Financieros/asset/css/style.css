@@ -1979,7 +1979,7 @@ ul li a:focus {
 /*-----Left menu-------*/
 #left-menu{}
 #left-menu .left-bg {
-  background: url('../img/des.jpg');
+  background: url('../img/captura11.png');
   background-repeat: repeat-x;
   height: 100px;
   left: 0;
@@ -1989,7 +1989,7 @@ ul li a:focus {
 
 
 #left-menu .sub-left-menu {
-  background-color: #e6daf1;
+  background-color: #c8bfe7;
   left: 0;
   padding-top: 50px;
   z-index: 222;

@@ -11,6 +11,8 @@ include_once '../plantilla/barra_lateral_usuario.php';
 
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <script type="text/javascript">
+        function selector_Cliente() {
+        value = document.getElementById("selector").value;
             swal("Mensaje Simple!");
         </script>
 <div id="content" >

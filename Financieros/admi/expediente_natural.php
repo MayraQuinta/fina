@@ -20,6 +20,7 @@ include_once '../modelos/persona_juridica.php';
 include_once '../repositorios/repositorio_juridico.php';
 Conexion::abrir_conexion();
 
+
 $datos = repositorio_natural::obtener_persona_natural(Conexion::obtener_conexion(), $_REQUEST['id_natural']);
 
 $lista_balance = repositorio_balance::lista_balance(Conexion::obtener_conexion(), $_REQUEST['id_natural']);
@@ -66,6 +67,7 @@ $lista_bienes = repositorio_natural::lista_bienes(Conexion::obtener_conexion(), 
                                 <th class="text-center">Nit</th>
 
                                 <th class="text-center">Telefono</th>
+
 
 
                                 </thead>

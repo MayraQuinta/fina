@@ -242,15 +242,20 @@ function selector_Cliente() {
                                     <div class="col-md-3">
                                         <div class="text-center">
 
-                                            <button type="button" onclick="cuota_per()" class="btn btn-primary m-t-15 waves-effect">CALCULAR</button>
-                                        </div></div>
-                                </div>
+                                            <button type="button" onclick="cuota_per()" class="btn ripple-infinite btn-round btn-primary">
+                                               <div><span>Calcular</span></div> 
+                                                </button>
+                                        </div>
+                                </div></div>
                                 <div class="text-center">
 
                                 </div>
                                 <div class="row"><div class="text-center">
-                                        <button type="button" style="visibility: hidden" onclick="cuota_per()" class="btn btn-primary m-t-15 waves-effect">CALCULAR</button>
-                                    </div></div>
+                                        <button type="button" style="visibility: hidden" onclick="cuota_per()" class="btn ripple-infinite btn-round btn-warning">
+                                  <div><span>Calcular</span></div> 
+                                                </button>
+                                        </div>
+                                </div></div>
                                 <div class="row clearfix">
 
 
@@ -302,11 +307,20 @@ function selector_Cliente() {
                                     </div>
                                 </div>
 
+                    <div class="col-md-12 panel-footer">
+                            <div class="text-center">
+                                <button type="submit" name="nameEnviar" value="ok" class="btn ripple-infinite btn-round btn-primary" ><div>
+                                      <span>Guardar</span>
+                                    </div></button>
+                                <button type="reset" class="btn ripple-infinite btn-round btn-warning" >
+                                    <div>
+                                      <span>Cancelar</span>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
 
-                                <div class="text-center">
-                                    <button type="submit" name="nameEnviar" value="ok" class="btn btn-primary m-t-15 waves-effect">GUARDAR</button>
-                                    <button type="reset"  class="btn btn-primary m-t-15 waves-effect">CANCELAR</button>
-                                </div>
+                            
 
                             </div>
                         </div>

@@ -446,9 +446,9 @@ function selector_Cliente() {
                                     <div class="col-md-3">
                                         <div class="text-center">
 
-                                            <button type="button" onclick="cuota_per()" class="btn ripple-infinite btn-round btn-primary"><div>
-                                      <span>Calcular</span>
-                                    </div></button>
+                                            <button type="button" onclick="cuota_per()" class="btn ripple-infinite btn-round btn-primary">
+                                <div><span>Calcular</span></div>
+                            </button>
                                         </div></div>
                                 </div>
                                 <div class="text-center">
@@ -518,7 +518,7 @@ function selector_Cliente() {
                                 <button type="submit" class="btn ripple-infinite btn-round btn-primary" form="credito_personal" ><div>
                                       <span>Guardar</span>
                                     </div></button>
-                                <button type="reset" class="btn ripple-infinite btn-round btn-primary" form="credito_personal" >
+                                <button type="reset" class="btn ripple-infinite btn-round btn-warning" form="credito_personal" >
                                     <div>
                                       <span>Cancelar</span>
                                     </div>

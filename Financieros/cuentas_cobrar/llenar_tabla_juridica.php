@@ -23,7 +23,7 @@ $fila=$listado;// echo '<script language="javascript">alert("'.$fila->getId_nomb
         var linea2="";
         linea2=linea2.concat(
             "<tr>",
-            '<td><input type="hidden" id="codCliente_cpersonal" name="codCliente_cpersonal" value="'+codigo+'"> '+codigo+"</td>",
+            '<td><input type="hidden" id="selector" name="selector" value="'+codigo+'"> '+codigo+"</td>",
             "<td>"+nombre+"</td>",
             "<td>"+numero+"</td>",
             "<td>"+dui+"</td>",

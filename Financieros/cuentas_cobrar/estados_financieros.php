@@ -59,7 +59,7 @@ if (isset($_REQUEST['nameEnviar'])) {
     include_once '../app/Conexion.php';
     Conexion::abrir_conexion();
     
-    $id_juridico = $_REQUEST['codCliente_cpersonal'];
+    $id_juridico = $_REQUEST['selector'];
     $periodo = $_REQUEST['NamePeriodo'];
 
     ///////////esto es para guardar rel balance general            
