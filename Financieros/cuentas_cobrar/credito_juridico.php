@@ -132,14 +132,12 @@ function selector_Cliente() {
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
-                        <div class="header">
-                            <h2 class="text-center">SELECCIONE LA EMPRESA  </h2>
-                        </div>
+                       
                         <div class="body">
                             <div class="row clearfix">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <div class="col-md-10">
+                                        <div class="col-md-5">
                                             <div class="input-field"><i class="fa fa-search prefix" aria-hidden="true">
 
                                                 </i><label for="" style="font-size:16px">Buscar Empresa</label>
@@ -164,7 +162,8 @@ function selector_Cliente() {
                             </div>
 
                             <table class="table table-striped table-bordered" id="tabla_cliente_juridico">
-                                <caption>CLIENTE</caption>
+                                <caption>Cliente</caption>
+                                <br>
                                 <thead>
                                 <th>Codigo</th>
                                 <th>Nombre de  empresa</th>

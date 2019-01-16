@@ -420,7 +420,7 @@ function selector_Cliente() {
                                                     <option value="" disabled="" selected="">SELECCIONE EL NUMERO DE MESES</option>
                                                     <?php
                                                     $n = 12;
-                                                    for ($i = 0; $i <= 7; $i++) {//echo '<script language="javascript">alert("'.$n.'");</script>'; 
+                                                    for ($i = 0; $i <= 7; $i++) {//echo '<script ="javascript">alert("'.$n.'");</script>'; 
                                                         echo '<option value="' . $n . '">' . $n . ' meses</option>';
                                                         $n = $n + 12;
                                                     }
