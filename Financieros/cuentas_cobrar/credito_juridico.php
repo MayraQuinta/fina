@@ -193,7 +193,7 @@ function selector_Cliente() {
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="header"><a data-toggle="collapse" data-parent="#accordion" href="#collapse-credito">
-                                <h2 class="text-center">DATOS DE CREDITO</h2>
+                                <h2 class="text-center">Datos de crédito</h2>
                             </a></div>
                         <div id="collapse-credito" class="panel-collapse collapse in">
                             <div class="body">
@@ -201,7 +201,7 @@ function selector_Cliente() {
                                     <div class="col-md-3">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <span class="input-group-addon" id="basic-addon1">MONTO SOLICITADO($)</span>
+                                                <span class="input-group-addon" id="basic-addon1">Monto solicitado($)</span>
                                                 <input type="number" required="" min="1500" max="40000" class="form-control text-center" id="monto_per" name="monto_per" placeholder="min: 1,500 max: 40,000">
                                             </div>
                                         </div>
@@ -210,9 +210,9 @@ function selector_Cliente() {
                                     <div class="col-md-3">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <span class="input-group-addon" id="basic-addon1">PLAZO</span>
+                                                <span class="input-group-addon" id="basic-addon1">Plazo</span>
                                                 <select class="form-control show-tick" required="" id="mese_per" name="mese_per" onchange="interes_hp(this)">
-                                                    <option value="" disabled="" selected="">SELECCIONE EL NUMERO DE MESES</option>
+                                                    <option value="" disabled="" selected="">Seleccione el numero de meses</option>
                                                     <?php
                                                     $n = 12;
                                                     for ($i = 0; $i <= 7; $i++) {//echo '<script language="javascript">alert("'.$n.'");</script>'; 
@@ -227,12 +227,12 @@ function selector_Cliente() {
 
                       <div class="col-md-3">
                                             <div class="row">
-                                                 <span class="input-group-addon rojo" id="basic-addon1">TASA DE INTERES</span>
+                                                 <span class="">Tasa de interes</span>
+                                                 <br>
                                                 <div class="col-md-6">
-                                                    <div class="form-line">
-                                                       
+                                                   
                                                         <input type="number" required="" min="1" max="20" class="form-control text-center" readonly="" id="tasa_per" name="tasa_per" placeholder="TASA">
-                                                    </div>
+                                                
 
                                                 </div>
                                                 <div class="col-md-6"><label style="font-size: 18">%</label></div>   

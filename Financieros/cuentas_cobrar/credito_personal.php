@@ -191,37 +191,42 @@ function selector_Cliente() {
                         <div id="collapse-BIEN" class="panel-collapse collapse in">
                             <div class="body">
                                 <div class="row clearfix">
-                                    <div class="col-md-12">
+                                    <div class="col-md-3">
                                         <div class="form-group">
-                                            <div class="form-line">
+                                            
 
-                                                <span class="input-group-addon" id="basic-addon1">UBICACION</span>
-                                                <input type="text" class="form-control text-center"  id="hubica" name="hubica" placeholder="UBICACION...">
-
-                                            </div>
+                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">    
+                                                <input type="text" class="form-text"  id="hubica" name="hubica" >
+                                                 <span class="bar"></span>
+                                             <label><span class="fa fa-home"></span > Ubicación</label>
+                                           </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="row clearfix">
-                                    <div class="col-md-12">
+                                
+                                    <div class="col-md-3">
                                         <div class="form-group">
-                                            <div class="form-line">
-                                                <span class="input-group-addon" id="basic-addon1">DESCRIPCION</span>
-                                                <input type="text" class="form-control text-center"  id="rdescr" name="descr" placeholder="DESCRIPCION...">
-                                            </div>
+                                           
+                                             <div class="form-group form-animate-text" style="margin-top:40px !important;">    
+                                                <input type="text" class="form-text"  id="rdescr" name="descr" >
+                                            <span class="bar"></span>
+                                             <label><span class="fa fa-edit"></span > Descripción</label>
+                                          </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="row clearfix">
-                                    <div class="col-md-12">
+                               
+                               
+                                    <div class="col-md-5">
                                         <div class="form-group">
-                                            <div class="form-line">
-                                                <span class="input-group-addon" id="basic-addon1">ANEXO</span>
-                                                <input type="file" class="form-control text-center"  id="bio" name="bio" placeholder="ANEXO...">
+                                           
+                                             <div class="form-group form-animate-text" style="margin-top:40px !important;">    
+                                                <input type="file" class="form-text"  id="bio" name="bio" >
+                                            <span class="bar"></span>
+                                             <label><span class="fa fa-user"></span > Anexo</label>
                                             </div>
+                                         
                                         </div>
                                     </div>
-                                </div>
+                               </div>
                             </div>
                         </div>
                     </div>
@@ -444,7 +449,8 @@ function selector_Cliente() {
 
                                     <div class="col-md-3">
                                         <div class="row">
-                                            <span class="input-group-addon" id="basic-addon1">Tasa de interes</span>
+                                            <span >Tasa de interes</span>
+                                            <br>
                                             <div class="col-md-6">
                                                 <div class="form-line">
 
