@@ -103,7 +103,7 @@ function selector_Cliente() {
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="header">
-                            <h2 class="text-center">SELECCIONE EL CLIENTE</h2>
+                            <h2 class="text-center">Seleccione el cliente</h2>
                         </div>
                         <div class="body">
                             <div class="row clearfix">
@@ -146,12 +146,12 @@ function selector_Cliente() {
 
 
                                 <table class="table table-striped table-bordered" id="tabla_cliente_cpersonal">
-                                    <caption>CLIENTE</caption>
+                                    <caption>Cliente</caption>
                                     <thead>
                                     <th>Código</th>
                                     <th>Nombre</th>
-                                    <th>Dui</th>
-                                    <th>Nit</th>
+                                    <th>DUI</th>
+                                    <th>NIT</th>
                                     <th>Teléfono</th>
                                     <th>Dirección</th>  
                                     </thead>
@@ -160,7 +160,7 @@ function selector_Cliente() {
                                     </tbody>
                                 </table>
                                 <table class="table table-striped table-bordered" id="tabla_referencias">
-                                    <caption>REFERENCIAS</caption>
+                                    <caption>Referencias</caption>
                                     <thead>
                                     <th>&nbsp;</th>    
                                     <th>Nombre</th>
@@ -186,7 +186,7 @@ function selector_Cliente() {
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="header"><a data-toggle="collapse" data-parent="#accordion" href="#collapse-BIEN">
-                                <h2 class="text-center">DATOS DEL BIEN </h2>
+                                <h2 class="text-center">Datos del bien</h2>
                             </a> </div>
                         <div id="collapse-BIEN" class="panel-collapse collapse in">
                             <div class="body">
@@ -240,82 +240,80 @@ function selector_Cliente() {
                     <div class="card">
                         <div class="header">
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapse-fiador">
-                                <h2 class="text-center">DATOS DE FIADOR</h2>
+                                <h2 class="text-center">Datos de fiador</h2>
                             </a></div>
                         <div id="collapse-fiador" class="panel-collapse collapse">
                             <div class="body">
                                 <div class="row clearfix">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <div class="form-line">
-                                                <span class="input-group-addon" id="basic-addon1">NOMBRE</span>
-                                                <input type="text" class="form-control text-center" required="" minlength="3" id="Nombre_fia_per" name="Nombre_fia_per" placeholder="NOMBRE...">
-                                            </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group form-animate-text" style="margin-top:40px !important;">    
+                                            <input type="text" class="form-text" required="" minlength="3" id="Nombre_fia_per" name="Nombre_fia_per" placeholder="">
+                                             <span class="bar"></span>
+                                             <label><span class="fa fa-user"></span > Nombre</label>
                                         </div>
                                     </div>
 
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <div class="form-line">
-                                                <span class="input-group-addon" id="basic-addon1">APELLIDO</span>
-                                                <input type="text" class="form-control text-center" required="" minlength="3" id="Apellido_fia_per" name="Apellido_fia_per" placeholder="APELLIDO...">
-                                            </div>
+
+                                    <div class="col-md-3">
+                                        <div class="form-group form-animate-text" style="margin-top:40px !important;">  
+                                                <input type="text" class="form-text" required="" minlength="3" id="Apellido_fia_per" name="Apellido_fia_per" placeholder="">
+                                                <span class="bar"></span>
+                                             <label><span class="fa fa-user"></span > Apellido</label>
+                                        </div>
+                                    </div>
+                            
+                                    <div class="col-md-3">
+                                        <div class="form-group form-animate-text" style="margin-top:40px !important;">  
+                                                <input type="tel" class="form-text" required="" minlength="3" id="Telefono_fia_per" name="Telefono_fia_per" placeholder="">
+                                       <span class="bar"></span>
+                                             <label><span class="fa fa-book"></span > Teléfono</label>
+                                        </div>
+                                    </div>
+                               
+                                    <div class="col-md-3">
+                                        <div class="form-group form-animate-text" style="margin-top:40px !important;">  
+                                                <input type="text" class="form-text" required="" minlength="3" id="Direccion_fia_per" name="Direccion_fia_per" placeholder="">
+                                                 <span class="bar"></span>
+                                             <label><span class="fa fa-book"></span > Dirección</label>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="row clearfix">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <div class="form-line">
-                                                <span class="input-group-addon" id="basic-addon1">DIRECCION</span>
-                                                <input type="text" class="form-control text-center" required="" minlength="3" id="Direccion_fia_per" name="Direccion_fia_per" placeholder="DIRECCION...">
-                                            </div>
-                                        </div>
-                                    </div>
 
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <div class="form-line">
-                                                <span class="input-group-addon" id="basic-addon1">TELEFONO</span>
-                                                <input type="tel" class="form-control text-center" required="" minlength="3" id="Telefono_fia_per" name="Telefono_fia_per" placeholder="TELEFONO...">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                   
+                     
                                 <div class="row clearfix">
-                                    <div class="col-md-6">
+                                 <div class="col-md-3">
+                                    <div class="form-group form-animate-text" style="margin-top:40px !important;">  
                                         <div class="form-group">
-                                            <div class="form-line">
-                                                <span class="input-group-addon" id="basic-addon1">DUI</span>
-                                                <input type="text" class="form-control text-center" required="" minlength="3" id="Dui_fia_per" name="Dui_fia_per" placeholder="DUI...">
-                                            </div>
+                                                <input type="text" class="form-text" required="" minlength="3" id="Dui_fia_per" name="Dui_fia_per" placeholder="">
+                                              <span class="bar"></span>
+                                             <label><span class="fa fa-credit-card"></span > DUI</label>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <div class="form-line">
-                                                <span class="input-group-addon" id="basic-addon1">NIT</span>
-                                                <input type="text" class="form-control text-center" required="" minlength="3" id="Nit_fia_per" name="Nit_fia_per" placeholder="NIT...">
-                                            </div>
+                                     </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group form-animate-text" style="margin-top:40px !important;">  
+                                                <input type="text" class="form-text" required="" minlength="3" id="Nit_fia_per" name="Nit_fia_per" placeholder="">
+                                            <span class="bar"></span>
+                                             <label><span class="fa fa-credit-card"></span > NIT</label>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="row clearfix">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <div class="form-line">
-                                                <span class="input-group-addon" id="basic-addon1">CORREO</span>
-                                                <input type="email" class="form-control text-center" required="" minlength="3" id="Email_fia_per" name="Email_fia_per" placeholder="CORREO...">
-                                            </div>
+                           
+                         
+                                    <div class="col-md-3">
+                                        <div class="form-group form-animate-text" style="margin-top:40px !important;">  
+
+                                                <input type="email" class="form-text" required="" minlength="3" id="Email_fia_per" name="Email_fia_per" placeholder="">
+                                           <span class="bar"></span>
+                                             <label><span class="fa fa-envelope-o"></span > E-Mail</label>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <div class="form-line">
-                                                <span class="input-group-addon" id="basic-addon1">LUGAR DE TRABAJO</span>
-                                                <input type="text" class="form-control text-center" required="" minlength="3" id="Trabajo_fia_per" name="Trabajo_fia_per" placeholder="LUGAR DE TRABAJO...">
-                                            </div>
+                                    <div class="col-md-3">
+                                       <div class="form-group form-animate-text" style="margin-top:40px !important;">  
+                                                <input type="text" class="form-text" required="" minlength="3" id="Trabajo_fia_per" name="Trabajo_fia_per" placeholder="">
+                                          <span class="bar"></span>
+                                             <label><span class="fa fa-credit-card"></span > Lugar de trabajo</label>
                                         </div>
                                     </div>
                                 </div>
@@ -334,54 +332,68 @@ function selector_Cliente() {
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="header"><a data-toggle="collapse" data-parent="#accordion" href="#collapse-referencias">
-                                <h2 class="text-center">DATOS DE REFERENCIA</h2>
+                                <h2 class="text-center">Datos de referencia</h2>
                             </a> </div>
                         <div id="collapse-referencias" class="panel-collapse collapse">
                             <div class="body">
                                 <div class="row clearfix">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <div class="form-line">
-                                                <span class="input-group-addon" id="basic-addon1">NOMBRE</span>
-                                                <input type="text"class="form-control text-center" id="ref_Nombre" name="ref_Nombre" placeholder="NOMBRE...">
-                                            </div>
+                                    <div class="col-md-3">
+                                   
+                                         <div class="form-group form-animate-text" style="margin-top:40px !important;"> 
+                                                <input type="text"class="form-text" id="ref_Nombre" name="ref_Nombre" placeholder="">
+                                             <span class="bar"></span>
+                                             <label><span class="fa fa-user"></span > Nombre</label>
+                                         
                                         </div>
                                     </div>
 
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <div class="form-line">
-                                                <span class="input-group-addon" id="basic-addon1">APELLIDO</span>
-                                                <input type="text" class="form-control text-center" id="ref_Apellido" name="ref_Apellido" placeholder="APELLIDO...">
-                                            </div>
+                                    <div class="col-md-3">
+                                     
+                                            
+                                           <div class="form-group form-animate-text" style="margin-top:40px !important;"> 
+                                                <input type="text" class="form-text"  id="ref_Apellido" name="ref_Apellido" placeholder="">
+                                            <span class="bar"></span>
+                                             <label><span class="fa fa-user"></span > Apellido</label>
                                         </div>
+                                    </div>
+                         
+
+                       
+                                    <div class="col-md-3">
+                                   
+                                            
+                                            <div class="form-group form-animate-text" style="margin-top:40px !important;"> 
+                                            <input type="text" class="form-text" id="ref_Direccion" name="ref_Direccion" placeholder="">
+                                             <span class="bar"></span>
+                                             <label><span class="fa fa-book"></span > Dirección</label>
+                                        
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                     
+                                           
+                                            <div class="form-group form-animate-text" style="margin-top:40px !important;"> 
+                                  
+                                                <input type="tel" class="form-text" id="ref_Telefono" name="ref_Telefono" placeholder="">
+                                            <span class="bar"></span>
+                                             <label><span class="fa fa-book"></span > Teléfono</label>
+
+                                            </div>
+                                     
                                     </div>
                                 </div>
-
-                                <div class="row clearfix">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <div class="form-line">
-                                                <span class="input-group-addon" id="basic-addon1">DIREECION</span>
-                                                <input type="text" class="form-control text-center" id="ref_Direccion" name="ref_Direccion" placeholder="DIRECCION...">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <div class="form-line">
-                                                <span class="input-group-addon" id="basic-addon1">TELEFONO</span>
-                                                <input type="tel" class="form-control text-center" id="ref_Telefono" name="ref_Telefono" placeholder="TELEFONO...">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row clearfix">
+                                <div class="row ">
                                     <div class="text-center">
-                                        <button type="button" onclick="agr_refe()" class="btn btn-primary m-t-15 waves-effect">Agregar</button>
+                                        <button type="button" onclick="agr_refe()" class="btn btn-round btn-success" value="success">Agregar</button>
                                     </div>
+
+                                   
+                            
+                                   
                                 </div>
+
+                                
 
                             </div>
                         </div>
@@ -398,41 +410,41 @@ function selector_Cliente() {
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="header"><a data-toggle="collapse" data-parent="#accordion" href="#collapse-credito">
-                                <h2 class="text-center">DATOS DE CREDITO</h2>
+                                <h2 class="text-center">Datos de crédito</h2>
                             </a></div>
                         <div id="collapse-credito" class="panel-collapse collapse in">
                             <div class="body">
                                 <div class="row clearfix">
                                     <div class="col-md-3">
                                         <div class="form-group">
-                                            <div class="form-line">
-                                                <span class="input-group-addon" id="basic-addon1">MONTO SOLICITADO($)</span>
-                                                <input type="number" required="" min="1000" max="20000" class="form-control text-center" id="monto_per" name="monto_per" placeholder="MONTO SOLICITADO($)... MINIMO $1,500, MAXIMO $40,000">
-                                            </div>
+                                            
+                                                <span >Monto solicitado($)</span>
+                                                <input type="number" required="" min="1000" max="20000" class="form-control" id="monto_per" name="monto_per" placeholder="Min $1,500, Max $40,000">
+                                           
                                         </div>
                                     </div>
 
                                     <div class="col-md-3">
                                         <div class="form-group">
-                                            <div class="form-line">
-                                                <span class="input-group-addon" id="basic-addon1">PLAZO</span>
+                                            
+                                                <span >Plazo</span>
                                                 <select class="form-control show-tick" required="" id="mese_per" name="mese_per" onchange="interes_hp(this)">
-                                                    <option value="" disabled="" selected="">SELECCIONE EL NUMERO DE MESES</option>
+                                                    <option value="" disabled="" selected="">Seleccione el numero de meses</option>
                                                     <?php
                                                     $n = 12;
-                                                    for ($i = 0; $i <= 7; $i++) {//echo '<script ="javascript">alert("'.$n.'");</script>'; 
+                                                    for ($i = 0; $i <= 7; $i++) {//echo '<script language="javascript">alert("'.$n.'");</script>'; 
                                                         echo '<option value="' . $n . '">' . $n . ' meses</option>';
                                                         $n = $n + 12;
                                                     }
                                                     ?>
                                                 </select>
-                                            </div>
+                                           
                                         </div>
                                     </div>
 
                                     <div class="col-md-3">
                                         <div class="row">
-                                            <span class="input-group-addon" id="basic-addon1">TASA DE INTERES</span>
+                                            <span class="input-group-addon" id="basic-addon1">Tasa de interes</span>
                                             <div class="col-md-6">
                                                 <div class="form-line">
 
@@ -446,9 +458,9 @@ function selector_Cliente() {
                                     <div class="col-md-3">
                                         <div class="text-center">
 
-                                            <button type="button" onclick="cuota_per()" class="btn ripple-infinite btn-round btn-primary">
-                                <div><span>Calcular</span></div>
-                            </button>
+                                            <button type="button" onclick="cuota_per()" class="btn ripple-infinite btn-round btn-primary"><div>
+                                      <span>Calcular</span>
+                                    </div></button>
                                         </div></div>
                                 </div>
                                 <div class="text-center">
@@ -532,7 +544,7 @@ function selector_Cliente() {
                 </div>
             </div>
         </div>
-        <!--FIN DE DATO -->
+        <!--FIN DE DATO DE CREDITO-->
 
     </section>
 </form>
