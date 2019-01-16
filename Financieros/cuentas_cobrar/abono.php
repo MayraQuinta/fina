@@ -71,7 +71,7 @@ function selector_Cliente() {
     //fin agregar
     //busco cada imput de otra tabla y los inserto
     document.abono_form.nprestamo_fat.value = 30;
-    document.abono_form.nombre_fat.value = nombre;
+    document.getElementById('nombre_fat').innerHTML = "<span class='input-group-addon'>Nombre Cliente <input type='text' name='nombre_fat' id='nombre_fat' style='text-align:center'  value='"+nombre+"' disabled>";
     document.abono_form.fecha_pres_fat.value = newFecha_Prestamo;
     document.abono_form.nit_fat.value = nit;
     document.abono_form.dui_fat.value = dui;
@@ -79,12 +79,112 @@ function selector_Cliente() {
     document.abono_form.fecha_fin_fat.value = newFecha_proximo;
     document.abono_form.monto_fat.value = prestamo;
     document.abono_form.cuota_fat.value = cuota_persona;
-    document.abono_form.tasa_fat.value = tasa;
+    document.abono_form.tasa_fat1.value = tasa;
     document.abono_form.saldo_act_fat.value = saldo;
     document.abono_form.mora_fat.value = mora_acumulada;
     //fin de insertar datos a inputs
 }//fin funcion selector cliente
 </script>
+<script>
+    function calcular_factura() {
+        
+        if (document.getElementById("abono").value > 0) {
+            
+            var pago = document.getElementById("abono").value;
+            var pagoTotal = parseInt( document.getElementById("saldo_act").value);
+            var fecha_pago = document.getElementById("fecha_pres_fat").value;
+            var fecha_hoy = document.getElementById("fecha_pago_fat").value;
+            
+            var fecha_aux = fecha_hoy.split('/');
+            
+            var mes = (fecha_aux[1]);
+            var ano = (fecha_aux[0]);
+            var diasMes = 30 //getUltimoDiaDelMes(mes, ano);
+            
+            var interes = document.getElementById("tasa_fat1").value/100/12;
+            
+            
+            //calcualo los dias que se paso o faltan para el pago
+            var mora = 0;
+            var aFecha2 = fecha_hoy.split('/');
+            var aFecha1 = fecha_pago.split('/');
+            var fFecha1 = Date.UTC(aFecha1[0], aFecha1[1], aFecha1[2]);
+            var fFecha2 = Date.UTC(aFecha2[0], aFecha2[1], aFecha2[2] - 1);
+            var dif = fFecha2 - fFecha1;
+            var dias = Math.floor(dif / (1000 * 60 * 60 * 24));
+
+            
+            if (dias == 0) {
+                var int_calculado = (interes * document.getElementById("saldo_act").value * diasMes) / 360;
+               
+            } else {
+                if (dias < 0) {
+                    var int_calculado = (interes * document.getElementById("saldo_act").value * (diasMes + dias)) / 360;
+                   
+                } else {
+                    if (dias > 0) {
+                        
+                        var int_calculado = (interes * document.getElementById("saldo_act").value * diasMes) / 360;
+                       
+                        var mora = (((interes) * (document.getElementById("cuota_hoy").value - int_calculado)) / 360) * (dias);
+                    }
+                }
+
+            }
+            
+            var deudaTotal=(parseFloat(int_calculado) + parseFloat(pagoTotal));
+            
+            
+            if ((deudaTotal) < pago) {
+                swal({
+                    title: "¿Desea Continuar?",
+                    text: "La cantidad ingresada es mayor al saldo actual mas los intereses, se finalizara el prestamo " ,
+                    type: "warning",
+                    showCancelButton: true,
+                    cancelButtonText: "Cancelar",
+                    confirmButtonClass: "btn-danger",
+                    confirmButtonText: "Si, continuar!",
+                    closeOnConfirm: false
+                },
+                        function () {
+                            ok = true;
+                            swal(
+                                    'Registrado',
+                                    'Datos Registrados con Exito',
+                                    'success'
+                                    );
+                            document.getElementById("finalizar").value = "si";
+                            document.getElementById("abono").value=(int_calculado + pagoTotal);
+                            document.getElementById("mora_hoy").value = mora;
+                            document.getElementById("int_hoy").value = int_calculado;
+                           document.abono_form.submit();//lo envio aqui porque retorna la vaiable antes y despues ejecuta el swal
+                           
+                        });
+                        //alert("paso1");
+            }else{
+            if (pago > int_calculado) {
+                
+                document.getElementById('cap_fat').innerHTML = "$ " + (pago - int_calculado - mora).toFixed(2);
+                document.getElementById('int_fat').innerHTML = "$ " + int_calculado.toFixed(2);
+                document.getElementById('mora_fat').innerHTML = "$ " + mora.toFixed(2);
+                document.getElementById('total_fat').innerHTML = "$ " + pago;
+                alert("paso");
+                document.getElementById('saldo_act_fat').innerHTML = "SALDO ACTUAL: $ " + ((document.getElementById("saldo_act").value - (pago - int_calculado - mora)).toFixed(2));
+                document.getElementById("saldo_act_hoy").value = ((document.getElementById("saldo_act").value - (pago - int_calculado - mora)).toFixed(2));
+                document.getElementById("int_hoy").value = int_calculado;
+                document.getElementById("mora_hoy").value = mora;
+
+
+            } else {
+                swal('Oops', 'Parece que el pago no alcanza a cubrir  el interes del mes', 'warning');
+            }
+        }
+            
+        } else {
+            swal('Oops', 'Formato de abono no valido ', 'warning');
+        }
+    }
+    </script>
 <script language="javascript">
     $(document).ready(function () {
 
@@ -219,7 +319,7 @@ function selector_Cliente() {
                                     <div class="form-group">
                                         <div class="form-line">
                                             <label class="success">Abono</label>
-                                            <input type="text"class="form-control text-center" required="" minlength="1"  id="abono" name="abono"  placeholder="$$$">
+                                            <input type="number" class="form-control text-center" required="" minlength="1"  id="abono" name="abono"  placeholder="$$$">
                                         </div>
                                     </div>
                                 </div>
@@ -232,37 +332,37 @@ function selector_Cliente() {
                             <table class="table table-striped table-bordered" s id="factura_natural">
                                 <caption>FACTURA</caption>
 
-                                <tbody id="facturaCli">
+                                <tbody>
                                     <tr>
                                         <th colspan=4><p class="text-center">BanDejando   CREDITO FACIL </p></th>
                                     </tr>
                                     <tr>
-                                        <td id="nprestamo_fat"><span class="input-group-addon">Nº Factura<input type="text" name="nprestamo_fat" class="form-control" style="text-align:center" disabled></span> </td>
-                                        <td id="nombre_fat"><span class="input-group-addon">Nombre Cliente<input type="text" name="nombre_fat" class="form-control" style="text-align:center" disabled></span></td>
-                                        <td id="fecha_pres_fat"><span class="input-group-addon">Fecha Aplicacion:  <input type="text" name="fecha_pres_fat" style="text-align:center" disabled></span></td>
+                                        <td><span class="input-group-addon">Nº Factura<input type="text" name="nprestamo_fat" id="nprestamo_fat" class="form-control" style="text-align:center" disabled></span> </td>
+                                        <td id="nombre_fat"><span class="input-group-addon">Nombre Cliente</td>
+                                        <td><span class="input-group-addon">Fecha Aplicacion:  <input type="text" name="fecha_pres_fat" id="fecha_pres_fat" style="text-align:center" disabled></span></td>
                                     </tr>
                                     <tr>
-                                        <td id="nit_fat"><span class="input-group-addon">NIT<input type="text" name="nit_fat" class="form-control" style="text-align:center" disabled></span></td>
-                                        <td id="dui_fat"><span class="input-group-addon">DUI <input type="text" name="dui_fat" class="form-control" style="text-align:center" disabled></span></td>
-                                        <td id="fecha_pago_fat"><span class="input-group-addon">Fecha: <input type="text" name="fecha_pago_fat" style="text-align:center" disabled></span></td>
+                                        <td><span class="input-group-addon">NIT<input type="text" name="nit_fat" id="nit_fat" class="form-control" style="text-align:center" disabled></span></td>
+                                        <td><span class="input-group-addon">DUI <input type="text" name="dui_fat" id="dui_fat" class="form-control" style="text-align:center" disabled></span></td>
+                                        <td><span class="input-group-addon">Fecha: <input type="text" name="fecha_pago_fat" id="fecha_pago_fat" style="text-align:center" disabled></span></td>
                                     </tr>
                                     <tr>
-                                        <td id="fecha_fin_fat"><span class="input-group-addon">Fecha Vencimiento <input type="text" name="fecha_fin_fat" style="text-align:center" disabled></span></td>
-                                        <td id="fecha_ultimo_fat"></td>
+                                        <td><span class="input-group-addon">Fecha Vencimiento <input type="text" name="fecha_fin_fat" id="fecha_fin_fat" style="text-align:center" disabled></span></td>
+                                        <td></td>
                                         <td></td>
                                         <td> </td>
                                     </tr>
                                     <tr>
-                                        <td id="monto_fat"><span class="input-group-addon">Monto: $ <input type="text" name="monto_fat" style="text-align:center" disabled></span></td>
-                                        <td id="cuota_fat"><span class="input-group-addon">Valor Cuota: $ <input type="text" name="cuota_fat" style="text-align:center" disabled></span></td>
+                                        <td><span class="input-group-addon">Monto: $ <input type="text" name="monto_fat" id="monto_fat" style="text-align:center" disabled></span></td>
+                                        <td><span class="input-group-addon">Valor Cuota: $ <input type="text" name="cuota_fat" id="cuota_fat" style="text-align:center" disabled></span></td>
                                         <td colspan="2"> </td>
                                     <tr>
-                                        <td id="tasa_fat"><span class="input-group-addon">Tasa Nominal: <input type="text" name="tasa_fat" style="text-align:center" disabled>%</span></td>
+                                        <td><span class="input-group-addon">Tasa Nominal: <input type="text" name="tasa_fat1" id="tasa_fat1" style="text-align:center" disabled>%</span></td>
                                         <td colspan="3"> </td>
                                     </tr>
                                     <tr>
-                                        <td id="saldo_ant_fat"><span class="input-group-addon">Saldo Anterior: $ <input type="text" name="saldo_ant_fat" style="text-align:center" disabled></span></td>
-                                        <td id="saldo_act_fat"><span class="input-group-addon">Saldo Actual: $ <input type="text" name="saldo_act_fat" style="text-align:center" disabled></span></td>
+                                        <td><span class="input-group-addon">Saldo Anterior: $ <input type="text" name="saldo_ant_fat" id="saldo_ant_fat" style="text-align:center" disabled></span></td>
+                                        <td><span class="input-group-addon">Saldo Actual: $ <input type="text" name="saldo_act_fat" id="saldo_act_fat" style="text-align:center" disabled></span></td>
                                         <td colspan="2"> </td>
                                     </tr>
                                     <tr>
@@ -274,17 +374,17 @@ function selector_Cliente() {
                                     <tr>
                                         <td><span class="input-group-addon">CAPITAL:</span></td>
                                         <td></td>
-                                        <td id="cap_fat">$ <input type="text" name="cap_fat" style="text-align:center" disabled></td>
+                                        <td id="cap_fat">$ </td>
                                     </tr>
                                     <tr>
                                         <td><span class="input-group-addon">INTERES:</span></td>
                                         <td></td>
-                                        <td id="int_fat">$ <input type="text" name="int_fat" style="text-align:center" disabled></td>
+                                        <td id="int_fat">$</td>
                                     </tr>
                                     <tr>
                                         <td><span class="input-group-addon">MORA:</span></td>
                                         <td></td>
-                                        <td id="mora_fat"> $ <input type="text" name="mora_fat" style="text-align:center" disabled></td>
+                                        <td id="mora_fat"> $ </td>
                                     <tr>
 
                                         <td colspan="2"></td>
@@ -292,13 +392,13 @@ function selector_Cliente() {
                                         <td> </td>
                                     </tr>
                                     <tr>
-                                        <td id="nom_caj_fat"><span class="input-group-addon">Asesor: <input type="text" class="form-control" name="nom_caj_fat" style="text-align:center" disabled> </span></td>
+                                        <td><span class="input-group-addon">Asesor: <input type="text" class="form-control" name="nom_caj_fat" style="text-align:center" disabled> </span></td>
                                         <td></td>
                                         <td></td>
                                     </tr>
-                                <td id="id_cajero_fat"><span class="input-group-addon">Cajero Nº <input type="text" name="id_cajero_fat" style="text-align:center" disabled></span></td>
+                                <td><span class="input-group-addon">Cajero Nº <input type="text" name="id_cajero_fat" style="text-align:center" disabled></span></td>
                                 <td><span class="input-group-addon">TOTAL:</span></td>
-                                <td id="total_fat"> $ <input type="text" name="total_fat" style="text-align:center" disabled></td>
+                                <td id="total_fat"> $ </td>
                                 </tr>
 
                                 </tbody>
@@ -371,99 +471,12 @@ function selector_Cliente() {
         }
         return false;//para qeu no se envie el form
     }
+    //eliminar de la tabla  saldo_act
+    </script>
 
 
-//eliminar de la tabla  saldo_act
 
-
-    function calcular_factura() {
-        if (document.getElementById("abono").value > 0) {
-            var pago = document.getElementById("abono").value;
-            var pagoTotal = parseInt( document.getElementById("saldo_act").value);
-            var fecha_pago = document.getElementById("fecha_pago").value;
-            var fecha_hoy = document.getElementById("fecha_hoy").value;
-            var fecha_aux = fecha_hoy.split('-');
-            var mes = (fecha_aux[1]);
-            var ano = (fecha_aux[0]);
-            var diasMes = 30 //getUltimoDiaDelMes(mes, ano);
-
-
-            //calcualo los dias que se paso o faltan para el pago
-            var mora = 0;
-            var aFecha2 = fecha_hoy.split('-');
-            var aFecha1 = fecha_pago.split('-');
-            var fFecha1 = Date.UTC(aFecha1[0], aFecha1[1], aFecha1[2]);
-            var fFecha2 = Date.UTC(aFecha2[0], aFecha2[1], aFecha2[2] - 1);
-            var dif = fFecha2 - fFecha1;
-            var dias = Math.floor(dif / (1000 * 60 * 60 * 24));
-
-
-            if (dias == 0) {
-                var int_calculado = (document.getElementById("interes").value * document.getElementById("saldo_act").value * diasMes) / 360;
-              
-            } else {
-                if (dias < 0) {
-                    var int_calculado = (document.getElementById("interes").value * document.getElementById("saldo_act").value * (diasMes + dias)) / 360;
-                    
-                } else {
-                    if (dias > 0) {
-                        var int_calculado = (document.getElementById("interes").value * document.getElementById("saldo_act").value * diasMes) / 360;
-                       
-                        var mora = (((document.getElementById("interes").value) * (document.getElementById("cuota_hoy").value - int_calculado)) / 360) * (dias);
-                    }
-                }
-
-            }
-            var deudaTotal=(parseFloat(int_calculado) + parseFloat(pagoTotal));
-            
-            
-            if ((deudaTotal) < pago) {
-                swal({
-                    title: "¿Desea Continuar?",
-                    text: "La cantidad ingresada es mayor al saldo actual mas los intereses, se finalizara el prestamo " ,
-                    type: "warning",
-                    showCancelButton: true,
-                    cancelButtonText: "Cancelar",
-                    confirmButtonClass: "btn-danger",
-                    confirmButtonText: "Si, continuar!",
-                    closeOnConfirm: false
-                },
-                        function () {
-                            ok = true;
-                            swal(
-                                    'Registrado',
-                                    'Datos Registrados con Exito',
-                                    'success'
-                                    );
-                            document.getElementById("finalizar").value = "si";
-                            document.getElementById("abono").value=(int_calculado + pagoTotal);
-                            document.getElementById("mora_hoy").value = mora;
-                            document.getElementById("int_hoy").value = int_calculado;
-                           document.abono_form.submit();//lo envio aqui porque retorna la vaiable antes y despues ejecuta el swal
-                           
-                        });
-            }else{
-            if (pago > int_calculado) {
-                document.getElementById('cap_fat').innerHTML = "$ " + (pago - int_calculado - mora).toFixed(2);
-                document.getElementById('int_fat').innerHTML = "$ " + int_calculado.toFixed(2);
-                document.getElementById('mora_fat').innerHTML = "$ " + mora.toFixed(2);
-                document.getElementById('total_fat').innerHTML = "$ " + pago;
-                document.getElementById('saldo_act_fat').innerHTML = "SALDO ACTUAL: $ " + ((document.getElementById("saldo_act").value - (pago - int_calculado - mora)).toFixed(2));
-                document.getElementById("saldo_act_hoy").value = ((document.getElementById("saldo_act").value - (pago - int_calculado - mora)).toFixed(2));
-                document.getElementById("int_hoy").value = int_calculado;
-                document.getElementById("mora_hoy").value = mora;
-
-
-            } else {
-                swal('Oops', 'Parece que el pago no alcanza a cubrir  el interes del mes', 'warning');
-            }
-        }
-            
-        } else {
-            swal('Oops', 'Formato de abono no valido ', 'warning');
-        }
-    }
-
+    <script>
     function getUltimoDiaDelMes(mes, ano)
     {
         alert(mes + " " + ano);

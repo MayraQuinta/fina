@@ -8,7 +8,7 @@
                 <ul class="nav nav-list">
                     <li><div class="left-bg"></div></li>
                     <li class="time">
-                      <h1 class="animated fadeInLeft"><strong>21:00</strong></h1>
+                      <h1 class="animated fadeInLeft" ><strong>21:00</strong></h1>
                       <p class="animated fadeInRight"><strong>Sat,October 1st 2029</strong></p>
                     </li>
 
