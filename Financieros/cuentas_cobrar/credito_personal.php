@@ -532,7 +532,7 @@ function selector_Cliente() {
                 </div>
             </div>
         </div>
-        <!--FIN DE DATO DE CREDITO-->
+        <!--FIN DE DATO -->
 
     </section>
 </form>

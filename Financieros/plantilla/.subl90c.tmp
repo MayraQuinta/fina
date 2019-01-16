@@ -1,5 +1,5 @@
 <!-- Top Bar -->
-        <!-- start:  -->
+        <!-- start: -->
         <nav class="navbar navbar-default header navbar-fixed-top">
           <div class="col-md-12 nav-wrapper">
             <div class="navbar-header" style="width:100%;">
@@ -8,21 +8,24 @@
                 <span class="middle"></span>
                 <span class="bottom"></span>
               </div>
-                <a href="../home/home_administrador.php" class="navbar-brand"> 
-                
-                 <b>Analisis Financieros</b>
+              
+      <!-- Sidebar toggle button-
+      <!-- Navbar Right Menu-->
+                <a  href="../home/home_usuario.php" class="app-header__logo" style="background-color:#E84D13;"  aria-label="Hide Sidebar">
+                 -><a class="app-sidebar__toggle" href="#" data-toggle="sidebar" aria-label="Hide Sidebar"></a>
+                 <b >Sistema Financiero</b>
                 </a>
 
-             
+              
 
               <ul class="nav navbar-nav navbar-right user-nav">
                 <li class="user-name"><span></span></li>
                   <li class="dropdown avatar-dropdown">
-                   <img src="../asset/img/minerva.gif" class="img-circle avatar" alt="user name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"/>
+                   <img   data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"/>
                    
                 </li>
-                <li>
-                    <a href="../index.php" style="color: #f8f9fb"><span class="fa fa-user-times" style="color: #dc7777"></span> Cerrar Session</a>
+                <li >
+                    <a href="../index.php" style="color: #f8f9fb"><span class="fa fa-user-times" style="color: #f8f9fb"></span> Cerrar Sessión</a>
                  </li>
               </ul>
             </div>
