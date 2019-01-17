@@ -84,7 +84,7 @@ $lista_prestamo = repositorio_prestamo::lista_prestamo_pendiente_juridica(Conexi
                                 <th class="text-center"><?php echo "$". $lista['3'];?></th>
                                 <th class="text-center"><?php echo $lista['6'];?></th>
                                  <td class="text-center">
-                                     <button class="btn btn-danger" onclick="abrir_expediente('<?php echo $lista['8'];?>')"> 
+                                     <button class="btn btn-danger" onclick="abrir_expediente('<?php echo $lista['7'];?>')"> 
                                         <i class="Medium material-icons prefix">visibility</i> 
                                     </button>
                                 </td>
