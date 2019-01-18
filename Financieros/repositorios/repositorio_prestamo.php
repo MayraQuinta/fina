@@ -1,3 +1,4 @@
+
 <?php
 
 class repositorio_prestamo {
@@ -45,6 +46,52 @@ class repositorio_prestamo {
     
     //*************************
     public static function insertar_prestamo_fi($conexion, $prestamo,$id) {
+        $prestamo_insertado = false;
+        //$prestamo = new presamo();
+        if (isset($conexion)) {
+            try {
+
+                $user = $prestamo->getId_asesor();
+                $nombre = $prestamo->getPrestamo_original();
+                $fecha = $prestamo->getFecha();
+                $t = $prestamo->getTiempo();
+                $tasa = $prestamo->getTasa();
+                $tipo = $prestamo->getTipo_credito();
+                $nuevafecha = strtotime('+1 month', strtotime($fecha));
+                $nuevafecha = date('Y-m-d', $nuevafecha);
+
+                
+                $sql="UPDATE prestamo SET prestamo_original ='$nombre', saldo_actual ='$nombre', estado ='NORMAL', proximo_pago = '$nuevafecha', fecha = '$fecha', "
+                        . "tiempo = '$t', tasa_interes = '$tasa', tipo_credito = '$tipo' WHERE prestamo.id_prestamo ='$id'";
+
+///estos son alias para que PDO pueda trabajar 
+                $sentencia = $conexion->prepare($sql);
+
+//                $sentencia->bindParam(':nombre', $nombre, PDO::PARAM_STR);
+//                $sentencia->bindParam(':user', $user, PDO::PARAM_STR);
+//                $sentencia->bindParam(':plan', $plan, PDO::PARAM_STR);
+//                $sentencia->bindParam(':fecha', $fecha, PDO::PARAM_STR);
+//                $sentencia->bindParam(':t', $t, PDO::PARAM_STR);
+//                $sentencia->bindParam(':tasa', $tasa, PDO::PARAM_STR);
+//                $sentencia->bindParam(':tipo', $tipo, PDO::PARAM_STR);
+//                // $sentencia->bindParam(':nit1', $nit1, PDO::PARAM_STR);
+
+
+                $prestamo_insertado = $sentencia->execute();
+//             $accion = 'Se registro al siguiente prestamo de mantenimiento: ' . $nombre . ", con direccion ". $direccion . ", telefono ". $telefono.", y correo ".$correo ;
+//              self::insertar_bitacora($conexion, $accion);
+            } catch (PDOException $ex) {
+                echo '<script>swal("No se puedo realizar el registro", "Revise los datos ingresados  ", "warning");</script>';
+                print 'ERROR: ' . $ex->getMessage();
+            }
+        }
+        return $prestamo_insertado;
+    }
+    
+    //****************
+
+    //*************************
+    public static function insertar_prestamo_finan($conexion, $prestamo,$id) {
         $prestamo_insertado = false;
         //$prestamo = new presamo();
         if (isset($conexion)) {
@@ -537,7 +584,7 @@ class repositorio_prestamo {
                         INNER JOIN prestamo ON prestamo.id_asesor = usuario.id_usuario
                         INNER JOIN expediente_natural ON expediente_natural.id_prestamo = prestamo.id_prestamo
                         INNER JOIN persona_natural ON expediente_natural.persona_natural = persona_natural.id_persona_natural
-                        WHERE prestamo.estado = 'NORMAL' and prestamo.saldo_actual < (prestamo.prestamo_original/2)";
+                        WHERE prestamo.estado = 'NORMAL' and prestamo.saldo_actual < (prestamo.prestamo_original)";
                 $sentencia = $conexion->prepare($sql);
                 $sentencia->execute();
                 $resultado = $sentencia->fetchAll();
@@ -589,6 +636,47 @@ class repositorio_prestamo {
                         INNER JOIN persona_juridica ON expediente_juridico.id_persona_juridica = persona_juridica.id_persona_juridica
                         WHERE prestamo.estado = 'NORMAL' and prestamo.saldo_actual < (prestamo.prestamo_original)
 												AND persona_juridica.id_persona_juridica  = '$codigo'
+";
+                $sentencia = $conexion->prepare($sql);
+                $sentencia->execute();
+                $resultado = $sentencia->fetchAll();
+            } catch (PDOException $exc) {
+                print('ERROR' . $exc->getMessage());
+            }
+        }
+
+        return $resultado;
+    }
+
+
+    public static function llenar_refinanciamiento_natural($conexion, $codigo) {
+        $lista = array();
+
+        if (isset($conexion)) {
+            try {
+                $sql = "SELECT
+                        usuario.nombre,
+                        prestamo.tipo_credito,
+                        persona_natural.nombre,
+                        prestamo.prestamo_original,
+                        usuario.apellido,
+                        persona_natural.categoria,
+                        prestamo.tiempo,
+                        persona_natural.id_persona_natural,
+                        prestamo.id_prestamo,
+                        prestamo.saldo_actual,
+                        persona_natural.dui,
+                        persona_natural.nit,
+                        persona_natural.telefono,
+                        persona_natural.direccion,
+                        prestamo.tasa_interes
+                        FROM
+                        prestamo
+                        INNER JOIN usuario ON prestamo.id_asesor = usuario.id_usuario
+                        INNER JOIN expediente_natural ON expediente_natural.id_prestamo = prestamo.id_prestamo
+                        INNER JOIN persona_natural ON expediente_natural.persona_natural = persona_natural.id_persona_natural
+                        WHERE prestamo.estado = 'NORMAL' and prestamo.saldo_actual < (prestamo.prestamo_original)
+                                                AND persona_natural.id_persona_natural = '$codigo'
 ";
                 $sentencia = $conexion->prepare($sql);
                 $sentencia->execute();

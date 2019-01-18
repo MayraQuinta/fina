@@ -55,7 +55,12 @@
                       </ul>
                     </li>
                     <li class="ripple"><a href="../cuentas_cobrar/refinanciamiento.php">
-                    <span class="fa fa-pencil-square"></span>Refinanciamiento</a>
+                    <span class="fa fa-pencil-square"></span>Refinanciamiento Jurídico</a>
+                    
+                      
+                    </li>
+                    <li class="ripple"><a href="../cuentas_cobrar/refinanciamiento_natural.php">
+                    <span class="fa fa-pencil-square"></span>Refinanciamiento Natural</a>
                     
                       
                     </li>

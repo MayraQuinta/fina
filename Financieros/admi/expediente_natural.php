@@ -120,7 +120,7 @@ if (isset($_REQUEST['tipo'])) {
                                         <tbody>
                                             <?php foreach ($lista_referencias as $lista) { ?>
                                                 <tr>
-
+                                                    
                                                     <td class="text-center"><?php echo $lista['0']; ?></td>
                                                     <td class="text-center"><?php echo $lista['1']; ?></td>
                                                     <td class="text-center"><?php echo $lista['2']; ?></td>
@@ -152,7 +152,7 @@ if (isset($_REQUEST['tipo'])) {
                                         <thead>
 
                                         <th class="text-center">Nombre</th>
-                                        <th class="text-center">Direccin</th>
+                                        <th class="text-center">Direccion</th>
                                         <th class="text-center">Dui</th>
                                         <th class="text-center">Nit</th>
                                         <th class="text-center">Correo</th>
@@ -187,7 +187,7 @@ if (isset($_REQUEST['tipo'])) {
                         <div class="card">
                             <div class="header">
                                 <a href="#">
-                                    <h3 class="panel-heading text-center">DATOS DEl BIEN HIPOTECARIO</h3>
+                                    <h3 class="panel-heading text-center">DATOS DEL BIEN HIPOTECARIO</h3>
                                 </a>
                             </div>
                             <div id="" class="">
