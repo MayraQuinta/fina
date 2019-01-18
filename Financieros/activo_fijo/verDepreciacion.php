@@ -151,15 +151,15 @@ activo.id_activo = '$clienteInfo'
                 </thead>
                 <tbody>
                     <?php
-                    if ($fila['clasi'] == "1")
+                    if ($fila['clasi'] == "1")//Moviliario y equipo 2 años
                         $veces = 2;
-                    if ($fila['clasi'] == "2")
+                    if ($fila['clasi'] == "2")//Vehiculos 4 años
                         $veces = 4;
-                    if ($fila['clasi'] == "3")
+                    if ($fila['clasi'] == "3")//Maquinaria 5 años
                         $veces = 5;
-                    if ($fila['clasi'] == "4")
+                    if ($fila['clasi'] == "4")//Edificio 20 años
                         $veces = 20;
-                    if ($fila['clasi'] == "5")
+                    if ($fila['clasi'] == "5")//Terrenos
                         $veces = 0;
                     $ano = explode('-', $fila['fecha']);
                     $ano = $ano[0];

@@ -83,7 +83,7 @@ $lista_prestamo = repositorio_prestamo::lista_prestamo_pendiente_natural(Conexio
                                 <th class="text-center"><?php echo "$". $lista['4'];?></th>
                                 <th class="text-center"><?php echo $lista['5'];?></th>
                                  <td class="text-center">
-                                     <button class="btn btn-danger" onclick="abrir_expediente('<?php echo $lista['8'];?>', '<?php echo $lista['3'];?>')"> 
+                                     <button class="btn btn-danger" onclick="abrir_expediente('<?php echo $lista['6'];?>', '<?php echo $lista['3'];?>')"> 
                                         <i class="Medium material-icons prefix">visibility</i> 
                                     </button>
                                 </td>
