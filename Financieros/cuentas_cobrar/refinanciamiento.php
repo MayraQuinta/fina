@@ -92,7 +92,7 @@ $lista_prestamo_natural = repositorio_prestamo::lista_refinanciamiento_naturales
                          <?php foreach ($lista_prestamo_natural as $lista2) { ?>
                             <tr>
                                <td class="text-center">
-                                   <button class="btn btn-danger" onclick="refinanciar('<?php echo $lista2['6'];?>')"> 
+                                   <button class="btn btn-danger" onclick="refi('<?php echo $lista2['6'];?>')"> 
                                      <i class="fa fa-money"></i> 
                                     </button>
                                 </td>
@@ -138,6 +138,10 @@ function abrir_pagos_natural(id_prestamo) {
 
 function refinanciar(id_prestamo ,id_juridico ){
     location.href="credito_refinanciado_juridico.php?id_prestamo=" +id_prestamo+"&id_juridico="+id_juridico,"_parent";
+}
+
+function refi(id_prestamo){
+    location.href="credito_refinanciado_natural.php?id_prestamo=" +id_prestamo,"_parent";
 }
 
 </script>

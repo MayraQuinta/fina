@@ -23,7 +23,7 @@ if (isset($_REQUEST['id_prestamo'])) {
 }else{
 
 
-$lista_prestamo = repositorio_prestamo::lista_refinanciamiento_juridico(Conexion::obtener_conexion());
+$lista_prestamo = repositorio_prestamo::lista_refinanciamiento_naturales(Conexion::obtener_conexion());
 $lista_prestamo_natural = repositorio_prestamo::lista_refinanciamiento_naturales(Conexion::obtener_conexion());
 ?>    
 

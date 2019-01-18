@@ -135,6 +135,52 @@ class repositorio_prestamo {
     }
     
     //****************
+    
+      //*************************
+    public static function insertar_prestamo_finan_na($conexion, $prestamo,$id) {
+        $prestamo_insertado = false;
+        //$prestamo = new presamo();
+        if (isset($conexion)) {
+            try {
+
+                $user = $prestamo->getId_asesor();
+                $nombre = $prestamo->getPrestamo_original();
+                $fecha = $prestamo->getFecha();
+                $t = $prestamo->getTiempo();
+                $tasa = $prestamo->getTasa();
+                $tipo = $prestamo->getTipo_credito();
+                $nuevafecha = strtotime('+1 month', strtotime($fecha));
+                $nuevafecha = date('Y-m-d', $nuevafecha);
+
+                
+                $sql="UPDATE prestamo SET prestamo_original ='$nombre', saldo_actual ='$nombre', estado ='NORMAL', proximo_pago = '$nuevafecha', fecha = '$fecha', "
+                        . "tiempo = '$t', tasa_interes = '$tasa', tipo_credito = '$tipo' WHERE prestamo.id_prestamo ='$id'";
+
+///estos son alias para que PDO pueda trabajar 
+                $sentencia = $conexion->prepare($sql);
+
+//                $sentencia->bindParam(':nombre', $nombre, PDO::PARAM_STR);
+//                $sentencia->bindParam(':user', $user, PDO::PARAM_STR);
+//                $sentencia->bindParam(':plan', $plan, PDO::PARAM_STR);
+//                $sentencia->bindParam(':fecha', $fecha, PDO::PARAM_STR);
+//                $sentencia->bindParam(':t', $t, PDO::PARAM_STR);
+//                $sentencia->bindParam(':tasa', $tasa, PDO::PARAM_STR);
+//                $sentencia->bindParam(':tipo', $tipo, PDO::PARAM_STR);
+//                // $sentencia->bindParam(':nit1', $nit1, PDO::PARAM_STR);
+
+
+                $prestamo_insertado = $sentencia->execute();
+//             $accion = 'Se registro al siguiente prestamo de mantenimiento: ' . $nombre . ", con direccion ". $direccion . ", telefono ". $telefono.", y correo ".$correo ;
+//              self::insertar_bitacora($conexion, $accion);
+            } catch (PDOException $ex) {
+                echo '<script>swal("No se puedo realizar el registro", "Revise los datos ingresados  ", "warning");</script>';
+                print 'ERROR: ' . $ex->getMessage();
+            }
+        }
+        return $prestamo_insertado;
+    }
+    
+    //****************
 
     public static function actualizar_prestamo($conexion, $prestamo, $id) {
         $prestamo_insertado = false;
@@ -676,7 +722,7 @@ class repositorio_prestamo {
                         INNER JOIN expediente_natural ON expediente_natural.id_prestamo = prestamo.id_prestamo
                         INNER JOIN persona_natural ON expediente_natural.persona_natural = persona_natural.id_persona_natural
                         WHERE prestamo.estado = 'NORMAL' and prestamo.saldo_actual < (prestamo.prestamo_original)
-                                                AND persona_natural.id_persona_natural = '$codigo'
+                                                AND prestamo.id_prestamo= '$codigo'
 ";
                 $sentencia = $conexion->prepare($sql);
                 $sentencia->execute();

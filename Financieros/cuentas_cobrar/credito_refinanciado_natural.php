@@ -86,7 +86,7 @@ if (isset($_REQUEST['nameEnviar'])) {
         
     
 }else {
-$datos = repositorio_prestamo::llenar_refinanciamiento_natural(Conexion::obtener_conexion(), $_REQUEST['id_natural']);
+$datos = repositorio_prestamo::llenar_refinanciamiento_natural(Conexion::obtener_conexion(), $_REQUEST['id_prestamo']);
 ?>
 
 <div id="content" >
@@ -141,11 +141,11 @@ $datos = repositorio_prestamo::llenar_refinanciamiento_natural(Conexion::obtener
                                 </thead>
                                 <tbody>
                                     <?php
-                                    $datos = repositorio_prestamo::llenar_refinanciamiento_natural(Conexion::obtener_conexion(), $_REQUEST['id_natural']);
+                                    $datos = repositorio_prestamo::llenar_refinanciamiento_natural(Conexion::obtener_conexion(), $_REQUEST['id_prestamo']);
                                     foreach ($datos as $lista){?>
                                     <tr>
                                         <td><?php echo $lista['1'];?></td>
-                                        <td><?php echo $lista['0'];?></td>
+                                        <td><?php echo $lista['2'];?></td>
                                         <td><?php echo $lista['10'];?></td>
                                         <td><?php echo $lista['11'];?></td>
                                         <td><?php echo $lista['12'];?></td>
