@@ -62,7 +62,7 @@ and institucion.id_institucion=activo.id_institucion and encargado.id_encargado=
                 <div class="panel">
                   <div class="panel-body">
                       <div  href="../asset/img/finsi.png" class="col-md-6 col-sm-12">
-                        <h3 class="animated fadeInLeft">ACTIVO FIJO</h3>
+                        <h3 class="animated fadeInLeft">Activo  Fijo</h3>
                         
 
                       

@@ -62,7 +62,7 @@ if (isset($_REQUEST['nameEnviar'])) {
 
                           <div class="col-md-6">
                             <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                              <input type="text" class="form-text" id="validate_firstname" required="" name="nameNombre" aria-required="true">
+                              <input type="text" onkeypress="return soloLetras(event)" class="form-text" id="validate_firstname" required="" name="nameNombre" aria-required="true">
                               <span class="bar"></span>
                               <label><span class="fa fa-user"></span>   Nombres</label>
                             </div>
@@ -70,7 +70,7 @@ if (isset($_REQUEST['nameEnviar'])) {
 
                           <div class="col-md-6">
                             <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                           <input type="text" class="form-text" id="validate_firstname" required="" name="nameApellido" aria-required="true">
+                           <input type="text" onkeypress="return soloLetras(event)" class="form-text" id="validate_firstname" required="" name="nameApellido" aria-required="true">
                               <span class="bar"></span>
                               <label><span class="fa fa-user"></span>   Apellidos</label>
                             </div>
@@ -107,6 +107,39 @@ if (isset($_REQUEST['nameEnviar'])) {
                   </div>
                 </div>
               </div>
+<!-- Essential javascripts for application to work-->
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/notify.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/jquery.maskedinput.min.js"></script>
+    
+      <script type="text/javascript">
+      
+ jQuery(function($){
+            // Definimos las mascaras para cada input
+            
+            $("#dui_natural").mask("99999999-9");
+            
+        });
+           function soloLetras(e){
+        key=e.keyCode || e.which;
+        teclado=String.fromCharCode(key).toLowerCase();
+        letras=" áéíóúabcdefghijklmnñopqrstuvwxyz";
+        especiales="8-37-38-46-164";
+        teclado_especial=false;
+        for(var i in especiales){
+            if(key==especiales[i]){
+                teclado_especial=true;break;
+            }
+        }
+        if(letras.indexOf(teclado)==-1 && !teclado_especial){
+        return false;
+    }
+        }
+        
+    </script>
 
 <script type="text/javascript">
   $(document).ready(function(){

@@ -14,7 +14,7 @@ include_once '../app/Conexion.php';
                 <div class="panel">
                   <div class="panel-body">
                       <div class="col-md-6 col-sm-12">
-                        <h3 class="animated fadeInLeft">ACTIVO FIJO</h3>
+                        <h3 class="animated fadeInLeft">Activo Fijo</h3>
                         
 
                       
@@ -69,7 +69,7 @@ $lista_clasificacion = repositorio_clasificacion::lista_clasificacion(Conexion::
 
                           <div class="col-md-6">
                             <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                              <input type="text" class="form-text" id="validate_firstname" name="nameNombre"  required="" aria-required="true">
+                              <input type="text" onkeypress="return soloLetras(event)" class="form-text" id="validate_firstname" name="nameNombre"  required="" aria-required="true">
                               <span class="bar"></span>
                               <label><span class="fa fa-user"></span>   Nombre </label>
                             </div>
@@ -115,8 +115,44 @@ $lista_clasificacion = repositorio_clasificacion::lista_clasificacion(Conexion::
                 </div>
               </div>
    
-
+     
+      <!-- Essential javascripts for application to work-->
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/notify.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/jquery.maskedinput.min.js"></script>
+    
+      <script type="text/javascript">
+      
+ jQuery(function($){
+            // Definimos las mascaras para cada input
+            
+            $("#telefono").mask("9999-9999");
+            
+        });
+           function soloLetras(e){
+        key=e.keyCode || e.which;
+        teclado=String.fromCharCode(key).toLowerCase();
+        letras=" áéíóúabcdefghijklmnñopqrstuvwxyz";
+        especiales="8-37-38-46-164";
+        teclado_especial=false;
+        for(var i in especiales){
+            if(key==especiales[i]){
+                teclado_especial=true;break;
+            }
+        }
+        if(letras.indexOf(teclado)==-1 && !teclado_especial){
+        return false;
+    }
+        }
+        
+    </script>
+    
    
   <!-- end: Javascript -->
   </body>
+
+
 </html>
