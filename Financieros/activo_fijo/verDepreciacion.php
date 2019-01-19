@@ -38,9 +38,9 @@ activo.id_activo = '$clienteInfo'
 
 <div class="row" >
     <!--<form id="imprimir_depre" method="post" action="../reportesActivo/imp_depre.php" target="_blank">-->
-    <div class="col-md-10">
-                  <div class="col-md-12 panel">
-                    <div class="col-md-12 panel-heading">
+    <div class="col-md-15">
+                  <div class="col-md-15 panel">
+                    <div class="col-md-15 panel-heading">
                       <h4>Depreciación</h4>
                     </div>
                     <div class="col-md-12 panel-body" style="padding-bottom:30px;">
@@ -113,7 +113,7 @@ activo.id_activo = '$clienteInfo'
 
 
                              <td colspan="4"  style="height:10px;" >
-                    <label for="textarea1" style="font-size:16px">Institucion<small></small> </label><br>
+                    <label for="textarea1" style="font-size:16px">Institución<small></small> </label><br>
                         <div class="form-group form-animate-text" style="margin-top:30px !important;">
                               <input type="text" class="form-text" name="ver_fecha_depre" value="<?php echo $fila['nombreInst']; ?>" id="ver_fecha_depre" readonly=""  >
                              
@@ -187,8 +187,8 @@ activo.id_activo = '$clienteInfo'
     <a href="listaactivos.php">
 
         <a href="listaactivos.php">
-            <button class="btn btn-info" type="button" > 
-                <i class="fa fa-eye"></i>Volver
+            <button class="btn ripple-infinite btn-round btn-primary" type="button" > 
+                <div><span>Volver</span></div>
             </button>
         </a>
         <?php

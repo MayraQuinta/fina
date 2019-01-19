@@ -76,7 +76,7 @@ and institucion.id_institucion=activo.id_institucion and encargado.id_encargado=
     <div class="container-fluid">
 
 
-        <div class="panel" name="libros">
+        <div class="panel " name="libros">
 
            
             <div class="panel-body">  
@@ -86,7 +86,7 @@ and institucion.id_institucion=activo.id_institucion and encargado.id_encargado=
       <div class="container-fluid mimin-wrapper" id="contenido">
   
      <div class="header">
-                                <h2 class="text-center">Lista de activos</h2>
+                                <h2 class="panel-heading text-center">Lista de activos</h2>
                             </div>
 
           <!-- start: Content -->
@@ -112,7 +112,7 @@ and institucion.id_institucion=activo.id_institucion and encargado.id_encargado=
                         <th>Institución</th>
                         <th>Encargado</th>
                         <th>Precio($)</th>
-                        <th>Acciones</th>
+                        <th>Ver Depreciación</th>
                       </tr>
                     </thead>
                     <tbody class="buscar">
@@ -124,8 +124,8 @@ and institucion.id_institucion=activo.id_institucion and encargado.id_encargado=
                      <td><?php echo $fila['nombreInst']; ?></td>
                      <td><?php echo $fila['encargado']; ?></td>
                      <td><?php echo $fila['precio'].' $' ; ?></td>
-                     <td ><button class="btn btn-info" onclick="llamarPagina('<?php echo $fila['id']; ?>')"> 
-                      <i class="fa fa-eye  "></i>Depreciación</button></td>
+                     <td ><button class="btn ripple-infinite btn-round btn-primary" onclick="llamarPagina('<?php echo $fila['id']; ?>')"> 
+                      <div><span>Depreciación</span></div></button></td>
                      </tr>
                             <?php
             }
