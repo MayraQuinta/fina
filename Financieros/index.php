@@ -91,8 +91,14 @@
           <div class="panel periodic-login">
               <span class="atomic-number"></span>
               <div class="panel-body text-center">
-                  <h1 class="atomic-mass"><strong>SISTEMA FINANCIERO</strong></h1>
-                  <p class="atomic-mass" ></p>
+                 
+                   <div class="logo" style="font:60019px;
+        color: white;
+       ">
+        <h1  >Sistema Financiero </h1>
+
+
+      </div>
                   <!--  <div class="col-sm-12 text-center">
                     <img src="../asset/img/imagenn.jpg" style="width: 100px;height:100px;">
                   </div>
