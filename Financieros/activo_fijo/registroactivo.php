@@ -250,7 +250,6 @@ $sql = "INSERT INTO activo (id_tipo, id_departamento, id_institucion, id_usuario
 
 
 
-
 <!-- Essential javascripts for application to work-->
     <script src="../js/jquery-3.2.1.min.js"></script>
     <script src="../js/popper.min.js"></script>
@@ -273,8 +272,9 @@ $sql = "INSERT INTO activo (id_tipo, id_departamento, id_institucion, id_usuario
 
  jQuery(function($){
             // Definimos las mascaras para cada input
-            $('#precio').mask('000.000.000.000.000,00', {reverse: true});
-           
+            $('#precio').mask('000,000,000,000,000.00', {reverse: true});
+            
+
         });
 
 
@@ -285,6 +285,17 @@ $sql = "INSERT INTO activo (id_tipo, id_departamento, id_institucion, id_usuario
   $('#search').quicksearch('table tbody tr');
 });
     </script>
+<script src="../libreria/jquery.mask.min.js"></script>
+
+<script type="text/javascript">
+    $('.mask-dui').mask('00000000-0');
+    $('.mask-celular').mask('0000-0000');
+    $('.mask-nit').mask('0000-000000-000-0');
+
+</script>
+
+    
+
 </html>
 
 

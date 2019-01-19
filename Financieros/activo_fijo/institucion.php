@@ -61,7 +61,7 @@ if (isset($_REQUEST['nameEnviar'])) {
 
                           <div class="col-md-9">
                             <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                              <input type="text" class="form-text" id="validate_firstname" name="nameNombre" required="" aria-required="true">
+                              <input type="text" class="form-text" onkeypress="return soloLetras(event)" id="validate_firstname" name="nameNombre" required="" aria-required="true">
                               <span class="bar"></span>
                               <label><span class="fa fa-institution"></span>   Nombre de la institución </label>
                             </div>
@@ -97,4 +97,30 @@ if (isset($_REQUEST['nameEnviar'])) {
    
   <!-- end: Javascript -->
   </body>
+
+   <script type="text/javascript">
+      
+ jQuery(function($){
+            // Definimos las mascaras para cada input
+            
+            $("#dui_natural").mask("99999999-9");
+            
+        });
+           function soloLetras(e){
+        key=e.keyCode || e.which;
+        teclado=String.fromCharCode(key).toLowerCase();
+        letras=" áéíóúabcdefghijklmnñopqrstuvwxyz";
+        especiales="8-37-38-46-164";
+        teclado_especial=false;
+        for(var i in especiales){
+            if(key==especiales[i]){
+                teclado_especial=true;break;
+            }
+        }
+        if(letras.indexOf(teclado)==-1 && !teclado_especial){
+        return false;
+    }
+        }
+        
+    </script>
 </html>

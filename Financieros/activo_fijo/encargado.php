@@ -114,7 +114,14 @@ if (isset($_REQUEST['nameEnviar'])) {
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/jquery.maskedinput.min.js"></script>
-    
+    <script src="../libreria/jquery.mask.min.js"></script>
+
+<script type="text/javascript">
+    $('.mask-dui').mask('00000000-0');
+    $('.mask-celular').mask('0000-0000');
+    $('.mask-nit').mask('0000-000000-000-0');
+
+</script>
       <script type="text/javascript">
       
  jQuery(function($){
