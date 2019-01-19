@@ -8,6 +8,42 @@ include_once '../plantilla/cabecera.php';
 include_once '../plantilla/barraSuperior.php';
 include_once '../plantilla/barra_lateral_usuario.php';
 ?>
+<script>
+    function soloNumero(e) {
+        key = e.keyCode || e.which;
+        teclado = String.fromCharCode(key);
+        numerito = "0123456789";
+        especiales = "8-37-38-46";
+        teclado_especial = false;
+        for (var i in especiales) {
+            if (key == especiales[i]) {
+                teclado_especial = true;
+            }
+        }
+        if (numerito.indexOf(teclado) == -1 && !teclado_especial) {
+            return false;
+        }
+    }
+
+
+    function soloLetras(e) {
+        key = e.keyCode || e.which;
+        teclado = String.fromCharCode(key).toLowerCase();
+        letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
+        especiales = "8-37-38-46-164";
+        teclado_especial = false;
+        for (var i in especiales) {
+            if (key == especiales[i]) {
+                teclado_especial = true;
+                break;
+            }
+        }
+        if (letras.indexOf(teclado) == -1 && !teclado_especial) {
+            return false;
+        }
+    }
+
+</script>
 
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <script type="text/javascript">
@@ -51,7 +87,7 @@ include_once '../plantilla/barra_lateral_usuario.php';
                                             <div class="col-md-6">
 
                                             <div class="form-group form-animate-text" style="margin-top:40px !important;">    
-                                            <input type="text"  class="form-text" name="nombre_natural" id required="" aria-required="true">
+                                            <input type="text"  class="form-text" name="nombre_natural" id required="" aria-required="true" autocomplete="off" onkeypress="return soloLetras(event)">
                                              <span class="bar"></span>
                                             <label><span class="fa fa-user"></span > Nombres</label>
                                         </div>
@@ -59,7 +95,7 @@ include_once '../plantilla/barra_lateral_usuario.php';
 
                                         <div class="col-md-6">
                                             <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                            <input type="text" class="form-text" name="apellido_natural"  required="" aria-required="true">
+                                            <input type="text" class="form-text" name="apellido_natural"  required="" aria-required="true" autocomplete="off" onkeypress="return soloLetras(event)">
                                             <span class="bar"></span>
                                             <label><span class="fa fa-user"></span> Apellidos</label>
                                         </div>
@@ -69,7 +105,7 @@ include_once '../plantilla/barra_lateral_usuario.php';
                                     
                                         <div class="col-md-6">
                                             <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                             <input type="text" class="form-text" name="dui_natural"  id="Dui_fia_per"  required="">
+                                             <input type="text" class="form-text mask-dui" name="dui_natural"  id="Dui_fia_per"  required="">
                                            <span class="bar"></span>
                                             <label><span class="fa fa-credit-card"></span>   DUI</label>
                                         </div>
@@ -79,7 +115,7 @@ include_once '../plantilla/barra_lateral_usuario.php';
                                         <div class="col-md-6">
                                             <div class="form-group form-animate-text" style="margin-top:40px !important;">
                             
-                                            <input type="text" class="form-text" name="nit_natural" id="Nit_fia_per" required="">
+                                            <input type="text" class="form-text mask-nit" name="nit_natural" id="Nit_fia_per" required="">
                                              <span class="bar"></span>
                                             <label><span class="fa fa-credit-card"></span>   NIT</label>
                                         </div>
@@ -90,7 +126,7 @@ include_once '../plantilla/barra_lateral_usuario.php';
                                     
                                         <div class="col-md-6">
                                             <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                            <input type="text" class="form-text" name="telefono_natural" id="ref_Telefono" required="">
+                                            <input type="text" class="form-text mask-celular" name="telefono_natural" id="ref_Telefono" required="">
                                              <span class="bar"></span>
                                             <label><span class="fa fa-phone"></span>   Teléfono</label>
                                         </div>
@@ -99,7 +135,7 @@ include_once '../plantilla/barra_lateral_usuario.php';
                                 
                                         <div class="col-md-6">
                                             <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                            <input type="text" class="form-text" name="direccion_natural" required="">
+                                            <input type="text" class="form-text" name="direccion_natural" required="" autocomplete="off" onkeypress="return soloLetras(event)">
                                              <span class="bar"></span>
                                             <label><span class="fa fa-book"></span>   Dirección</label>
                                         </div>
@@ -135,6 +171,15 @@ include_once '../plantilla/barra_lateral_usuario.php';
 </form>
  </body>
  </html>
+<script src="../libreria/jquery.mask.min.js"></script>
+
+<script type="text/javascript">
+    $('.mask-dui').mask('00000000-0');
+    $('.mask-celular').mask('0000-0000');
+    $('.mask-nit').mask('0000-000000-000-0');
+
+</script>
+
 <script>
     function confirmar_envio_perNatural() {
         var ok = false;
