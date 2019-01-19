@@ -38,13 +38,17 @@ activo.id_activo = '$clienteInfo'
 
 <div class="row" >
     <!--<form id="imprimir_depre" method="post" action="../reportesActivo/imp_depre.php" target="_blank">-->
-    <div class="col-md-15">
-                  <div class="col-md-15 panel">
-                    <div class="col-md-15 panel-heading">
-                      <h4>Depreciación</h4>
+    <section class="content">
+    <div class="container-fluid">
+        <div class="panel" name="libros">
+            <div class="panel-heading text-center">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Depreciación de Activos</h3>
                     </div>
-                    <div class="col-md-12 panel-body" style="padding-bottom:30px;">
-                      <div class="col-md-12">
+                </div>
+            </div>
+            <div class="panel-body"> 
 
         <?php while ($fila = mysqli_fetch_array($datos)) { ?>
             <div>
@@ -188,7 +192,7 @@ activo.id_activo = '$clienteInfo'
 
         <a href="listaactivos.php">
             <button class="btn ripple-infinite btn-round btn-primary" type="button" > 
-                <div><span>Volver</span></div>
+                <div><span>Volver</span> </div>
             </button>
         </a>
         <?php
