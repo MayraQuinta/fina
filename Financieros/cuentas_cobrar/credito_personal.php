@@ -3,8 +3,45 @@ include_once '../plantilla/cabecera.php';
 include_once '../plantilla/barraSuperior.php';
 include_once '../plantilla/barra_lateral_usuario.php';
 
-
 ?>
+
+<script>
+    function soloNumero(e) {
+        key = e.keyCode || e.which;
+        teclado = String.fromCharCode(key);
+        numerito = "0123456789";
+        especiales = "8-37-38-46";
+        teclado_especial = false;
+        for (var i in especiales) {
+            if (key == especiales[i]) {
+                teclado_especial = true;
+            }
+        }
+        if (numerito.indexOf(teclado) == -1 && !teclado_especial) {
+            return false;
+        }
+    }
+
+
+    function soloLetras(e) {
+        key = e.keyCode || e.which;
+        teclado = String.fromCharCode(key).toLowerCase();
+        letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
+        especiales = "8-37-38-46-164";
+        teclado_especial = false;
+        for (var i in especiales) {
+            if (key == especiales[i]) {
+                teclado_especial = true;
+                break;
+            }
+        }
+        if (letras.indexOf(teclado) == -1 && !teclado_especial) {
+            return false;
+        }
+    }
+
+</script>
+
 <script>
   $(document).ready(function(){
     $('#plan_pago_personal').DataTable({
@@ -252,7 +289,7 @@ function selector_Cliente() {
                                 <div class="row clearfix">
                                     <div class="col-md-3">
                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">    
-                                            <input type="text" class="form-text" required="" minlength="3" id="Nombre_fia_per" name="Nombre_fia_per" placeholder="">
+                                            <input type="text" class="form-text" required="" minlength="3" id="Nombre_fia_per" name="Nombre_fia_per" placeholder="" autocomplete="off" onkeypress="return soloLetras(event)">
                                              <span class="bar"></span>
                                              <label><span class="fa fa-user"></span > Nombre</label>
                                         </div>
@@ -261,7 +298,7 @@ function selector_Cliente() {
 
                                     <div class="col-md-3">
                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">  
-                                                <input type="text" class="form-text" required="" minlength="3" id="Apellido_fia_per" name="Apellido_fia_per" placeholder="">
+                                                <input type="text" class="form-text" required="" minlength="3" id="Apellido_fia_per" name="Apellido_fia_per" placeholder="" autocomplete="off" onkeypress="return soloLetras(event)">
                                                 <span class="bar"></span>
                                              <label><span class="fa fa-user"></span > Apellido</label>
                                         </div>
@@ -269,7 +306,7 @@ function selector_Cliente() {
                             
                                     <div class="col-md-3">
                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">  
-                                                <input type="tel" class="form-text" required="" minlength="3" id="Telefono_fia_per" name="Telefono_fia_per" placeholder="">
+                                                <input type="tel" class="form-text mask-celular" required="" minlength="3" id="Telefono_fia_per" name="Telefono_fia_per" placeholder="" >
                                        <span class="bar"></span>
                                              <label><span class="fa fa-book"></span > Teléfono</label>
                                         </div>
@@ -291,7 +328,7 @@ function selector_Cliente() {
                                  <div class="col-md-3">
                                     <div class="form-group form-animate-text" style="margin-top:40px !important;">  
                                         <div class="form-group">
-                                                <input type="text" class="form-text" required="" minlength="3" id="Dui_fia_per" name="Dui_fia_per" placeholder="">
+                                                <input type="text" class="form-text mask-dui" required="" minlength="3" id="Dui_fia_per" name="Dui_fia_per" placeholder="">
                                               <span class="bar"></span>
                                              <label><span class="fa fa-credit-card"></span > DUI</label>
                                         </div>
@@ -299,7 +336,7 @@ function selector_Cliente() {
                                      </div>
                                     <div class="col-md-3">
                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">  
-                                                <input type="text" class="form-text" required="" minlength="3" id="Nit_fia_per" name="Nit_fia_per" placeholder="">
+                                                <input type="text" class="form-text mask-nit" required="" minlength="3" id="Nit_fia_per" name="Nit_fia_per" placeholder="">
                                             <span class="bar"></span>
                                              <label><span class="fa fa-credit-card"></span > NIT</label>
                                         </div>
@@ -345,7 +382,7 @@ function selector_Cliente() {
                                     <div class="col-md-3">
                                    
                                          <div class="form-group form-animate-text" style="margin-top:40px !important;"> 
-                                                <input type="text"class="form-text" id="ref_Nombre" name="ref_Nombre" placeholder="">
+                                                <input type="text" class="form-text" id="ref_Nombre" name="ref_Nombre" placeholder="" autocomplete="off" onkeypress="return soloLetras(event)">
                                              <span class="bar"></span>
                                              <label><span class="fa fa-user"></span > Nombre</label>
                                          
@@ -356,7 +393,7 @@ function selector_Cliente() {
                                      
                                             
                                            <div class="form-group form-animate-text" style="margin-top:40px !important;"> 
-                                                <input type="text" class="form-text"  id="ref_Apellido" name="ref_Apellido" placeholder="">
+                                                <input type="text" class="form-text"  id="ref_Apellido" name="ref_Apellido" placeholder="" autocomplete="off" onkeypress="return soloLetras(event)">
                                             <span class="bar"></span>
                                              <label><span class="fa fa-user"></span > Apellido</label>
                                         </div>
@@ -380,7 +417,7 @@ function selector_Cliente() {
                                            
                                             <div class="form-group form-animate-text" style="margin-top:40px !important;"> 
                                   
-                                                <input type="tel" class="form-text" id="ref_Telefono" name="ref_Telefono" placeholder="">
+                                                <input type="tel" class="form-text mask-celular" id="ref_Telefono" name="ref_Telefono" placeholder="">
                                             <span class="bar"></span>
                                              <label><span class="fa fa-book"></span > Teléfono</label>
 
@@ -390,7 +427,9 @@ function selector_Cliente() {
                                 </div>
                                 <div class="row ">
                                     <div class="text-center">
-                                        <button type="button" onclick="agr_refe()" class="btn btn-round btn-success" value="success">Agregar</button>
+                                        <button type="button" onclick="agr_refe()" class="btn ripple-infinite btn-round btn-primary" value="success"><div>
+                                      <span>Agregar</span>
+                                    </div></button>
                                     </div>
 
                                    
@@ -843,6 +882,16 @@ function selector_Cliente() {
         }
     }
 </script>
+
+<script src="../libreria/jquery.mask.min.js"></script>
+
+<script type="text/javascript">
+    $('.mask-dui').mask('00000000-0');
+    $('.mask-celular').mask('0000-0000');
+    $('.mask-nit').mask('0000-000000-000-0');
+
+</script>
+
 <?php
 include_once '../plantilla/pie.php';
 if (isset($_REQUEST["pas_cp"])) {
@@ -1144,3 +1193,5 @@ if (isset($_REQUEST["pas_cp"])) {
     }
 }
 ?>
+
+

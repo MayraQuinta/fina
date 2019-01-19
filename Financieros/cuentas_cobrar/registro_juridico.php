@@ -3,6 +3,43 @@
 
 <html lang="en">
 
+<script>
+    function soloNumero(e) {
+        key = e.keyCode || e.which;
+        teclado = String.fromCharCode(key);
+        numerito = "0123456789";
+        especiales = "8-37-38-46";
+        teclado_especial = false;
+        for (var i in especiales) {
+            if (key == especiales[i]) {
+                teclado_especial = true;
+            }
+        }
+        if (numerito.indexOf(teclado) == -1 && !teclado_especial) {
+            return false;
+        }
+    }
+
+
+    function soloLetras(e) {
+        key = e.keyCode || e.which;
+        teclado = String.fromCharCode(key).toLowerCase();
+        letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
+        especiales = "8-37-38-46-164";
+        teclado_especial = false;
+        for (var i in especiales) {
+            if (key == especiales[i]) {
+                teclado_especial = true;
+                break;
+            }
+        }
+        if (letras.indexOf(teclado) == -1 && !teclado_especial) {
+            return false;
+        }
+    }
+
+</script>
+
 <?php
 include_once '../plantilla/cabecera.php';
 include_once '../plantilla/barraSuperior.php';
@@ -122,7 +159,7 @@ if (isset($_REQUEST['nameEnviar'])) {
 
                                             <div class="form-group form-animate-text" style="margin-top:40px !important;">
 
-                                                    <input type="text" class="form-text" name="nameNombre" required="">
+                                                    <input type="text" class="form-text" name="nameNombre" required="" autocomplete="off" onkeypress="return soloLetras(event)">
                                                <span class="bar"></span>
                               <label><span class="fa fa-institution"></span>   Nombre de la empresa</label>
                                                 </div>
@@ -133,7 +170,7 @@ if (isset($_REQUEST['nameEnviar'])) {
 
                                             <div class="form-group form-animate-text" style="margin-top:40px !important;">
                                                  
-                                                    <input type="text" class="form-text" name="nameNumero" required="">
+                                                    <input type="text" class="form-text" name="nameNumero" required="" autocomplete="off" onkeypress="return soloNumero(event)">
                                                 <span class="bar"></span>
                               <label><span class="fa fa-list-ol"></span>   No. Empresa</label> 
                                                 </div>
@@ -143,7 +180,7 @@ if (isset($_REQUEST['nameEnviar'])) {
                                             <div class="col-md-4">
 
                                             <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                            <input type="text" class="form-text" name="nameDuiJuridico" id="Dui_fia_per"  required="">
+                                            <input type="text" class="form-text mask-dui" name="nameDuiJuridico" id="Dui_fia_per"  required="">
                                             <span class="bar"></span>
                                             <label><span class="fa fa-credit-card"></span>   DUI(Encargado jurídico)</label> 
                                                 </div>
@@ -153,7 +190,7 @@ if (isset($_REQUEST['nameEnviar'])) {
                                             <div class="col-md-3">
 
                                             <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                                    <input type="text" class="form-text" name="nameNitJuridico" id="Nit_fia_per"  required="">
+                                                    <input type="text" class="form-text mask-nit" name="nameNitJuridico" id="Nit_fia_per"  required="">
                                                 <span class="bar"></span>
                                             <label><span class="fa fa-credit-card"></span>   NIT(Encargado jurídico)</label> 
 
@@ -451,6 +488,17 @@ if (isset($_REQUEST['nameEnviar'])) {
         <!--FIN DE ESTADO DE RESULTADOS-->
 
     </form>
+
+<script src="../libreria/jquery.mask.min.js"></script>
+
+<script type="text/javascript">
+    $('.mask-dui').mask('00000000-0');
+    $('.mask-celular').mask('0000-0000');
+    $('.mask-nit').mask('0000-000000-000-0');
+
+</script>
+
+
     <?php
 }
 include_once '../plantilla/pie.php';
