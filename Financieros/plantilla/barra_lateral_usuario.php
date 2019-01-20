@@ -8,7 +8,7 @@
                 <ul class="nav nav-list">
                     <li><div class="left-bg"></div></li>
                     <li class="time">
-                      <h1 class="animated fadeInLeft" ><strong>21:00</strong></h1>
+                      <h1 class="animated fadeInLeft"><strong>21:00</strong></h1>
                       <p class="animated fadeInRight"><strong>Sat,October 1st 2029</strong></p>
                     </li>
 
@@ -54,39 +54,29 @@
                         <li><a href="../cuentas_cobrar/cartera_incobrable.php">Incobrables</a></li>
                       </ul>
                     </li>
+
                     <li class="ripple"><a href="../cuentas_cobrar/refinanciamiento.php">
-                    <span class="fa fa-pencil-square"></span>Refinanciamiento Jurídico</a>
-                    
-                      
+                    <span class="fa fa-pencil-square"></span>Refinanciamiento de Créditos</a>  
                     </li>
-                    <li class="ripple"><a href="../cuentas_cobrar/refinanciamiento_natural.php">
-                    <span class="fa fa-pencil-square"></span>Refinanciamiento Natural</a>
-                    
-                      
+
+                    <li class="ripple"><a href="../cuentas_cobrar/estados_financieros.php"><span class="fa fa-check-square-o"></span>Estados financieros</a>    
                     </li>
-                    <li class="ripple"><a href="../cuentas_cobrar/estados_financieros.php"><span class="fa fa-check-square-o"></span>Estados financieros</a>
-                      
-                    </li>
-                    <li class="ripple"><a href="../cuentas_cobrar/abono.php"><span class="fa fa-table"></span> Registro de Abono</a>
-                      
+
+                    <li class="ripple"><a href="../cuentas_cobrar/abono.php"><span class="fa fa-table"></span> Registro de Abono</a>    
                     </li>
 
 
                     <li class="ripple"><a style="color: #dc7777">
-                    <span class="fa-home fa"></span>ACTIVO FIJO </a>
-
-                      
+                    <span class="fa-home fa"></span>ACTIVO FIJO </a>   
                     </li>
 
                     <li class="ripple"><a href="../activo_fijo/listaactivos.php"><span class="fa fa-list"></span>Lista de activos</a>
                       </li>
 
-                      <li class="ripple"><a href="../activo_fijo/registroactivo.php"><span class="fa fa-plus-circle"></span>Registro de activo</a>
-                      
+                      <li class="ripple"><a href="../activo_fijo/registroactivo.php"><span class="fa fa-plus-circle"></span>Registro de activo</a>    
                     </li>
 
-                    <li class="ripple"><a href="../activo_fijo/tipoactivo.php"><span class="fa fa-file-text-o"></span>Registro de tipo de activo</a>
-                      
+                    <li class="ripple"><a href="../activo_fijo/tipoactivo.php"><span class="fa fa-file-text-o"></span>Registro de tipo de activo</a>    
                     </li>
 
                      <li class="ripple"><a  href="../activo_fijo/encargado.php"><span class="fa fa-street-view"></span>Registro de encargado</a>   

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   
 <meta charset="UTF-8">
@@ -95,9 +95,8 @@ padding-left:20px;
 <!-- custom -->
 <script src="../asset/js/main.js"></script>
 <!-- end: Javascript -->
-<script type="text/javascript">
-var d = new Date();
-</script>
+
+
 
 </head>
 <body class="theme-blue">

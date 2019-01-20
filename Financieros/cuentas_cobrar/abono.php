@@ -1,58 +1,20 @@
-
 <?php
 include_once '../plantilla/cabecera.php';
 include_once '../plantilla/barraSuperior.php';
 include_once '../plantilla/barra_lateral_usuario.php';
 ?>
-<script>
-function selector_Cliente() {
-    var cuota_persona = 0;
-    value = document.getElementById("selector").value;
-    val  = value.split(',');
-    
-    id = val[0];
-    nombre = val[1];
-    dui = val[2];
-    nit = val[3];
-    prestamo = val[4];
-    saldo = val[5];
-    tasa_persona = val[6]/100/12;
-    meses_persona= val[7];
-    cuota_persona = prestamo * ((Math.pow(1 + tasa_persona, meses_persona) * tasa_persona) / (Math.pow(1 + tasa_persona, meses_persona) - 1));
-    cuota_persona = cuota_persona.toFixed(2);
-    var tabla = document.createElement("TR");
-    document.getElementById("cliente").innerHTML='';
-    var fila = "<tr><td>"+id
-    +"</td><td>"+nombre
-    +"</td><td>"+dui
-    +"</td><td>"+nit
-    +"</td><td>"+prestamo
-    +"</td><td>"+saldo
-    +"</td><td>"+cuota_persona
-    +"</td></tr>";
-   	tabla.innerHTML=fila;
-    document.getElementById("cliente").appendChild(tabla);
-    
-}
-</script>
+
 <script language="javascript">
     $(document).ready(function () {
-
-
-
         $(document).ready(function ()
         {
-
             $('#abono').keypress(function (e) {
                 if (e.which == 13) {
                     calcular_factura();
                     return false;
                 }
             });
-
         });
-
-
     });
 </script>
 <div id="content" align="center">
@@ -75,7 +37,7 @@ function selector_Cliente() {
             <div class="panel-heading text-center">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Abono de Clientes Naturales y Empresariales</h3>
+                        <h3>Abono</h3>
                     </div>
                 </div>
             </div>
@@ -114,32 +76,7 @@ function selector_Cliente() {
                                             <div class="input-field"><i class="fa fa-search prefix" aria-hidden="true">
 
                                                 </i><label for="" style="font-size:16px">Buscar Cliente</label>
-                                                <select id="selector" name="selector" onchange="selector_Cliente()" class="form-control">
-                                                
-                                                   <?php
-                                                    include_once '../app/Conexion.php';
-                                                    include_once '../modelos/persona_juridica.php';
-                                                    include_once '../repositorios/repositorio_expediente_natural.php';
-                                                    include_once '../repositorios/repositorio_juridico.php';
-                                                    Conexion::abrir_conexion();
-                                                    
-                                                    $listado1 = repositorio_juridico::lista_persona_abono_juridica(Conexion::obtener_conexion());
-                                                   // $l=count($listado1);
-                                                    echo '<option value="0" label="Seleccione un Cliente" >';
-                                                    foreach ($listado1 as $filaJ) {
-                                                        echo '<option value="' .$filaJ[0].','.$filaJ[1].','.$filaJ[2].','.$filaJ[3].','.$filaJ[4].','.$filaJ[5].','.$filaJ[6].','.$filaJ[7]. '" label="' . $filaJ[1] ."-J". '" > ';
-                                                    }
-                                                    
-                                                    $listado = repositorio_expediente_natural::lista_persona_natural_abono(Conexion::obtener_conexion());
-                                                    foreach ($listado as $fila) {
-                                                        echo '<option  value="' . $fila[0] .','.$fila[1].','.$fila[3].','.$fila[4].','.$fila[5].','.$fila[6].','.$fila[7].','.$fila[8].'" label="' . $fila[1] ."-N".'" >';
-                                                    }
-                                                    
-                                                    
-                                                    
-                                                    ?>
-                                                </select>
-                                                <!--<input type="text" id="buscar_cliente_abono"  name="buscar_cliente_abono" autofocus onkeypress="llenar_tabla_cliente_abono(this)" list="lista_personas_cliente_abono" class="form-control">-->
+                                                <input type="text" id="buscar_cliente_abono"  name="buscar_cliente_abono" autofocus onkeypress="llenar_tabla_cliente_abono(this)" list="lista_personas_cliente_abono" class="form-control">
                                             </div>              
                                         </div>
                                     </div>
@@ -151,7 +88,7 @@ function selector_Cliente() {
                             <table class="table table-striped table-bordered" id="tabla_cliente_abono">
                                 <caption>CLIENTE</caption>
                                 <thead>
-                                <th>Código</th>
+                                <th>Codigo</th>
                                 <th>Nombre</th>
                                 <th><div id="tipoID">Dui</div></th>
                                 <th>Nit</th>
@@ -159,60 +96,62 @@ function selector_Cliente() {
                                 <th>Saldo Actual</th>  
                                 <th>Cuota</th>  
                                 </thead>
-                                <tbody id="cliente">
+                                <tbody>
 
                                 </tbody>
                             </table>
 
-                           <div class="select-dropdown">
+                            <div class="select-dropdown">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <div class="form-line">
                                             <label class="success">Abono</label>
-                                            <input type="text" class="form-control text-center" required="" minlength="1"  id="abono" name="abono"  placeholder="$$$">
+                                            <input type="text"class="form-control text-center" required="" minlength="1"  id="abono" name="abono"  placeholder="$$$">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="text-center">
-                                    <button type="button" onclick="calcular_factura()" class="btn btn-primary m-t-15 waves-effect">CALCULAR</button>
+                                    <button type="button" onclick="calcular_factura()" class="btn ripple-infinite btn-round btn-primary"><div>
+                                      <span>Calcular</span>
+                                    </div></button>
                                 </div>
                             </div>
-                        <div class="container-fluid" id="factura_N" >
-                        <table class="table table-striped table-bordered" s id="factura_natural">
+                           <div class="container-fluid" id="factura_N" >
+                            <table class="table table-striped table-bordered" s id="factura_natural">
                                 <caption>FACTURA</caption>
 
-                                <tbody id="factura_N">
+                                <tbody>
                                     <tr>
-                                        <th colspan=4><p class="panel-heading text-center">CREDITO FACIL </p></th>
+                                        <th colspan=4><p class="text-center">BanDejando   CREDITO FACIL </p></th>
                                     </tr>
                                     <tr>
-                                        <td id="nprestamo_fat"> N° factura:</td>
-                                        <td colspan="2" id="nombre_fat">Nombre Cliente:</td>
-                                        <td id="fecha_pres_fat">Fecha Aplicacion:</td>
+                                        <td id="nprestamo_fat">Nº Facura</td>
+                                        <td colspan="2" id="nombre_fat">Nombre Cliente</td>
+                                        <td id="fecha_pres_fat">Fecha Aplicacion</td>
                                     </tr>
                                     <tr>
-                                        <td id="nit_fat">Nit:</td>
-                                        <td id="dui_fat">Dui:</td>
+                                        <td id="nit_fat">NIT</td>
+                                        <td id="dui_fat">DUI</td>
                                         <td > </td>
                                         <td id="fecha_pago_fat"> 12/12/1212</td>
                                     </tr>
                                     <tr>
-                                        <td id="fecha_fin_fat">Fecha Vencimiento:</td>
-                                        <td id="fecha_ultimo_fat"></td>
+                                        <td id="fecha_fin_fat">Fecha Vencimiento</td>
+                                        <td id="fecha_ultimo_fat">12/12/1212</td>
                                         <td></td>
                                         <td> </td>
                                     </tr>
                                     <tr>
-                                        <td id="monto_fat">Monto:</td>
-                                        <td id="cuota_fat">Valor de Cuota:</td>
+                                        <td id="monto_fat">Monto</td>
+                                        <td id="cuota_fat">Valor Cuota</td>
                                         <td colspan="2"> </td>
                                     <tr>
-                                        <td id="tasa_fat">Tasa Nominal:</td>
+                                        <td id="tasa_fat">Tasa Nominal</td>
                                         <td colspan="3"> </td>
                                     </tr>
                                     <tr>
-                                        <td id="saldo_ant_fat">Saldo Anterior:</td>
-                                        <td id="saldo_act_fat">Saldo Actual:</td>
+                                        <td id="saldo_ant_fat">Saldo Anterior</td>
+                                        <td id="saldo_act_fat">Saldo Actual</td>
                                         <td colspan="2"> </td>
                                     </tr>
                                     <tr>
@@ -223,19 +162,19 @@ function selector_Cliente() {
                                     </tr>
 
                                     <tr>
-                                        <td>CAPITAL:</td>
+                                        <td>CAPITAL</td>
                                         <td></td>
                                         <td ></td>
                                         <td id="cap_fat"> $</td>
                                     </tr>
                                     <tr>
-                                        <td>INTERES:</td>
+                                        <td>INTERES</td>
                                         <td></td>
                                         <td></td>
                                         <td id="int_fat"> $</td>
                                     </tr>
                                     <tr>
-                                        <td>Mora:</td>
+                                        <td>Mora</td>
                                         <td></td>
                                         <td></td>
                                         <td id="mora_fat"> $</td>
@@ -246,13 +185,13 @@ function selector_Cliente() {
                                         <td> </td>
                                     </tr>
                                     <tr>
-                                        <td id="nom_caj_fat">Nombre Asesor:</td>
+                                        <td id="nom_caj_fat">nobre user</td>
                                         <td></td>
                                         <td ></td>
                                         <td > </td>
                                     </tr>
-                                <td id="id_cajero_fat">N° Cajero:</td>
-                                <td>TOTAL:</td>
+                                <td id="id_cajero_fat">cajero n</td>
+                                <td>TOTAL</td>
                                 <td></td>
                                 <td id="total_fat"> $</td>
                                 </tr>
@@ -263,8 +202,12 @@ function selector_Cliente() {
                             </div>
 
                             <div class="text-center">
-                                <button type="submit" form="abono_form" class="btn ripple-infinite btn-round btn-primary" >GUARDAR</button>
-                                <button type="reset" class="btn ripple-infinite btn-round btn-warning">CANCELAR</button>
+                                <button type="submit" form="abono_form" class="btn ripple-infinite btn-round btn-primary" ><div>
+                                      <span>Guardar</span>
+                                    </div></button>
+                                <button type="reset" class="btn ripple-infinite btn-round btn-warning"><div>
+                                      <span>Cancelar</span>
+                                    </div></button>
                             </div>
                         </form>
                     </div>
@@ -290,7 +233,7 @@ function selector_Cliente() {
     $listado1 = repositorio_juridico::lista_persona_juridca(Conexion::obtener_conexion());
     $l=count($listado1);
     for ($i=0 ; $i < $l ; $i++) {
-        echo '<option value="' . $filaJ[0]->getId_nombre() . '" label="' . $filaJ[1]->getId_persona_juridica() . '-J" > ';
+        echo '<option value="' . $listado1[$i]->getId_nombre() . '" label="' . $listado1[$i]->getId_persona_juridica() . '-J" > ';
     }
     
     $listado = repositorio_expediente_natural::lista_clientes(Conexion::obtener_conexion());
@@ -315,23 +258,19 @@ function selector_Cliente() {
     
     function llenar_tabla_cliente_abono(valor) {
         //var depto = valor.value;
+        //alert(depto);
         var depto = $("#lista_personas_cliente_abono option[value='" + $('#buscar_cliente_abono').val() + "']").attr('label');
         $("#lista_personas_cliente_abono").load(" #lista_personas_cliente_abono");//para actuaizar la datalist cuando registra 
 //var numero=valor.id.substr(7)
-
+//alert(depto);
         if (depto != "") {//alert("paso"+depto);
-            $.post("../cuenta_cobrar/llenar_tabla_cliente_abono.php", {libro: depto}, function (mensaje) {
+            $.post("llenar_tabla_cliente_abono.php", {libro: depto}, function (mensaje) {
                 $('#lista_personas_cliente_abono').html(mensaje).fadeIn();
-
             });
         }
         return false;//para qeu no se envie el form
     }
-
-
 //eliminar de la tabla  saldo_act
-
-
     function calcular_factura() {
         if (document.getElementById("abono").value > 0) {
             var pago = document.getElementById("abono").value;
@@ -342,8 +281,6 @@ function selector_Cliente() {
             var mes = (fecha_aux[1]);
             var ano = (fecha_aux[0]);
             var diasMes = 30 //getUltimoDiaDelMes(mes, ano);
-
-
             //calcualo los dias que se paso o faltan para el pago
             var mora = 0;
             var aFecha2 = fecha_hoy.split('-');
@@ -352,8 +289,6 @@ function selector_Cliente() {
             var fFecha2 = Date.UTC(aFecha2[0], aFecha2[1], aFecha2[2] - 1);
             var dif = fFecha2 - fFecha1;
             var dias = Math.floor(dif / (1000 * 60 * 60 * 24));
-
-
             if (dias == 0) {
                 var int_calculado = (document.getElementById("interes").value * document.getElementById("saldo_act").value * diasMes) / 360;
               
@@ -368,7 +303,6 @@ function selector_Cliente() {
                         var mora = (((document.getElementById("interes").value) * (document.getElementById("cuota_hoy").value - int_calculado)) / 360) * (dias);
                     }
                 }
-
             }
             var deudaTotal=(parseFloat(int_calculado) + parseFloat(pagoTotal));
             
@@ -408,8 +342,6 @@ function selector_Cliente() {
                 document.getElementById("saldo_act_hoy").value = ((document.getElementById("saldo_act").value - (pago - int_calculado - mora)).toFixed(2));
                 document.getElementById("int_hoy").value = int_calculado;
                 document.getElementById("mora_hoy").value = mora;
-
-
             } else {
                 swal('Oops', 'Parece que el pago no alcanza a cubrir  el interes del mes', 'warning');
             }
@@ -419,7 +351,6 @@ function selector_Cliente() {
             swal('Oops', 'Formato de abono no valido ', 'warning');
         }
     }
-
     function getUltimoDiaDelMes(mes, ano)
     {
         alert(mes + " " + ano);
@@ -435,7 +366,6 @@ function selector_Cliente() {
                 return 30;
             } else if (mes == 2)
             {
-
                 if ((ano % 4 == 0) && (ano % 100 != 0) || (ano % 400 == 0))
                     return 29;
                 else
@@ -443,14 +373,10 @@ function selector_Cliente() {
             }
         }
     }
-
-
 </script>
 <?php
 include_once '../plantilla/pie.php';
 if (isset($_REQUEST["paso_abono"])) {
-
-
     include_once '../app/Conexion.php';
     include_once '../modelos/pago.php';
     include_once '../modelos/presamo.php';
@@ -459,26 +385,20 @@ if (isset($_REQUEST["paso_abono"])) {
     include_once '../repositorios/repositorio_referencias.php';
     include_once '../repositorios/repositorio_prestamo.php';
     include_once '../repositorios/repositorio_expediente_natural.php';
-
-
-
     Conexion::abrir_conexion();
 //echo '<script language="javascript">alert("juas");</script>'; 
     $fin=$_REQUEST["finalizar"];
     $pago = new pago();
-
     $pago->setFecha($_REQUEST["fecha_hoy"]);
     $pago->setId_prestamo($_REQUEST["id_prestamo_abono"]);
     $pago->setInteres($_REQUEST["int_hoy"]);
     $pago->setMonto($_REQUEST["abono"]);
     $pago->setMora($_REQUEST["mora_hoy"]);
-
     $prestamo = new presamo();
     $prestamo->setSaldo_actual($_REQUEST["saldo_act_hoy"]);
     $prestamo->setEstado($fin);
     $prestamo->setId_asesor($_REQUEST["codCliente_abono"]);
     $prestamo->setId_plan($_REQUEST["pj"]);
-
     if (repositorio_pago::insertar_pago(Conexion::obtener_conexion(), $pago) && repositorio_prestamo::actualizar_prestamo(Conexion::obtener_conexion(), $prestamo, $_REQUEST["id_prestamo_abono"])) {
         echo "<script type='text/javascript'>";
         echo 'swal({
