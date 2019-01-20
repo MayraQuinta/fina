@@ -1989,7 +1989,7 @@ ul li a:focus {
 
 
 #left-menu .sub-left-menu {
-  background: url('../img/fon1.png');
+  background-color: #ffffff;
   left: 0;
   padding-top: 50px;
   z-index: 222;
