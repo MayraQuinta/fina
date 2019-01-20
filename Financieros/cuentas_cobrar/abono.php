@@ -111,7 +111,9 @@ include_once '../plantilla/barra_lateral_usuario.php';
                                     </div>
                                 </div>
                                 <div class="text-center">
-                                    <button type="button" onclick="calcular_factura()" class="btn btn-primary m-t-15 waves-effect">CALCULAR</button>
+                                    <button type="button" onclick="calcular_factura()" class="btn ripple-infinite btn-round btn-primary"><div>
+                                      <span>Calcular</span>
+                                    </div></button>
                                 </div>
                             </div>
                            <div class="container-fluid" id="factura_N" >
@@ -200,8 +202,12 @@ include_once '../plantilla/barra_lateral_usuario.php';
                             </div>
 
                             <div class="text-center">
-                                <button type="submit" form="abono_form" class="btn  btn-primary m-t-15 waves-effect" >GUARDAR</button>
-                                <button type="reset" class="btn btn-primary m-t-15 waves-effect">CANCELAR</button>
+                                <button type="submit" form="abono_form" class="btn ripple-infinite btn-round btn-primary" ><div>
+                                      <span>Guardar</span>
+                                    </div></button>
+                                <button type="reset" class="btn ripple-infinite btn-round btn-warning"><div>
+                                      <span>Cancelar</span>
+                                    </div></button>
                             </div>
                         </form>
                     </div>
