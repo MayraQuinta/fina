@@ -59,7 +59,7 @@ if (isset($_REQUEST['nameEnviar'])) {
     
    
     
-    if ( repositorio_prestamo::insertar_prestamo_finan(Conexion::obtener_conexion(), $prestamo,$_REQUEST['pas_cp'])) {
+    if ( repositorio_prestamo::insertar_prestamo_finan(Conexion::obtener_conexion(), $prestamo,$_REQUEST['id_prestamo'])) {
 //         $id_prestamo = repositorio_prestamo::obtenerU_ultimo_prestamo(Conexion::obtener_conexion());
 //         $id_persona = $_REQUEST['pas_cp'];
 //         echo $id_prestamo;
@@ -117,7 +117,7 @@ $datos = repositorio_prestamo::llenar_refinanciamiento_natural(Conexion::obtener
 
 
                 <form action="credito_refinanciado_natural.php" autocomplete="off" method="get" name="credito_personal" id="credito_personal" >
-                    <input type="hidden" id="pas_cp" value="<?php echo $_REQUEST['id_prestamo'];?>" name="pas_cp"/>
+                    <input type="hidden" id="id_prestamo" value="<?php echo $_REQUEST['id_prestamo'];?>" name="id_prestamo"/>
     <input type="radio" id="uno" checked="" style="visibility: hidden"/>
     <section class="content">
         <!--    INICIO  DATOS-->
