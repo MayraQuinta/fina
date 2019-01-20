@@ -123,33 +123,33 @@ include_once '../plantilla/barra_lateral_usuario.php';
                                         <th colspan=4><p class="text-center">BanDejando   CREDITO FACIL </p></th>
                                     </tr>
                                     <tr>
-                                        <td id="nprestamo_fat"> n facura</td>
-                                        <td colspan="2" id="nombre_fat">nombre cliente</td>
-                                        <td id="fecha_pres_fat">fecha aplicacion</td>
+                                        <td id="nprestamo_fat">Nº Facura</td>
+                                        <td colspan="2" id="nombre_fat">Nombre Cliente</td>
+                                        <td id="fecha_pres_fat">Fecha Aplicacion</td>
                                     </tr>
                                     <tr>
-                                        <td id="nit_fat">nit</td>
-                                        <td id="dui_fat">dui</td>
+                                        <td id="nit_fat">NIT</td>
+                                        <td id="dui_fat">DUI</td>
                                         <td > </td>
                                         <td id="fecha_pago_fat"> 12/12/1212</td>
                                     </tr>
                                     <tr>
-                                        <td id="fecha_fin_fat">fecha vencimiento</td>
+                                        <td id="fecha_fin_fat">Fecha Vencimiento</td>
                                         <td id="fecha_ultimo_fat">12/12/1212</td>
                                         <td></td>
                                         <td> </td>
                                     </tr>
                                     <tr>
-                                        <td id="monto_fat">monto</td>
-                                        <td id="cuota_fat">valor cuota</td>
+                                        <td id="monto_fat">Monto</td>
+                                        <td id="cuota_fat">Valor Cuota</td>
                                         <td colspan="2"> </td>
                                     <tr>
-                                        <td id="tasa_fat">tasa nominal</td>
+                                        <td id="tasa_fat">Tasa Nominal</td>
                                         <td colspan="3"> </td>
                                     </tr>
                                     <tr>
-                                        <td id="saldo_ant_fat">saldo acterior</td>
-                                        <td id="saldo_act_fat">saldo actual</td>
+                                        <td id="saldo_ant_fat">Saldo Anterior</td>
+                                        <td id="saldo_act_fat">Saldo Actual</td>
                                         <td colspan="2"> </td>
                                     </tr>
                                     <tr>

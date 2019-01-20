@@ -15,7 +15,7 @@ if ($cual == "N") {
 foreach ($listado as $fila) {
     ?>
     <script type="text/javascript">
-        alert("cdigo");
+        //alert("cdigo");
     
         document.getElementById('nprestamo_fat').innerHTML = "NO. PRESTAMO: <?php echo $fila['idp'] ?>";
         document.getElementById('id_prestamo_abono').value = "<?php echo $fila['idp'] ?>";
